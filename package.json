@@ -1,5 +1,5 @@
 {
-  "name": "responsive-documentation-examples",
+  "name": "@phun-ky/responsive-documentation-examples",
   "version": "1.0.0",
   "description": "Create responsive documentation examples on the fly",
   "main": "responsive-documentation-examples.js",
