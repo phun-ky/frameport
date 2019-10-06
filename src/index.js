@@ -9,6 +9,18 @@ const HIDE_TEMPLATE_STYLE = [
 
 const createIframe = () => document.createElement('iframe');
 
+const getHeaders = rdeHeaders => {
+  let headers = [];
+  if (rdeHeaders) {
+    if (rdeHeaders.indexOf(',') !== -1) {
+      headers = [...headers, ...rdeHeaders.split(',')];
+    } else if (rdeHeaders !== '') {
+      headers.push(rdeHeaders);
+    }
+  }
+  return headers;
+};
+
 const getBlobURL = (html, type) => {
   const blob = new Blob([html], { type });
   return URL.createObjectURL(blob);
@@ -88,15 +100,7 @@ const fromTarget = target => {
 
   template.style = HIDE_TEMPLATE_STYLE;
 
-  let headers = [];
-
-  if (rdeHeaders) {
-    if (rdeHeaders.indexOf(',') !== -1) {
-      headers = [...headers, ...rdeHeaders.split(',')];
-    } else if (rdeHeaders !== '') {
-      headers.push(rdeHeaders);
-    }
-  }
+  let headers = getHeaders(rdeHeaders);
 
   const options = {
     html,
@@ -143,7 +147,7 @@ const fromTemplate = template => {
   template.style = HIDE_TEMPLATE_STYLE;
 
   let viewPorts = [];
-  let headers = [];
+  let headers = getHeaders(rdeHeaders);
 
   if (rdeViewports.indexOf(',') !== -1) {
     viewPorts = [...viewPorts, ...rdeViewports.split(',')];
@@ -151,14 +155,6 @@ const fromTemplate = template => {
     viewPorts.push(rdeViewports);
   } else {
     viewPorts.push('375x667');
-  }
-
-  if (rdeHeaders) {
-    if (rdeHeaders.indexOf(',') !== -1) {
-      headers = [...headers, ...rdeHeaders.split(',')];
-    } else if (rdeHeaders !== '') {
-      headers.push(rdeHeaders);
-    }
   }
 
   const options = {
