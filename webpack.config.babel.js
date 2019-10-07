@@ -7,7 +7,7 @@ export default {
   target: 'web',
   output: {
     path: __dirname,
-    filename: 'responsive-documentation-examples.js'
+    filename: '[name].js'
   },
   optimization: {
     minimize: true,
@@ -36,12 +36,16 @@ export default {
     fs: 'empty'
   },
   mode: 'production',
-  entry: path.join(__dirname, 'src', 'index.js'),
+  entry: {
+    'rde-init': path.join(__dirname, 'src', 'bin', 'event.js'),
+    'rde-module': path.join(__dirname, 'src', 'bin', 'module.js')
+  },
   resolve: {
     extensions: ['.js'],
     alias: {
       src: path.join(__dirname, 'src'),
-      lib: path.join(__dirname, 'src', 'lib')
+      lib: path.join(__dirname, 'src', 'lib'),
+      bin: path.join(__dirname, 'src', 'bin')
     }
   },
   module: {
