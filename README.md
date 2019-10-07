@@ -1,8 +1,8 @@
 # Responsive Documentation Examples
 
-> Create responsive documentation examples on the fly!
+> Responsive Documentation Examples (rde) enables you to fake and display your responsive components in real life media queries!
 
-Responsive Documentation Examples (rde) was created so I could display responsive examples of components in a style guide.
+rde was created so I could display responsive examples of components in a style guide. It creates iframes with your component (html, css and javascript) that acts as natural viewports, thus making use of your media queries!
 
 ```bash
 $ npm i @phun-ky/responsive-documentation-examples
