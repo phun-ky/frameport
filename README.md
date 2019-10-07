@@ -8,14 +8,44 @@ rde was created so I could display responsive examples of components in a style 
 $ npm i @phun-ky/responsive-documentation-examples
 ```
 
-See demo here: https://codepen.io/phun-ky/pen/MWWWvLm
+See demo here for usage as init: https://codepen.io/phun-ky/pen/MWWWvLm
+See demo here for usage as module: https://codesandbox.io/s/responsive-documentation-example-module-1em76
 
-## Usage
+## Use programatically
+
+With this approach, you can use it in your own JS code as a module.
+
+First argument is the target where you want the iframe to be generated. Second is options.
+
+```javascript
+import rde from '@phun-ky/responsive-design-example';
+
+rde(document.getElementById('target'), {
+  vw: 667,
+  html: '<h1>FOO</h1>'
+});
+```
+
+### Options:
+
+| option  | description                                                                                                                                                                                 |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| vw      | The width of the viewport you want. <strong>Required</strong>                                                                                                                               |
+| vh      | The height of the viewport you want.                                                                                                                                                        |
+| html    | The html you want to use in the viewport example. <strong>Required</strong>                                                                                                                 |
+| css     | A CSS file to be appended to the head section of the generated html. <strong>NOTE! This needs to be on the same domain and relative to root!</strong> For example: `/dist/yourcss.css`      |
+| style   | Raw CSS code to be inserted into a `<link>` -tag in the produced html                                                                                                                       |
+| code    | Raw JavaScript code to be inserted into `<script>`-tags in the produced html                                                                                                                |
+| js      | A JavaScript file to be appended to the head section of the generated html. <strong>NOTE! This needs to be on the same domain and relative to root!</strong> For example: `/dist/yourjs.js` |
+| class   | Class names to be given the produced iframe                                                                                                                                                 |
+| headers | Additional headers to append to the generated html                                                                                                                                          |
+
+## Usage as init (plug and play)
 
 Place the `script` tag at the bottom of your page, right before the `</body>`-tag:
 
 ```html
-<script src="../path/to/responsive-documentation-example.js"></script>
+<script src="../path/to/@phun-ky/responsive-documentation-examples/rde-init.js"></script>
 ```
 
 And then follow the steps below to display the responsive examples you want :)
@@ -74,7 +104,3 @@ This approach is useful if you want to use a device decorator to mimic appearanc
 | data-rde-js       | A JavaScript file to be appended to the head section of the generated html. <strong>NOTE! This needs to be on the same domain and relative to root!</strong> For example: `/dist/yourjs.js` |
 | data-rde-class    | Class names to be given the produced iframe                                                                                                                                                 |
 | data-rde-headers  | Additional headers to append to the generated html                                                                                                                                          |
-
-## TO DO
-
-- Make it usable as a module

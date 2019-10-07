@@ -5,10 +5,12 @@
     "access": "public"
   },
   "description": "Create responsive documentation examples on the fly",
-  "main": "responsive-documentation-examples.js",
+  "main": "rde-module.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf ./dist && webpack --mode production",
+    "build": "rimraf ./dist && npm run build:init && npm run build:module",
+    "build:init": "webpack --mode production --config webpack.config.babel.js",
+    "build:module": "webpack --mode production --config webpack.es6.config.babel.js",
     "commit": "npx git-cz"
   },
   "repository": {
@@ -39,6 +41,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-async-to-generator": "^7.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/register": "^7.0.0",
     "babel-eslint": "^9.0.0",

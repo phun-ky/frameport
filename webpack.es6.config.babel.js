@@ -6,7 +6,9 @@ export default {
   target: 'web',
   output: {
     path: __dirname,
-    filename: 'rde-init.js'
+    filename: 'rde-module.js',
+    library: 'RdeModule',
+    libraryTarget: 'commonjs2'
   },
   optimization: {
     minimize: true,
@@ -36,7 +38,7 @@ export default {
   },
   mode: 'production',
   entry: {
-    'rde-init': path.join(__dirname, 'src', 'bin', 'event.js')
+    'rde-module': path.join(__dirname, 'src', 'bin', 'module.js')
   },
   resolve: {
     extensions: ['.js'],
