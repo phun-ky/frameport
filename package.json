@@ -12,6 +12,18 @@
     "type": "git",
     "url": "git+https://github.com/phun-ky/responsive-documentation-examples.git"
   },
+  "keywords": [
+    "oocumentation",
+    "style guide",
+    "styleguide",
+    "design system",
+    "media queries",
+    "responsive",
+    "documentation helpers",
+    "javascript",
+    "css",
+    "html"
+  ],
   "author": "Alexander Vassbotn Røyne-Helgesen <alexander+rde@phun-ky.net>",
   "license": "MIT",
   "bugs": {
