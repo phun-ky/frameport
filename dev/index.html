@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html class="ph" lang="en">
+  <head>
+    <title>@phun-ky/frameport</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Language" content="no" />
+    <meta name="robots" content="none" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="application-name" content="@phun-ky/frameport" />
+    <style type="text/css">
+      *.ph,
+      *.ph::after,
+      *.ph::before {
+        margin: 0;
+        padding: 0;
+        word-break: break-word;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialised;
+      }
+      html {
+        font-family: var(
+          --ph-font-family,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif,
+          Apple Color Emoji,
+          Segoe UI Emoji
+        );
+      }
+      html,
+      body {
+        height: 100%;
+        min-height: 100%;
+      }
+      body {
+        background-color: var(--ph-color-background, #181a22);
+        color: var(--ph-color-text, #9fa8ad);
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+      }
+      main.ph {
+        flex-grow: 1;
+      }
+      .ph.container {
+        max-width: 48rem;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .ph.frontpage .ph.container {
+        margin-bottom: 1.25rem;
+        margin-top: 1.25rem;
+        max-width: 1024px;
+      }
+
+      .ph.project .ph.banner .ph.container {
+        max-width: 48rem;
+        width: 100%;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+      footer.ph.footer {
+        font-size: 1.25rem;
+        z-index: 100;
+        flex-grow: 0;
+        margin-top: auto;
+      }
+      .ph.app {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        position: relative;
+        padding: 1.25rem;
+      }
+      a.ph {
+        color: var(--ph-color-link, #6ca7f9);
+        font-weight: 500;
+      }
+      a.ph:visited {
+        color: var(--ph-color-link-visited, #6ca7f9);
+      }
+      a.ph:active {
+        color: var(--ph-color-link-active, #6ca7f9);
+      }
+      a.ph:hover {
+        color: var(--ph-color-link-hover, #6ca7f9);
+      }
+      p,
+      p.ph,
+      .ph.byline {
+        font-style: normal;
+        max-width: 65ch;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        color: var(--ph-color-text, #9fa8ad);
+        margin-top: 1.25em;
+        margin-bottom: 1.25em;
+      }
+      .ph.byline time,
+      .ph.byline .ph.read-time {
+        opacity: 0.7;
+      }
+      article.ph {
+        color: var(--ph-color-text, #9fa8ad);
+        font-size: 1rem;
+        line-height: 1.75rem;
+      }
+      p.lead,
+      p.ph.lead {
+        color: var(--ph-color-text-accent, #e4e4e7);
+        font-weight: 600;
+        line-height: 1.75rem;
+        margin-bottom: 2.5rem;
+        font-size: 1.125rem;
+      }
+      .ph.frontpage p.ph.lead {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        margin: 0;
+        font-weight: normal;
+        color: inherit;
+      }
+      .ph.author p.ph,
+      footer.ph p.ph {
+        max-width: none;
+      }
+      h1.ph,
+      h2.ph,
+      h3.ph,
+      h4.ph,
+      h5.ph,
+      h6.ph {
+        color: var(--ph-color-text-accent, #e4e4e7);
+      }
+      h1.ph {
+        margin-bottom: 2.5rem;
+        font-size: 2.25rem;
+        line-height: 1.25;
+        font-weight: 700;
+      }
+      @media screen and (min-width: 768px) {
+        h1.ph {
+          font-size: 3rem;
+          line-height: 1.375;
+        }
+      }
+      @media screen and (min-width: 1024px) {
+        h1.ph {
+          font-size: 3.75rem;
+          line-height: 1.375;
+        }
+      }
+      h1.ph > em.ph {
+        font-weight: normal;
+        max-width: 65ch;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        display: block;
+        color: var(--ph-color-text);
+      }
+      .ph.frontpage h1.ph {
+        margin-bottom: 2.5rem;
+        font-size: 3rem;
+        line-height: 1.375;
+      }
+      @media screen and (min-width: 1024px) {
+        .ph.frontpage h1.ph {
+          font-size: 4.75rem;
+        }
+      }
+      h2.ph {
+        font-size: 1.75rem;
+        line-height: 1.3333333;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+      }
+      h3.ph {
+        font-size: 1.5rem;
+        line-height: 1.3333333;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        font-weight: 400;
+      }
+      h4.ph {
+        font-size: 1.25rem;
+        line-height: 1.3333333;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: var(--ph-color-text);
+      }
+      header.ph.header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-grow: 0;
+        grid-gap: 1rem;
+        min-height: 3rem;
+      }
+      @media screen and (min-width: 1440px) {
+        header.ph.header {
+          position: sticky;
+          top: 20px;
+          z-index: 100;
+        }
+
+        .ph.project header.ph.header {
+          position: static;
+          top: unset;
+        }
+      }
+      .ph.header-menu {
+        margin-left: auto;
+        min-height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        grid-gap: 1rem;
+      }
+      .ph.header-menu a.ph {
+        display: none;
+      }
+      @media screen and (min-width: 640px) {
+        .ph.header-menu a.ph {
+          display: inline-block;
+        }
+      }
+      .ph.darkmode-button {
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        border-radius: 50%;
+        color: var(--ph-color-text);
+        cursor: pointer;
+        display: flex;
+        height: 3rem;
+        justify-content: center;
+        width: 3rem;
+      }
+      .ph.darkmode-button:active,
+      .ph.darkmode-button:hover {
+        background-color: var(--ph-color-well-background);
+      }
+      .ph.darkmode-button > svg.ph {
+        pointer-events: none;
+        height: 2rem;
+        width: 2rem;
+      }
+      .ph.hide-dark {
+        display: none;
+      }
+      .ph.hide-light {
+        display: block;
+      }
+      .ph.theme--light .hide-light {
+        display: none;
+      }
+      .ph.theme--light .hide-dark {
+        display: block;
+      }
+      p.ph:has(> img[src^='/img']) {
+        max-width: none;
+      }
+    </style>
+    <link rel="style" href="ph.css" />
+  </head>
+  <body class="ph">
+    <div class="ph app" id="app">
+      <header class="ph header">
+        <a class="ph home" href="https://phun-ky.net" target="_blank">home</a>
+        <a
+          class="ph projects-home"
+          href="https://phun-ky.net/projects"
+          target="_blank"
+          >projects</a
+        >
+        <div class="ph header-menu">
+          <a
+            class="ph"
+            href="https://www.paypal.me/phunky/20"
+            rel="noopener noreferrer"
+            target="_blank"
+            >buy me a coffee?</a
+          >
+          <a
+            class="ph"
+            href="https://github.com/sponsors/phun-ky"
+            rel="noopener noreferrer"
+            target="_blank"
+            >sponsor me!</a
+          >
+          <button class="ph darkmode-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Sun Icon"
+              fill="currentColor"
+              stroke="none"
+              class="ph hide-dark"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Moon Icon"
+              fill="currentColor"
+              stroke="none"
+              class="ph hide-light"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="ph" id="main">
+        <section class="ph section">
+          <div class="ph container">
+            <h1 class="ph">Responsive Documentation Examples</h1>
+            <p class="ph lead">
+              Responsive Documentation Examples (rde) enables you to fake and
+              display your responsive components in real life media queries! See
+              <a
+                class="ph"
+                href="https://github.com/phun-ky/responsive-documentation-examples/blob/master/README.md"
+                >README</a
+              >
+              for instructions.
+            </p>
+            <div class="ph actions">
+              <a
+                class="ph button"
+                href="https://github.com/phun-ky/responsive-documentation-examples"
+                >github</a
+              >
+              <a
+                class="ph button"
+                href="https://www.npmjs.com/package/@phun-ky/responsive-documentation-examples"
+                >npm</a
+              >
+            </div>
+            <pre
+              class="ph language-shell-session"
+            ><code class="ph shell-session language-shell-session">$ npm i @phun-ky/responsive-documentation-examples --save</code></pre>
+          </div>
+        </section>
+        <section class="ph section">
+          <div class="ph container">
+            <div
+              data-frameport
+              data-frameport-css="https://phun-ky.net/css/ph.css"
+              data-frameport-style="body{background-color: #84a295 !important;}"
+              data-frameport-target
+              data-frameport-template="#template"
+              data-frameport-vw="667"
+              data-frameport-vh="375"
+            ></div>
+            <div id="template">
+              <main class="ph" style="height: 100vh">
+                <button class="ph button" type="button">Primary</button>
+              </main>
+            </div>
+            <div
+              data-frameport
+              data-frameport-css="https://phun-ky.net/css/ph.css"
+              data-frameport-style="body{background-color: #84a295 !important;}"
+              data-frameport-viewports="375x667,360x740,768x1024"
+            >
+              <main class="ph" style="height: 100vh">
+                <div class="ph app">
+                  <p class="ph lead">Look mah, I'm in an iframe</p>
+                  <button class="ph button" type="button">Primary</button>
+                </div>
+              </main>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="ph">
+        <div class="ph container">
+          <p class="ph">
+            Made with <strong>a few good taters</strong> by by
+            <a class="ph" target="_blank" href="https://phun-ky.net"
+              >Alexander Vassbotn Røyne-Helgesen</a
+            >. Buy <strong class="ph">me</strong> some
+            <a class="ph" href="https://www.paypal.me/phunky/20"
+              >po-ta-toes??</a
+            >
+          </p>
+          <p class="ph">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              rel="license"
+              href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >
+              <img
+                alt="Creative Commons Licence"
+                style="border-width: 0"
+                width="88"
+                height="31"
+                src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
+              />
+            </a>
+            <br />This work, and all assets created by
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              href="http://phun-ky.net"
+              property="cc:attributionName"
+              rel="cc:attributionURL"
+            >
+              Alexander Vassbotn Røyne-Helgesen</a
+            >
+            is licensed under a
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              class="ph"
+              rel="license"
+              href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >
+              Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+              International License </a
+            >.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script data-dom src="/frameport.js" type="text/javascript"></script>
+    <script></script>
+  </body>
+</html>
