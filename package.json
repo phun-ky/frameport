@@ -5,24 +5,25 @@
     "access": "public"
   },
   "description": "Create responsive documentation examples on the fly",
-  "main": "rde.js",
-  "types": "rde.d.ts",
+  "main": "frameport.js",
+  "types": "frameport.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "rollup -c",
     "prerollup:dev": "npm run clean",
     "rollup:dev": "rollup -c -w",
-    "clean": "rm -rf dist/ dts/ ./rde.js",
+    "clean": "rm -rf dist/ dts/ ./frameport.js",
     "build": "npm run clean && npm run rollup",
-    "dev": "npx browser-sync start --server --files \"dev/*.html\" \"*.css\" --index \"dev/index.html\" --serveStatic \"/dev/*.html\"",
+    "dev": "npx browser-sync start -s --files \"dev/*.html\" \"*.css\" --index \"dev/index.html\" --serveStatic \"/dev/*\"",
     "docs:gen": "node ./node_modules/.bin/typedoc --entryPoints src --entryPointStrategy expand --gitRevision main --githubPages false --plugin typedoc-plugin-markdown --tsconfig tsconfig.json --hideInPageTOC --out api --readme none",
     "commit": "npx git-cz",
-    "release": "release-it"
+    "release": "release-it",
+    "version": "npm run docs:gen"
   },
   "files": [
-    "/rde.js",
-    "/rde.js.map",
-    "/rde.d.ts"
+    "/frameport.js",
+    "/frameport.js.map",
+    "/frameport.d.ts"
   ],
   "repository": {
     "type": "git",
@@ -43,7 +44,7 @@
     "frame",
     "frameport"
   ],
-  "author": "Alexander Vassbotn Røyne-Helgesen <alexander+rde@phun-ky.net>",
+  "author": "Alexander Vassbotn Røyne-Helgesen <alexander+frameport@phun-ky.net>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/phun-ky/frameport/issues"
