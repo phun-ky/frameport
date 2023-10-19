@@ -17,8 +17,7 @@
     "dev": "npx browser-sync start -s --files \"dev/*.html\" \"*.css\" --index \"dev/index.html\" --serveStatic \"/dev/*\"",
     "docs:gen": "node ./node_modules/.bin/typedoc --entryPoints src --entryPointStrategy expand --gitRevision main --githubPages false --plugin typedoc-plugin-markdown --tsconfig tsconfig.json --hideInPageTOC --out api --readme none",
     "commit": "npx git-cz",
-    "release": "release-it",
-    "version": "npm run docs:gen"
+    "release": "release-it"
   },
   "files": [
     "/frameport.js",
