@@ -18,7 +18,7 @@ export const getSource = (options: FrameportOptions): string => {
   code = getCode(code);
   style = getStyle(style);
 
-  return `<html>
+  return `<!DOCTYPE html><html>
   <head>
     ${headers.join('\n')}
     ${style}
