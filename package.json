@@ -1,21 +1,32 @@
 {
-  "name": "@phun-ky/responsive-documentation-examples",
+  "name": "@phun-ky/frameport",
   "version": "1.2.0",
   "publishConfig": {
     "access": "public"
   },
   "description": "Create responsive documentation examples on the fly",
-  "main": "rde-module.js",
+  "main": "rde.js",
+  "types": "rde.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf ./dist && npm run build:init && npm run build:module",
-    "build:init": "webpack --mode production --config webpack.config.babel.js",
-    "build:module": "webpack --mode production --config webpack.es6.config.babel.js",
-    "commit": "npx git-cz"
+    "rollup": "rollup -c",
+    "prerollup:dev": "npm run clean",
+    "rollup:dev": "rollup -c -w",
+    "clean": "rm -rf dist/ dts/ ./rde.js",
+    "build": "npm run clean && npm run rollup",
+    "dev": "npx browser-sync start --server --files \"dev/*.html\" \"*.css\" --index \"dev/index.html\" --serveStatic \"/dev/*.html\"",
+    "docs:gen": "node ./node_modules/.bin/typedoc --entryPoints src --entryPointStrategy expand --gitRevision main --githubPages false --plugin typedoc-plugin-markdown --tsconfig tsconfig.json --hideInPageTOC --out api --readme none",
+    "commit": "npx git-cz",
+    "release": "release-it"
   },
+  "files": [
+    "/rde.js",
+    "/rde.js.map",
+    "/rde.d.ts"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phun-ky/responsive-documentation-examples.git"
+    "url": "git+https://github.com/phun-ky/frameport.git"
   },
   "keywords": [
     "documentation",
@@ -27,41 +38,55 @@
     "documentation helpers",
     "javascript",
     "css",
-    "html"
+    "html",
+    "viewport",
+    "frame",
+    "frameport"
   ],
   "author": "Alexander Vassbotn Røyne-Helgesen <alexander+rde@phun-ky.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/phun-ky/responsive-documentation-examples/issues"
+    "url": "https://github.com/phun-ky/frameport/issues"
   },
-  "homepage": "https://github.com/phun-ky/responsive-documentation-examples#readme",
+  "homepage": "https://github.com/phun-ky/frameport#readme",
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-transform-async-to-generator": "^7.0.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/register": "^7.0.0",
-    "babel-eslint": "^9.0.0",
-    "babel-loader": "^8.0.0-beta.0",
-    "css-loader": "^1.0.0",
-    "cssnano": "^4.1.0",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-loader": "^2.0.0",
-    "mini-css-extract-plugin": "^0.4.2",
-    "postcss-loader": "^3.0.0",
-    "prettier": "^1.13.7",
-    "rimraf": "^2.6.2",
-    "style-loader": "^0.23.0",
-    "stylint-loader": "^1.0.0",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
-    "uglify-js": "^3.4.0",
-    "uglifyjs-webpack-plugin": "^1.2.5",
-    "webpack": "^4.12.0",
-    "webpack-cli": "^3.0.7"
+    "@release-it/conventional-changelog": "^7.0.1",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "esbuild-jest": "^0.5.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-compat": "^3.13.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "git-cz": "^4.9.0",
+    "network-information-types": "^0.1.1",
+    "prettier": "^2.4.1",
+    "prettier-eslint": "^13.0.0",
+    "release-it": "^16.1.5",
+    "rollup": "^2.39.0",
+    "rollup-plugin-dts": "^4.0.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.35.0",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.3.1",
+    "typedoc": "^0.25.2",
+    "typedoc-plugin-frontmatter": "^0.0.2",
+    "typedoc-plugin-markdown": "^3.15.3",
+    "typedoc-plugin-mdn-links": "^3.0.3",
+    "typedoc-plugin-no-inherit": "^1.4.0",
+    "typedoc-plugin-rename-defaults": "^0.6.5",
+    "typescript": "^4.5.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/git-cz"
+    }
   }
 }
