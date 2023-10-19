@@ -188,7 +188,7 @@ With this approach, the script will locate given template and produce frameports
 ```html
 <div
   data-frameport
-  data-frameport-css="https://phun-ky.net/css/ph.css"
+  data-frameport-css="/css/ph.css"
   data-frameport-style="body{background-color: #84a295 !important;}"
   data-frameport-target
   data-frameport-template="#template"
@@ -211,7 +211,7 @@ With this approach, you decide where the frameports are added. The script will l
 ```html
 <div
   data-frameport
-  data-frameport-css="https://phun-ky.net/css/ph.css"
+  data-frameport-css="/css/ph.css"
   data-frameport-style="body{background-color: #84a295 !important;}"
   data-frameport-viewports="375x667,360x740,768x1024"
 >
