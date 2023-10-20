@@ -25,7 +25,7 @@
 
 ## About
 
-Frameprot was created so I could display frameports of components in a style guide. It creates iframes with your component (html, css and javascript) that acts as natural viewports, thus making use of your media queries!
+Frameport was created so I could display frameports of components in a style guide. It creates iframes with your component (html, css and javascript) that acts as natural viewports, thus making use of your media queries! It is a zero dependency package!
 
 ```shell-session
 npm i -S @phun-ky/frameport
