@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/phun-ky/frameport/compare/v1.2.1...v1.2.2) (2023-10-23)
+
+
+### Tasks
+
+* 🤖 do not remember what i added ([83e1629](https://github.com/phun-ky/frameport/commit/83e1629398184cf39b208032737c9bdfea9b4840))
+
 ## [1.2.1](https://github.com/phun-ky/frameport/compare/v1.2.0...v1.2.1) (2023-10-19)
 
 
