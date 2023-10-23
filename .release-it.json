@@ -1,4 +1,5 @@
 {
+  "requireCleanWorkingDir": false,
   "git": {
     "commitMessage": "chore: 🤖 release v${version}"
   },
