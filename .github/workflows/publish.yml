@@ -7,10 +7,6 @@ on:
   pull_request:
     types: [closed]
     branches: [ "main" ]
-    paths:
-      - 'src/**'
-      - 'api/**'
-      - 'public/**'
   workflow_dispatch:
 jobs:
   publish:
