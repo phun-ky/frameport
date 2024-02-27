@@ -14,7 +14,7 @@ export const getHeaders = (
   if (rdeHeaders) {
     if (Array.isArray(rdeHeaders)) {
       headers = [...headers, ...rdeHeaders].map((h) => h.trim());
-    } else if (rdeHeaders.indexOf(',') !== -1) {
+    } else if (rdeHeaders.includes(',')) {
       headers = [...headers, ...rdeHeaders.split(',')].map((h) => h.trim());
     } else if (rdeHeaders !== '') {
       headers.push(rdeHeaders.trim());
