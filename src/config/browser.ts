@@ -123,10 +123,7 @@ export const activate = (frameport: FrameportFunctionType): void => {
   if (script) {
     const frameportScriptSrc = script.getAttribute('src');
 
-    if (
-      frameportScriptSrc &&
-      frameportScriptSrc.indexOf('frameport.js') !== -1
-    ) {
+    if (frameportScriptSrc && frameportScriptSrc.includes('frameport.js')) {
       if (script.hasAttribute('data-manual')) {
         manual(frameport);
       } else if (script.hasAttribute('data-instant')) {
