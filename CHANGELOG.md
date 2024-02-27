@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.2.4](https://github.com/phun-ky/frameport/compare/v1.2.3...v1.2.4) (2024-02-27)
+
+
+### Tasks
+
+* 🤖 Some updates ([9f43ad7](https://github.com/phun-ky/frameport/commit/9f43ad7be6e147575124e8b823affec3bd4e486f))
+* 🤖 Update dependencies and scripts ([8a525f0](https://github.com/phun-ky/frameport/commit/8a525f0c50a7e8bf7bc3013f91bf097a82ddc9ce))
+* 🤖 Update workflows ([33562de](https://github.com/phun-ky/frameport/commit/33562de37c2bd0bc86b22e554b1acf91ef0a4c37))
+* 🤖 use correct slug for codecov ([d3f894a](https://github.com/phun-ky/frameport/commit/d3f894a98b281ed5e76cacbe62e6654573428c51))
+
+
+### Documentation
+
+* ✏️ Update `README.md` ([80ce1a2](https://github.com/phun-ky/frameport/commit/80ce1a29cb467ea5e87e23078d61b4e1b07f69a4))
+
+
+### Refactoring
+
+* 💡 code format ([599de31](https://github.com/phun-ky/frameport/commit/599de313129327a73f0756b116800a00ea872096))
+
 ## [1.2.3](https://github.com/phun-ky/frameport/compare/v1.2.2...v1.2.3) (2023-10-27)
 
 

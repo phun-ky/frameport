@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[main.ts:5](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L5)
+[main.ts:6](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L6)
 
 ## Functions
 
@@ -33,4 +33,4 @@
 
 #### Defined in
 
-[main.ts:12](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L12)
+[main.ts:13](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L13)

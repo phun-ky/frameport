@@ -6,7 +6,7 @@
 
 ### add
 
-▸ **add**(`el`, `styles`): `Promise`<`void`\>
+▸ **add**(`el`, `styles`): `Promise`\<`void`\>
 
 Adds CSS styles to an HTMLElement.
 
@@ -15,11 +15,11 @@ Adds CSS styles to an HTMLElement.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `el` | `HTMLElement` | The HTMLElement to apply styles to. |
-| `styles` | `object` \| { `key`: `string` ; `value`: `string`  }[] | An object or an array of objects containing CSS styles to apply. |
+| `styles` | `object` \| \{ `key`: `string` ; `value`: `string`  }[] | An object or an array of objects containing CSS styles to apply. |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 - A Promise that resolves after styles are applied.
 
@@ -40,13 +40,13 @@ await add(element, styles);
 
 #### Defined in
 
-[utils/styles.ts:26](https://github.com/phun-ky/frameport/blob/main/src/utils/styles.ts#L26)
+[utils/styles.ts:25](https://github.com/phun-ky/frameport/blob/main/src/utils/styles.ts#L25)
 
 ___
 
 ### get
 
-▸ **get**(`el`): `Promise`<`CSSStyleDeclaration`\>
+▸ **get**(`el`): `Promise`\<`CSSStyleDeclaration`\>
 
 Gets the computed CSS styles of an HTMLElement.
 
@@ -58,7 +58,7 @@ Gets the computed CSS styles of an HTMLElement.
 
 #### Returns
 
-`Promise`<`CSSStyleDeclaration`\>
+`Promise`\<`CSSStyleDeclaration`\>
 
 - A Promise that resolves with the computed CSS styles.
 
@@ -73,4 +73,4 @@ console.log(computedStyles.color); // Logs the color property value
 
 #### Defined in
 
-[utils/styles.ts:68](https://github.com/phun-ky/frameport/blob/main/src/utils/styles.ts#L68)
+[utils/styles.ts:67](https://github.com/phun-ky/frameport/blob/main/src/utils/styles.ts#L67)

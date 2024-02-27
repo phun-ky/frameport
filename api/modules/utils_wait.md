@@ -4,46 +4,15 @@
 
 ## Functions
 
-### waitFor
-
-▸ **waitFor**(`ms`): `Promise`<`void`\>
-
-Waits for the specified amount of time in milliseconds.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `ms` | `number` | The number of milliseconds to wait. |
-
-#### Returns
-
-`Promise`<`void`\>
-
-- A Promise that resolves after the specified time.
-
-**`Example`**
-
-```ts
-// Wait for 1 second (1000 milliseconds)
-await waitFor(1000);
-```
-
-#### Defined in
-
-[utils/wait.ts:13](https://github.com/phun-ky/frameport/blob/main/src/utils/wait.ts#L13)
-
-___
-
 ### waitForFrame
 
-▸ **waitForFrame**(): `Promise`<`number`\>
+▸ **waitForFrame**(): `Promise`\<`number`\>
 
 Waits for the next animation frame using requestAnimationFrame.
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
 - A Promise that resolves with the timestamp of the next animation frame.
 
@@ -59,4 +28,4 @@ const timestamp = await waitForFrame();
 
 #### Defined in
 
-[utils/wait.ts:30](https://github.com/phun-ky/frameport/blob/main/src/utils/wait.ts#L30)
+[utils/wait.ts:15](https://github.com/phun-ky/frameport/blob/main/src/utils/wait.ts#L15)

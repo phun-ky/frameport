@@ -29,7 +29,7 @@ A function to activate frameport based on script attributes.
 
 #### Defined in
 
-[config/browser.ts:125](https://github.com/phun-ky/frameport/blob/main/src/config/browser.ts#L125)
+[config/browser.ts:120](https://github.com/phun-ky/frameport/blob/main/src/config/browser.ts#L120)
 
 ___
 
@@ -58,7 +58,7 @@ A function to initialize frameport when the DOM is ready.
 
 #### Defined in
 
-[config/browser.ts:19](https://github.com/phun-ky/frameport/blob/main/src/config/browser.ts#L19)
+[config/browser.ts:17](https://github.com/phun-ky/frameport/blob/main/src/config/browser.ts#L17)
 
 ___
 
@@ -81,7 +81,7 @@ A function to initialize lazy frameport functionality.
 
 #### Defined in
 
-[config/browser.ts:41](https://github.com/phun-ky/frameport/blob/main/src/config/browser.ts#L41)
+[config/browser.ts:37](https://github.com/phun-ky/frameport/blob/main/src/config/browser.ts#L37)
 
 ___
 
@@ -110,4 +110,4 @@ A function to manually activate frameport.
 
 #### Defined in
 
-[config/browser.ts:108](https://github.com/phun-ky/frameport/blob/main/src/config/browser.ts#L108)
+[config/browser.ts:105](https://github.com/phun-ky/frameport/blob/main/src/config/browser.ts#L105)
