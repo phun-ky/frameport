@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/phun-ky/frameport/compare/v1.2.2...v1.2.3) (2023-10-27)
+
+
+### Tasks
+
+* 🤖 bump eslint-plugin-import from 2.28.1 to 2.29.0 ([a016d13](https://github.com/phun-ky/frameport/commit/a016d13cc6310320139e90f2b8ab73517712a52f))
+
 ## [1.2.2](https://github.com/phun-ky/frameport/compare/v1.2.1...v1.2.2) (2023-10-23)
 
 
