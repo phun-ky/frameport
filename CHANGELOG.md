@@ -1,5 +1,30 @@
 # Changelog
 
+## [2.0.0](https://github.com/phun-ky/frameport/compare/v1.2.4...v2.0.0) (2024-02-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* 🧨 Produced files are now moved to `dist`, this breaks anyone references
+the built files with the `script`-tag. Old URL was `*/frameport*`, new is
+`*/dist/frameport*`
+
+### Tasks
+
+* 🤖 release v1.2.4 ([8950564](https://github.com/phun-ky/frameport/commit/8950564fdb5ade42c8f7db853457d0fdc6109087))
+* 🤖 Update dependencies and scripts ([4e5566f](https://github.com/phun-ky/frameport/commit/4e5566f68486eea9c8d15c07db6e99be349b020b))
+* 🤖 use correct slug for codecov ([939f886](https://github.com/phun-ky/frameport/commit/939f88602d23ee4b5029a5b85d06405616624939))
+
+
+### Documentation
+
+* ✏️ Add community files ([41553e6](https://github.com/phun-ky/frameport/commit/41553e69caeb7ba6c67080e16fe32240ac24b9ee))
+
+
+### Refactoring
+
+* 💡 code format ([7dc7678](https://github.com/phun-ky/frameport/commit/7dc7678bcf6a30a0f0d3e0a6f1bea5b44331db62))
+
 ## [1.2.4](https://github.com/phun-ky/frameport/compare/v1.2.3...v1.2.4) (2024-02-27)
 
 
