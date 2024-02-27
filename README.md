@@ -4,24 +4,26 @@
 
 > Frameport enables you to fake and display your responsive components in real life media queries!
 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com) [![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html) ![npm version](https://img.shields.io/npm/v/@phun-ky/frameport) ![issues](https://img.shields.io/github/issues/phun-ky/frameport) ![license](https://img.shields.io/npm/l/@phun-ky/frameport) ![size](https://img.shields.io/bundlephobia/min/@phun-ky/frameport) ![npm](https://img.shields.io/npm/dm/%40phun-ky/frameport) ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/frameport)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com) [![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html) ![npm version](https://img.shields.io/npm/v/@phun-ky/frameport) ![issues](https://img.shields.io/github/issues/phun-ky/frameport) ![license](https://img.shields.io/npm/l/@phun-ky/frameport) ![size](https://img.shields.io/bundlephobia/min/@phun-ky/frameport) ![npm](https://img.shields.io/npm/dm/%40phun-ky/frameport) ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/frameport) [![codecov](https://codecov.io/gh/phun-ky/frameport/graph/badge.svg?token=VA91DL7ZLZ)](https://codecov.io/gh/phun-ky/frameport)
 
-1. [@phun-ky/frameport](#phun-kyframeport)
-   1. [About](#about)
-   2. [API](#api)
-   3. [Demo](#demo)
-   4. [Options](#options)
-   5. [Usage](#usage)
-      1. [Typescript](#typescript)
-      2. [ESM](#esm)
-      3. [Script](#script)
-   6. [Advanced usage](#advanced-usage)
-      1. [Lazy](#lazy)
-   7. [Features](#features)
-   8. [Via DOM](#via-dom)
-      1. [Use templates as a target](#use-templates-as-a-target)
-      2. [Use targets with different template](#use-targets-with-different-template)
-         1. [Allowed tags](#allowed-tags)
+- [@phun-ky/frameport](#phun-kyframeport)
+  - [About](#about)
+  - [API](#api)
+  - [Demo](#demo)
+  - [Options](#options)
+  - [Usage](#usage)
+    - [Typescript](#typescript)
+    - [ESM](#esm)
+    - [Script](#script)
+  - [Advanced usage](#advanced-usage)
+    - [Lazy](#lazy)
+  - [Features](#features)
+  - [Via DOM](#via-dom)
+    - [Use templates as a target](#use-templates-as-a-target)
+    - [Use targets with different template](#use-targets-with-different-template)
+      - [Allowed tags](#allowed-tags)
+  - [Contributing](#contributing)
+  - [Sponsor me](#sponsor-me)
 
 ## About
 
@@ -62,7 +64,7 @@ Click [here for a demo on codepen.io](https://codepen.io/phun-ky/full/MWWWvLm)
 
 ### Typescript
 
-Types can be found in `@phun-ky/frameport/frameport.d.ts`.
+Types can be found in `@phun-ky/frameport/dist/frameport.d.ts`.
 
 ### ESM
 
@@ -74,7 +76,7 @@ import frameport from '@phun-ky/frameport';
 // do stuff
 frameport(document.getElementById('target'), {
   width: 667,
-  html: '<h1>FOO</h1>',
+  html: '<h1>FOO</h1>'
 });
 ```
 
@@ -176,7 +178,13 @@ export const lazy = (): void => {
 Place the `script` tag at the bottom of your page, right before the `</body>`-tag:
 
 ```html
-<script src="../path/to/@phun-ky/frameport/frameport.js"></script>
+<script src="../path/to/@phun-ky/frameport/dist/frameport.js"></script>
+```
+
+Or with a CDN:
+
+```html
+<script src="https://unpkg.com/@phun-ky/frameport/dist/frameport.js"></script>
 ```
 
 And then follow the steps below to display the frameports you want :)
@@ -246,3 +254,15 @@ This approach is useful if you want to use a device decorator to mimic appearanc
 | data-frameport-class     | Class names to be given the generated iframe                                                                                                                                                    |
 | data-frameport-viewports | The viewports to generate for examples. This is a string `wxh` for example: `375x667`. If you want more viewports, you can separate them with a comma: `375x667,360x740,768x1024`. **Required** |
 | data-frameport-headers   | An array of HTTP headers to include when fetching the HTML content                                                                                                                              |
+
+## Contributing
+
+If you want to contribute, please read the [CONTRIBUTING.md](https://github.com/phun-ky/frameport/blob/main/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/phun-ky/frameport/blob/main/CODE_OF_CONDUCT.md)
+
+## Sponsor me
+
+I'm an Open Source evangelist, creating stuff that does not exist yet to help get rid of secondary activities and to enhance systems already in place, be it documentation or web sites.
+
+The sponsorship is an unique opportunity to alleviate more hours for me to maintain my projects, create new ones and contribute to the large community we're all part of :)
+
+[Support me with GitHub Sponsors](https://github.com/sponsors/phun-ky).
