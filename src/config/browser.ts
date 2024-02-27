@@ -1,9 +1,7 @@
 /* eslint no-console:0 */
-'use strict';
-
-import { FrameportFunctionType } from 'types';
-import dom from 'features/dom';
-import { getHeaders } from 'utils/headers';
+import dom from '../features/dom';
+import { FrameportFunctionType } from '../types';
+import { getHeaders } from '../utils/headers';
 
 /**
  * A function to initialize frameport when the DOM is ready.
@@ -53,8 +51,8 @@ export const lazy = (): void => {
             frameportJs: javascript,
             frameportClass: className,
             frameportHeaders: headers,
-            frameportViewports: viewports,
-          },
+            frameportViewports: viewports
+          }
         } = el.target as HTMLElement;
 
         let html = el.target.innerHTML;
@@ -81,8 +79,9 @@ export const lazy = (): void => {
           javascript,
           className,
           headers: getHeaders(headers),
-          viewports,
+          viewports
         };
+
         dom(el.target as HTMLElement, options);
         observer.unobserve(el.target);
       }

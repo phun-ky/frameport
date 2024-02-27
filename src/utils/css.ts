@@ -5,8 +5,9 @@
  * @returns {string} - A CSS link tag.
  */
 export const getCSS = (css: string | undefined): string => {
-  if (css) {
-    return `<link rel="stylesheet" type="text/css" href="${window.location.protocol}//${window.location.host}${css}" />`;
+  if (css && css !== '') {
+    return `<link rel="stylesheet" type="text/css" href="${window.location.protocol}//${window.location.host}${css.trim()}" />`;
   }
+
   return '';
 };

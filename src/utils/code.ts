@@ -5,8 +5,9 @@
  * @returns {string} - The script element or an empty string if code is not available.
  */
 export const getCode = (code: string | undefined): string => {
-  if (code) {
-    return `<script>${code}</script>`;
+  if (code && code !== '') {
+    return `<script>${code.trim()}</script>`;
   }
+
   return '';
 };

@@ -1,12 +1,13 @@
-import { domReady, lazy, manual, activate } from 'config/browser';
-import dom from 'features/dom';
-import { getHeaders } from 'utils/headers';
+/* eslint-disable import/no-unused-modules */
+import { domReady, lazy, manual, activate } from './config/browser';
+import dom from './features/dom';
+import { getHeaders } from './utils/headers';
 
 export const modes = {
   domReady,
   lazy,
   manual,
-  activate,
+  activate
 };
 
 const frameport = () => {
@@ -14,7 +15,8 @@ const frameport = () => {
     .querySelectorAll('[data-frameport-iframe]')
     .forEach((iframe) => iframe.remove());
 
-  const elsToBeTransformedTemplate = document.querySelectorAll('[data-frameport]');
+  const elsToBeTransformedTemplate =
+    document.querySelectorAll('[data-frameport]');
 
   elsToBeTransformedTemplate.forEach((targetElement: HTMLElement) => {
     const {
@@ -28,8 +30,8 @@ const frameport = () => {
         frameportJs: javascript,
         frameportClass: className,
         frameportHeaders: headers,
-        frameportViewports: viewports,
-      },
+        frameportViewports: viewports
+      }
     } = targetElement;
 
     let html = targetElement.innerHTML;
@@ -56,7 +58,7 @@ const frameport = () => {
       javascript,
       className,
       headers: getHeaders(headers),
-      viewports,
+      viewports
     };
 
     dom(targetElement, options);

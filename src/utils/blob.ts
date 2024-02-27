@@ -7,5 +7,6 @@
  */
 export const getBlobURL = (html: string, type: string): string => {
   const blob = new Blob([html], { type });
+
   return URL.createObjectURL(blob);
 };

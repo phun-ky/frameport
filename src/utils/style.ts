@@ -5,10 +5,9 @@
  * @returns {string} - The style element as a string or an empty string if no styles are provided.
  */
 export const getStyle = (style: string | undefined): string => {
-  if (style) {
-    return `<style type="text/css">
-    ${style}
-  </style>`;
+  if (style && style !== '') {
+    return `<style type="text/css">${style}</style>`;
   }
+
   return '';
 };

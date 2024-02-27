@@ -1,7 +1,7 @@
-import { FrameportOptions } from 'types';
-import { createIframe } from 'utils/iframe';
-import { getGeneratedPageURL } from 'utils/page';
-import { add as addStyles } from 'utils/styles';
+import { FrameportOptions } from '../types';
+import { createIframe } from '../utils/iframe';
+import { getGeneratedPageURL } from '../utils/page';
+import { add as addStyles } from '../utils/styles';
 
 /**
  * Create an iframe element with specified options and styles.
@@ -9,9 +9,7 @@ import { add as addStyles } from 'utils/styles';
  * @param {FrameportOptions} options - The options for creating the iframe.
  * @returns {HTMLIFrameElement} - The created iframe element.
  */
-export const create = (
-  options: FrameportOptions
-): HTMLIFrameElement => {
+export const create = (options: FrameportOptions): HTMLIFrameElement => {
   const { className, height, width } = options;
   const url = getGeneratedPageURL(options);
   const iframeElement = createIframe();

@@ -1,4 +1,4 @@
-import { DEFAULT_HEADERS } from "./constants";
+import { DEFAULT_HEADERS } from '../constants';
 
 /**
  * Get headers for the iframe generated
@@ -11,11 +11,11 @@ export const getHeaders = (rdeHeaders: string | string[] | null | undefined): st
 
   if (rdeHeaders) {
     if (Array.isArray(rdeHeaders)) {
-      headers = [...headers, ...rdeHeaders];
+      headers = [...headers, ...rdeHeaders].map(h => h.trim());
     } else if (rdeHeaders.indexOf(',') !== -1) {
-      headers = [...headers, ...rdeHeaders.split(',')];
+      headers = [...headers, ...rdeHeaders.split(',')].map(h => h.trim());
     } else if (rdeHeaders !== '') {
-      headers.push(rdeHeaders);
+      headers.push(rdeHeaders.trim());
     }
   }
 
