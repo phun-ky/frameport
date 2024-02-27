@@ -12,10 +12,6 @@
 
 Ƭ **FrameportFunctionType**: () => `void`
 
-#### Type declaration
-
-▸ (): `void`
-
 Example usage:
 ```ts
 const options: FrameportOptions = {
@@ -30,6 +26,10 @@ const options: FrameportOptions = {
   headers: ['Authorization: Bearer Token']
 };
 ```
+
+#### Type declaration
+
+▸ (): `void`
 
 ##### Returns
 
