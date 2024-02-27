@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/phun-ky/frameport/compare/v2.0.0...v2.0.1) (2024-02-27)
+
+
+### Documentation
+
+* ✏️ Do not generate docs from tests ([ebbde94](https://github.com/phun-ky/frameport/commit/ebbde94f87aedd7721c64370f2e5c25e6ec3ad50))
+
 ## [2.0.0](https://github.com/phun-ky/frameport/compare/v1.2.4...v2.0.0) (2024-02-27)
 
 
