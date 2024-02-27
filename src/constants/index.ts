@@ -3,7 +3,14 @@
  *
  * @type {{ clip: string, height: string, margin: string, overflow: string, position: string, width: string }}
  */
-export const HIDE_TEMPLATE_STYLE: { clip: string; height: string; margin: string; overflow: string; position: string; width: string; } = {
+export const HIDE_TEMPLATE_STYLE: {
+  clip: string;
+  height: string;
+  margin: string;
+  overflow: string;
+  position: string;
+  width: string;
+} = {
   clip: 'rect(1px, 1px, 1px, 1px)',
   height: '1px',
   margin: '0',

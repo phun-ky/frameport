@@ -12,7 +12,7 @@ import { getStyle } from './style';
  * @returns {string} - The generated HTML source code as a string.
  */
 export const getSource = (options: FrameportOptions): string => {
-  let {  style, css, code, javascript } = options;
+  let { style, css, code, javascript } = options;
 
   const { html, headers = [] } = options;
 

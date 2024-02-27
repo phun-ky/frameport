@@ -14,9 +14,7 @@ import { getHeaders } from '../utils/headers';
  * // domReady(myRDE);
  * ```
  */
-export const domReady = (
-  frameport: FrameportFunctionType
-): void => {
+export const domReady = (frameport: FrameportFunctionType): void => {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       frameport();
@@ -104,9 +102,7 @@ export const lazy = (): void => {
  * // manual(myRDE);
  * ```
  */
-export const manual = (
-  frameport: FrameportFunctionType
-): void => {
+export const manual = (frameport: FrameportFunctionType): void => {
   window.frameport = frameport;
 };
 
@@ -121,15 +117,16 @@ export const manual = (
  * // activate(myRDE);
  * ```
  */
-export const activate = (
-  frameport: FrameportFunctionType
-): void => {
+export const activate = (frameport: FrameportFunctionType): void => {
   const script = document.currentScript;
 
   if (script) {
     const frameportScriptSrc = script.getAttribute('src');
 
-    if (frameportScriptSrc && frameportScriptSrc.indexOf('frameport.js') !== -1) {
+    if (
+      frameportScriptSrc &&
+      frameportScriptSrc.indexOf('frameport.js') !== -1
+    ) {
       if (script.hasAttribute('data-manual')) {
         manual(frameport);
       } else if (script.hasAttribute('data-instant')) {

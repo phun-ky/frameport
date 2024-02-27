@@ -3,7 +3,6 @@ import { describe, it } from 'node:test';
 
 import { getBlobURL } from '../blob';
 
-
 describe('getBlobURL', () => {
   it('should generate a Blob URL with the specified HTML content and MIME type', () => {
     const html = '<div>Hello, World!</div>';

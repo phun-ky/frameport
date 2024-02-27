@@ -3,4 +3,5 @@
  *
  * @returns {HTMLIFrameElement} - The created iframe element.
  */
-export const createIframe = (): HTMLIFrameElement => document.createElement('iframe');
+export const createIframe = (): HTMLIFrameElement =>
+  document.createElement('iframe');

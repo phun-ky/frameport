@@ -3,7 +3,6 @@ import { describe, it } from 'node:test';
 
 import { getCSS } from '../css';
 
-
 describe('getCSS', () => {
   it('should generate a CSS link tag with the correct CSS file URL', () => {
     const cssPath = '/path/to/styles.css';
