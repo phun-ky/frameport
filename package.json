@@ -41,6 +41,9 @@
     "html",
     "viewport",
     "frame",
+    "iframes",
+    "iframe",
+    "component",
     "frameport"
   ],
   "author": "Alexander Vassbotn Røyne-Helgesen <alexander+frameport@phun-ky.net>",
