@@ -11,10 +11,7 @@ import { add as addStyles } from '../utils/styles';
  * @param {FrameportOptions} options - The options for the iframe.
  * @returns {void}
  */
-const dom = (
-  targetElement: HTMLElement,
-  options: FrameportOptions
-): void => {
+const dom = (targetElement: HTMLElement, options: FrameportOptions): void => {
   if (
     !targetElement ||
     !options ||
