@@ -1,8 +1,8 @@
-import { generate } from 'config/generate';
-import { generateViewports } from 'config/generate-viewports';
-import { FrameportOptions } from 'types';
-import { HIDE_TEMPLATE_STYLE } from 'utils/constants';
-import { add as addStyles } from 'utils/styles';
+import { generate } from '../config/generate';
+import { generateViewports } from '../config/generate-viewports';
+import { HIDE_TEMPLATE_STYLE } from '../constants';
+import { FrameportOptions } from '../types';
+import { add as addStyles } from '../utils/styles';
 
 /**
  * Generate iframes into the DOM, possibly generating viewports.
@@ -11,10 +11,7 @@ import { add as addStyles } from 'utils/styles';
  * @param {FrameportOptions} options - The options for the iframe.
  * @returns {void}
  */
-const dom = (
-  targetElement: HTMLElement,
-  options: FrameportOptions
-): void => {
+const dom = (targetElement: HTMLElement, options: FrameportOptions): void => {
   if (
     !targetElement ||
     !options ||

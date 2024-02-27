@@ -1,5 +1,5 @@
-import { getBlobURL } from "./blob";
-import { getSource } from "./source";
+import { getBlobURL } from './blob';
+import { getSource } from './source';
 
 /**
  * Get the URL of a generated HTML page based on the provided options.
@@ -9,5 +9,6 @@ import { getSource } from "./source";
  */
 export const getGeneratedPageURL = (options) => {
   const source = getSource(options);
+
   return getBlobURL(source, 'text/html');
 };

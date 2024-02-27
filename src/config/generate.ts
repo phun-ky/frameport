@@ -1,5 +1,5 @@
-import { FrameportOptions } from 'types';
-import { create } from 'utils/create';
+import { FrameportOptions } from '../types';
+import { create } from '../utils/create';
 
 /**
  * Generate an iframe with the given options and append it to a target element.

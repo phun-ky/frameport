@@ -1,7 +1,8 @@
+import { FrameportOptions } from '../types';
+
 import { getCode } from './code';
 import { getCSS } from './css';
 import { getJavaScript } from './js';
-import { FrameportOptions } from '../types';
 import { getStyle } from './style';
 
 /**
@@ -11,23 +12,26 @@ import { getStyle } from './style';
  * @returns {string} - The generated HTML source code as a string.
  */
 export const getSource = (options: FrameportOptions): string => {
-  let { html, style, css, code, javascript, headers = [] } = options;
+  let { style, css, code, javascript } = options;
+
+  const { html, headers = [] } = options;
 
   css = getCSS(css);
   javascript = getJavaScript(javascript);
   code = getCode(code);
   style = getStyle(style);
 
-  return `<!DOCTYPE html><html>
-  <head>
-    ${headers.join('\n')}
-    ${style}
-    ${css}
-  </head>
-  <body>
-    ${html || ''}
-    ${javascript}
-    ${code}
-  </body>
+  return `<!DOCTYPE html>
+<html>
+<head>
+${headers.join('\n')}
+${style}
+${css}
+</head>
+<body>
+${html || ''}
+${javascript}
+${code}
+</body>
 </html>`;
 };

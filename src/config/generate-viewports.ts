@@ -1,5 +1,5 @@
-import { FrameportOptions } from 'types';
-import { create } from 'utils/create';
+import { FrameportOptions } from '../types';
+import { create } from '../utils/create';
 
 /**
  * Generate multiple iframe elements for different viewports and append them to a target element.
@@ -18,19 +18,14 @@ export const generateViewports = (
 
   let screens: string[] = [];
 
-  if (viewports.indexOf(',') !== -1) {
-    screens = [...screens, ...viewports.split(',')];
-  } else {
-    screens.push(viewports);
-  }
+  if (viewports.includes(',')) screens = [...screens, ...viewports.split(',')];
+  else screens.push(viewports);
 
-  screens.forEach((viewPort: string) => {
+  for (const viewPort of screens) {
     const values = viewPort.split('x');
-    const width = values[0];
-    const height = values[1];
-
+    const [width, height] = values;
     const iframeElement = create({ ...options, height, width });
 
     target.insertAdjacentElement('afterend', iframeElement);
-  });
+  }
 };

@@ -1,9 +1,7 @@
 /* eslint no-console:0 */
-'use strict';
-
-import { FrameportFunctionType } from 'types';
-import dom from 'features/dom';
-import { getHeaders } from 'utils/headers';
+import dom from '../features/dom';
+import { FrameportFunctionType } from '../types';
+import { getHeaders } from '../utils/headers';
 
 /**
  * A function to initialize frameport when the DOM is ready.
@@ -16,9 +14,7 @@ import { getHeaders } from 'utils/headers';
  * // domReady(myRDE);
  * ```
  */
-export const domReady = (
-  frameport: FrameportFunctionType
-): void => {
+export const domReady = (frameport: FrameportFunctionType): void => {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       frameport();
@@ -53,8 +49,8 @@ export const lazy = (): void => {
             frameportJs: javascript,
             frameportClass: className,
             frameportHeaders: headers,
-            frameportViewports: viewports,
-          },
+            frameportViewports: viewports
+          }
         } = el.target as HTMLElement;
 
         let html = el.target.innerHTML;
@@ -81,8 +77,9 @@ export const lazy = (): void => {
           javascript,
           className,
           headers: getHeaders(headers),
-          viewports,
+          viewports
         };
+
         dom(el.target as HTMLElement, options);
         observer.unobserve(el.target);
       }
@@ -105,9 +102,7 @@ export const lazy = (): void => {
  * // manual(myRDE);
  * ```
  */
-export const manual = (
-  frameport: FrameportFunctionType
-): void => {
+export const manual = (frameport: FrameportFunctionType): void => {
   window.frameport = frameport;
 };
 
@@ -122,15 +117,13 @@ export const manual = (
  * // activate(myRDE);
  * ```
  */
-export const activate = (
-  frameport: FrameportFunctionType
-): void => {
+export const activate = (frameport: FrameportFunctionType): void => {
   const script = document.currentScript;
 
   if (script) {
     const frameportScriptSrc = script.getAttribute('src');
 
-    if (frameportScriptSrc && frameportScriptSrc.indexOf('frameport.js') !== -1) {
+    if (frameportScriptSrc && frameportScriptSrc.includes('frameport.js')) {
       if (script.hasAttribute('data-manual')) {
         manual(frameport);
       } else if (script.hasAttribute('data-instant')) {
