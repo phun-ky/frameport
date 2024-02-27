@@ -157,6 +157,7 @@ declare global {
     /**
      * Represents the frameport object for additional functionality.
      */
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     frameport: any;
   }
 }
