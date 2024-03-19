@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.0.6](https://github.com/phun-ky/frameport/compare/v2.0.5...v2.0.6) (2024-03-19)
+
+
+### Tasks
+
+* 🤖 bump putout from 35.5.1 to 35.7.5 ([a997982](https://github.com/phun-ky/frameport/commit/a99798221aaea39de64ff86797297dc2e3f32440))
+
+## [2.0.5](https://github.com/phun-ky/frameport/compare/v2.0.4...v2.0.5) (2024-03-19)
+
+
+### Tasks
+
+* 🤖 bump typescript from 5.3.3 to 5.4.2 ([393448f](https://github.com/phun-ky/frameport/commit/393448f1a721983a90f9af54160e2595314bc59a))
+
 ## [2.0.4](https://github.com/phun-ky/frameport/compare/v2.0.3...v2.0.4) (2024-03-19)
 
 
