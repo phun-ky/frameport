@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/phun-ky/frameport/compare/v2.0.2...v2.0.3) (2024-03-19)
+
+
+### Tasks
+
+* 🤖 bump typedoc-plugin-mdn-links from 3.1.17 to 3.1.18 ([12b6c1e](https://github.com/phun-ky/frameport/commit/12b6c1ea1ff5a5e4e50c2deef78cbb02b2f993bb))
+
 ## [2.0.2](https://github.com/phun-ky/frameport/compare/v2.0.1...v2.0.2) (2024-03-13)
 
 
