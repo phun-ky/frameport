@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.4](https://github.com/phun-ky/frameport/compare/v2.0.3...v2.0.4) (2024-03-19)
+
+
+### Tasks
+
+* 🤖 bump typedoc from 0.25.9 to 0.25.12 ([1155e5e](https://github.com/phun-ky/frameport/commit/1155e5e40d17e7958d32cffa12af985c756f6de8))
+
 ## [2.0.3](https://github.com/phun-ky/frameport/compare/v2.0.2...v2.0.3) (2024-03-19)
 
 
