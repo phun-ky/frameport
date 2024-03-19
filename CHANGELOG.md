@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.7](https://github.com/phun-ky/frameport/compare/v2.0.6...v2.0.7) (2024-03-19)
+
+
+### Tasks
+
+* 🤖 bump stylus from 0.62.0 to 0.63.0 ([20ea2c3](https://github.com/phun-ky/frameport/commit/20ea2c305f2e83cade9215215f0ec702fc9992d0))
+
 ## [2.0.6](https://github.com/phun-ky/frameport/compare/v2.0.5...v2.0.6) (2024-03-19)
 
 
