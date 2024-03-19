@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.6](https://github.com/phun-ky/frameport/compare/v2.0.5...v2.0.6) (2024-03-19)
+
+
+### Tasks
+
+* 🤖 bump putout from 35.5.1 to 35.7.5 ([a997982](https://github.com/phun-ky/frameport/commit/a99798221aaea39de64ff86797297dc2e3f32440))
+
 ## [2.0.5](https://github.com/phun-ky/frameport/compare/v2.0.4...v2.0.5) (2024-03-19)
 
 
