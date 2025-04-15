@@ -29,7 +29,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the
-[@phun-ky/frameport Code of Conduct](https://github.com/phun-ky/frameportblob/master/CODE_OF_CONDUCT.md).
+[@phun-ky/frameport Code of Conduct](https://github.com/phun-ky/frameport/blob/master/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report unacceptable behavior
 to <code-of-conduct@phun-ky.net>.
 
