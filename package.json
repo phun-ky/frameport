@@ -10,9 +10,10 @@
   "types": "dist/frameport.d.ts",
   "type": "module",
   "scripts": {
-    "test": "glob -c \"node --import tsx --import global-jsdom/register --test --no-warnings\" \"./src/**/__tests__/**/*.[jt]s\"",
-    "pretest-ci": "rm -rf coverage && mkdir -p coverage",
-    "test-ci": "glob -c \"node --import tsx --import global-jsdom/register --test --no-warnings --experimental-test-coverage --test-reporter=cobertura --test-reporter-destination=coverage/cobertura-coverage.xml --test-reporter=spec --test-reporter-destination=stdout\" \"./src/**/__tests__/**/*.[jt]s\"",
+    "test": "npm run test:unit",
+    "pretest:ci": "rm -rf coverage && mkdir -p coverage",
+    "test:ci": "glob -c \"node --import tsx --import global-jsdom/register --test --no-warnings --experimental-test-coverage --test-reporter=cobertura --test-reporter-destination=coverage/cobertura-coverage.xml --test-reporter=spec --test-reporter-destination=stdout\" \"./src/**/__tests__/**/*.[jt]s\"",
+    "test:unit": "glob -c \"node --import tsx --import global-jsdom/register --test --no-warnings\" \"./src/**/__tests__/**/*.spec.[jt]s\"",
     "rollup": "rollup -c",
     "prerollup:dev": "npm run clean",
     "rollup:dev": "rollup -c -w",
@@ -93,7 +94,7 @@
     "ts-node": "^10.9.1",
     "tslib": "^2.3.1",
     "tsx": "^4.7.1",
-    "typedoc": "^0.25.8",
+    "typedoc": "^0.28.2",
     "typedoc-plugin-frontmatter": "^0.0.2",
     "typedoc-plugin-markdown": "^3.17.1",
     "typedoc-plugin-mdn-links": "^3.1.16",
@@ -107,7 +108,7 @@
     }
   },
   "engines": {
-    "node": ">=20.11.1",
-    "npm": ">=10.2.4"
+    "node": ">=21.7.1",
+    "npm": ">=10.8.2"
   }
 }
