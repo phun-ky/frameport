@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.0.8](https://github.com/phun-ky/frameport/compare/v2.0.7...v2.0.8) (2025-04-15)
+
+
+### Tasks
+
+* 🤖 bump quibble from 0.9.1 to 0.9.2 ([55ac63e](https://github.com/phun-ky/frameport/commit/55ac63e89392f39f565a1b6a3f6e72cf270ffb3c))
+
+
+### Bug
+
+* 🐛 Fix workflows and deps ([9e46bdb](https://github.com/phun-ky/frameport/commit/9e46bdb52739f0bb94343258dd0a699441e821bc))
+* 🐛 JSON import ([0931386](https://github.com/phun-ky/frameport/commit/09313863d1684f7324026d260d16d4b5992e4dfd))
+* 🐛 Rename scripts ([1a9722d](https://github.com/phun-ky/frameport/commit/1a9722d84f252f39438f5c3b18a41cca1184a1c2))
+* 🐛 Typedoc ([0aaad22](https://github.com/phun-ky/frameport/commit/0aaad22350b0dbc3ecc88506764b891fd93fb1d6))
+
 ## [2.0.7](https://github.com/phun-ky/frameport/compare/v2.0.6...v2.0.7) (2024-03-19)
 
 

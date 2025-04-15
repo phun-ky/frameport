@@ -2,7 +2,7 @@
 
 # types
 
-> Last updated 2025-04-15T08:19:09.589Z
+> Last updated 2025-04-15T08:28:32.715Z
 
 ## Table of Contents
 
