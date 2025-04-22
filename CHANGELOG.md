@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.9](https://github.com/phun-ky/frameport/compare/v2.0.8...v2.0.9) (2025-04-22)
+
+
+### Tasks
+
+* 🤖 bump eslint-config-prettier from 9.1.0 to 10.1.2 ([9a81584](https://github.com/phun-ky/frameport/commit/9a815842f5b8b44a080710293796205860cef37e))
+
 ## [2.0.8](https://github.com/phun-ky/frameport/compare/v2.0.7...v2.0.8) (2025-04-15)
 
 

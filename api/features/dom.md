@@ -2,7 +2,7 @@
 
 # features/dom
 
-> Last updated 2025-04-15T08:28:32.714Z
+> Last updated 2025-04-22T07:14:52.158Z
 
 ## Table of Contents
 
