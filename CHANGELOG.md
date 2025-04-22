@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.10](https://github.com/phun-ky/frameport/compare/v2.0.9...v2.0.10) (2025-04-22)
+
+
+### Tasks
+
+* 🤖 bump eslint-import-resolver-typescript from 3.6.1 to 4.3.4 ([da6c971](https://github.com/phun-ky/frameport/commit/da6c9716904fb5fa7195d84349900277b836c2cd))
+
 ## [2.0.9](https://github.com/phun-ky/frameport/compare/v2.0.8...v2.0.9) (2025-04-22)
 
 
