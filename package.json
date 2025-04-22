@@ -73,7 +73,7 @@
     "cobertura": "^1.0.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^10.1.2",
-    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-import-resolver-typescript": "4.3.4",
     "eslint-plugin-compat": "^4.2.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
