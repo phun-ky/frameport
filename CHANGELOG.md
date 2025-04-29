@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.13](https://github.com/phun-ky/frameport/compare/v2.0.12...v2.0.13) (2025-04-29)
+
+
+### Tasks
+
+* 🤖 bump @testing-library/dom from 9.3.4 to 10.4.0 ([196944c](https://github.com/phun-ky/frameport/commit/196944c7c4cb2e18f9bf2f9ab318f4562276bd6a))
+
 ## [2.0.12](https://github.com/phun-ky/frameport/compare/v2.0.11...v2.0.12) (2025-04-29)
 
 
