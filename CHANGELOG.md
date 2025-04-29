@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.14](https://github.com/phun-ky/frameport/compare/v2.0.13...v2.0.14) (2025-04-29)
+
+
+### Tasks
+
+* 🤖 bump glob from 10.4.5 to 11.0.2 ([9dbaf6c](https://github.com/phun-ky/frameport/commit/9dbaf6c8dd188bc6bcf8802c52c1e05e2bfc087e))
+
 ## [2.0.13](https://github.com/phun-ky/frameport/compare/v2.0.12...v2.0.13) (2025-04-29)
 
 

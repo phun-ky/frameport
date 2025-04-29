@@ -2,7 +2,7 @@
 
 # utils/style
 
-> Last updated 2025-04-29T13:08:18.046Z
+> Last updated 2025-04-29T21:28:12.482Z
 
 ## Table of Contents
 
