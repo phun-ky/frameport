@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.12](https://github.com/phun-ky/frameport/compare/v2.0.11...v2.0.12) (2025-04-29)
+
+
+### Tasks
+
+* 🤖 bump rollup from 4.40.0 to 4.40.1 ([e1fe2cc](https://github.com/phun-ky/frameport/commit/e1fe2cc37bf6c372090e4c2fb72a3392a92e90f7))
+
 ## [2.0.11](https://github.com/phun-ky/frameport/compare/v2.0.10...v2.0.11) (2025-04-29)
 
 

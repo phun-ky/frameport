@@ -2,7 +2,7 @@
 
 # utils/page
 
-> Last updated 2025-04-29T13:01:04.733Z
+> Last updated 2025-04-29T13:05:26.652Z
 
 ## Table of Contents
 
