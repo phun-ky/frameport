@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.11](https://github.com/phun-ky/frameport/compare/v2.0.10...v2.0.11) (2025-04-29)
+
+
+### Tasks
+
+* 🤖 bump prettier-eslint from 16.3.0 to 16.4.1 ([39f9c71](https://github.com/phun-ky/frameport/commit/39f9c7170fc95087879ab72708fd124ab6ebf4a9))
+
 ## [2.0.10](https://github.com/phun-ky/frameport/compare/v2.0.9...v2.0.10) (2025-04-22)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@phun-ky/frameport",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "publishConfig": {
     "access": "public"
   },
