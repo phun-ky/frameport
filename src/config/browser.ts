@@ -1,6 +1,6 @@
 /* eslint no-console:0 */
 import dom from '../features/dom';
-import { FrameportFunctionType } from '../types';
+import { type FrameportFunctionType } from '../types';
 import { getHeaders } from '../utils/headers';
 
 /**

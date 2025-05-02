@@ -1,16 +1,16 @@
-import { FrameportOptions } from '../types';
+import { type FrameportOptionsInterface } from '../types';
 import { create } from '../utils/create';
 
 /**
  * Generate multiple iframe elements for different viewports and append them to a target element.
  *
  * @param {HTMLElement} target - The target HTML element to insert iframes after.
- * @param {FrameportOptions} options - The options for generating the iframes.
+ * @param {FrameportOptionsInterface} options - The options for generating the iframes.
  * @returns {void}
  */
 export const generateViewports = (
   target: HTMLElement,
-  options: FrameportOptions
+  options: FrameportOptionsInterface
 ): void => {
   const { viewports } = options;
 

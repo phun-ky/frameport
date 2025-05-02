@@ -1,16 +1,16 @@
-import { FrameportOptions } from '../types';
+import { type FrameportOptionsInterface } from '../types';
 import { create } from '../utils/create';
 
 /**
  * Generate an iframe with the given options and append it to a target element.
  *
  * @param {HTMLElement} targetElement - The target HTML element to append the iframe to.
- * @param {FrameportOptions} options - The options for generating the iframe.
+ * @param {FrameportOptionsInterface} options - The options for generating the iframe.
  * @returns {void}
  */
 export const generate = (
   targetElement: HTMLElement,
-  options: FrameportOptions
+  options: FrameportOptionsInterface
 ): void => {
   const { width } = options;
 

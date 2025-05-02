@@ -1,4 +1,4 @@
-import { FrameportOptions } from '../types';
+import { type FrameportOptionsInterface } from '../types';
 
 import { getCode } from './code';
 import { getCSS } from './css';
@@ -8,10 +8,10 @@ import { getStyle } from './style';
 /**
  * Generate the source code for an HTML page based on the provided options.
  *
- * @param {FrameportOptions} options - The options for generating the HTML page source.
+ * @param {FrameportOptionsInterface} options - The options for generating the HTML page source.
  * @returns {string} - The generated HTML source code as a string.
  */
-export const getSource = (options: FrameportOptions): string => {
+export const getSource = (options: FrameportOptionsInterface): string => {
   let { style, css, code, javascript } = options;
 
   const { html, headers = [] } = options;
