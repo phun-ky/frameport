@@ -2,7 +2,7 @@
 
 # features/dom
 
-> Last updated 2025-04-29T21:28:12.475Z
+> Last updated 2025-05-02T12:54:22.266Z
 
 ## Table of Contents
 
@@ -26,7 +26,7 @@ Generate iframes into the DOM, possibly generating viewports.
 | Parameter       | Type                                                                    | Description                 |
 | --------------- | ----------------------------------------------------------------------- | --------------------------- |
 | `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target HTML element.    |
-| `options`       | [`FrameportOptions`](../types.md#frameportoptions)                      | The options for the iframe. |
+| `options`       | [`FrameportOptionsInterface`](../types.md#frameportoptionsinterface)    | The options for the iframe. |
 
 #### Returns
 

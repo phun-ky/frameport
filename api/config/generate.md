@@ -2,7 +2,7 @@
 
 # config/generate
 
-> Last updated 2025-04-29T21:28:12.472Z
+> Last updated 2025-05-02T12:54:22.264Z
 
 ## Table of Contents
 
@@ -26,7 +26,7 @@ Generate an iframe with the given options and append it to a target element.
 | Parameter       | Type                                                                    | Description                                      |
 | --------------- | ----------------------------------------------------------------------- | ------------------------------------------------ |
 | `targetElement` | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target HTML element to append the iframe to. |
-| `options`       | [`FrameportOptions`](../types.md#frameportoptions)                      | The options for generating the iframe.           |
+| `options`       | [`FrameportOptionsInterface`](../types.md#frameportoptionsinterface)    | The options for generating the iframe.           |
 
 #### Returns
 

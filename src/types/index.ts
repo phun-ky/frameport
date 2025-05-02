@@ -1,9 +1,9 @@
 /**
  * Represents options for creating a Responsive Documentation Example.
  *
- * @interface FrameportOptions
+ * @interface FrameportOptionsInterface
  */
-export interface FrameportOptions {
+export interface FrameportOptionsInterface {
   /**
    * The html you want to use in the viewport example
    *
@@ -131,7 +131,7 @@ export interface FrameportOptions {
 /**
  * Example usage:
  * ```ts
- * const options: FrameportOptions = {
+ * const options: FrameportOptionsInterface = {
  *   html: '<div>Hello, World!</div>',
  *   height: '300',
  *   width: 400,

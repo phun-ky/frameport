@@ -2,7 +2,7 @@
 
 # utils/create
 
-> Last updated 2025-04-29T21:28:12.480Z
+> Last updated 2025-05-02T12:54:22.270Z
 
 ## Table of Contents
 
@@ -23,9 +23,9 @@ Create an iframe element with specified options and styles.
 
 #### Parameters
 
-| Parameter | Type                                               | Description                          |
-| --------- | -------------------------------------------------- | ------------------------------------ |
-| `options` | [`FrameportOptions`](../types.md#frameportoptions) | The options for creating the iframe. |
+| Parameter | Type                                                                 | Description                          |
+| --------- | -------------------------------------------------------------------- | ------------------------------------ |
+| `options` | [`FrameportOptionsInterface`](../types.md#frameportoptionsinterface) | The options for creating the iframe. |
 
 #### Returns
 
