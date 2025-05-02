@@ -2,7 +2,7 @@
 
 # utils/source
 
-> Last updated 2025-04-29T21:28:12.481Z
+> Last updated 2025-05-02T12:54:22.271Z
 
 ## Table of Contents
 
@@ -23,9 +23,9 @@ Generate the source code for an HTML page based on the provided options.
 
 #### Parameters
 
-| Parameter | Type                                               | Description                                      |
-| --------- | -------------------------------------------------- | ------------------------------------------------ |
-| `options` | [`FrameportOptions`](../types.md#frameportoptions) | The options for generating the HTML page source. |
+| Parameter | Type                                                                 | Description                                      |
+| --------- | -------------------------------------------------------------------- | ------------------------------------------------ |
+| `options` | [`FrameportOptionsInterface`](../types.md#frameportoptionsinterface) | The options for generating the HTML page source. |
 
 #### Returns
 

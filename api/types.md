@@ -2,24 +2,24 @@
 
 # types
 
-> Last updated 2025-04-29T21:28:12.476Z
+> Last updated 2025-05-02T12:54:22.267Z
 
 ## Table of Contents
 
 - [Interfaces](#interfaces)
-  - [FrameportOptions](#frameportoptions)
+  - [FrameportOptionsInterface](#frameportoptionsinterface)
 - [Type Aliases](#type-aliases)
   - [FrameportFunctionType()](#frameportfunctiontype)
 
 ## Interfaces
 
-### FrameportOptions
+### FrameportOptionsInterface
 
 Defined in: [types/index.ts:6](https://github.com/phun-ky/frameport/blob/main/src/types/index.ts#L6)
 
 Represents options for creating a Responsive Documentation Example.
 
-FrameportOptions
+FrameportOptionsInterface
 
 #### Properties
 
@@ -52,7 +52,7 @@ Defined in: [types/index.ts:148](https://github.com/phun-ky/frameport/blob/main/
 Example usage:
 
 ```ts
-const options: FrameportOptions = {
+const options: FrameportOptionsInterface = {
   html: '<div>Hello, World!</div>',
   height: '300',
   width: 400,

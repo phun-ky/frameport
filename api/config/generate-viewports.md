@@ -2,7 +2,7 @@
 
 # config/generate-viewports
 
-> Last updated 2025-04-29T21:28:12.472Z
+> Last updated 2025-05-02T12:54:22.264Z
 
 ## Table of Contents
 
@@ -26,7 +26,7 @@ Generate multiple iframe elements for different viewports and append them to a t
 | Parameter | Type                                                                    | Description                                      |
 | --------- | ----------------------------------------------------------------------- | ------------------------------------------------ |
 | `target`  | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The target HTML element to insert iframes after. |
-| `options` | [`FrameportOptions`](../types.md#frameportoptions)                      | The options for generating the iframes.          |
+| `options` | [`FrameportOptionsInterface`](../types.md#frameportoptionsinterface)    | The options for generating the iframes.          |
 
 #### Returns
 
