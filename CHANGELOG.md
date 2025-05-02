@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.0.15](https://github.com/phun-ky/frameport/compare/v2.0.14...v2.0.15) (2025-05-02)
+
+
+### Tasks
+
+* 🤖 Upgrade ESLint ([795982b](https://github.com/phun-ky/frameport/commit/795982ba7f31d62d38d81635feee57c92c07f01d))
+
+
+### Documentation
+
+* ✏️ Regenerate documentation ([2b0cc7e](https://github.com/phun-ky/frameport/commit/2b0cc7efb8a1e389a269640c04ca35fdb08011be))
+
+
+### Bug
+
+* 🐛 Setup more proper interval for dependabot, also group ([9cebae2](https://github.com/phun-ky/frameport/commit/9cebae26796da63aa51f63cea4ebe4cf06f5cbe4))
+
+
+### Refactoring
+
+* 💡 Use proper typing ([856b533](https://github.com/phun-ky/frameport/commit/856b533df09310f173f5f20c35e4fe13602256d3))
+
 ## [2.0.14](https://github.com/phun-ky/frameport/compare/v2.0.13...v2.0.14) (2025-04-29)
 
 
