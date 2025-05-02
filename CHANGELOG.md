@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.16](https://github.com/phun-ky/frameport/compare/v2.0.15...v2.0.16) (2025-05-02)
+
+
+### Tasks
+
+* 🤖 bump stylus from 0.63.0 to 0.64.0 in the minor-and-patch group ([0f3a794](https://github.com/phun-ky/frameport/commit/0f3a7946d1fd34866f93a63b05ac59ca5ff98309))
+
 ## [2.0.15](https://github.com/phun-ky/frameport/compare/v2.0.14...v2.0.15) (2025-05-02)
 
 
