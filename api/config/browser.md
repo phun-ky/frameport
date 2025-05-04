@@ -2,15 +2,7 @@
 
 # config/browser
 
-> Last updated 2025-05-02T22:19:34.749Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [activate()](#activate)
-  - [domReady()](#domready)
-  - [lazy()](#lazy)
-  - [manual()](#manual)
+> Last updated 2025-05-04T12:13:30.519Z
 
 ## Functions
 

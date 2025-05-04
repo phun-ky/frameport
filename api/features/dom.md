@@ -2,12 +2,7 @@
 
 # features/dom
 
-> Last updated 2025-05-02T22:19:34.756Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [dom()](#dom)
+> Last updated 2025-05-04T12:13:30.628Z
 
 ## Functions
 

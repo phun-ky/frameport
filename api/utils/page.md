@@ -2,12 +2,7 @@
 
 # utils/page
 
-> Last updated 2025-05-02T22:19:34.762Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [getGeneratedPageURL()](#getgeneratedpageurl)
+> Last updated 2025-05-04T12:13:30.741Z
 
 ## Functions
 

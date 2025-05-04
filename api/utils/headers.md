@@ -2,12 +2,7 @@
 
 # utils/headers
 
-> Last updated 2025-05-02T22:19:34.761Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [getHeaders()](#getheaders)
+> Last updated 2025-05-04T12:13:30.721Z
 
 ## Functions
 
@@ -23,9 +18,9 @@ Get headers for the iframe generated
 
 #### Parameters
 
-| Parameter    | Type                                             | Description                    |
-| ------------ | ------------------------------------------------ | ------------------------------ |
-| `rdeHeaders` | `undefined` \| `null` \| `string` \| `string`\[] | The custom headers to include. |
+| Parameter    | Type        | Description |
+| ------------ | ----------- | ----------- | -------- | ----------- | ------------------------------ |
+| `rdeHeaders` | `undefined` | `null`      | `string` | `string`\[] | The custom headers to include. |
 
 #### Returns
 
