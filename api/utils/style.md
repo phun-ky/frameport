@@ -2,12 +2,7 @@
 
 # utils/style
 
-> Last updated 2025-05-02T22:19:34.762Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [getStyle()](#getstyle)
+> Last updated 2025-05-04T12:13:30.756Z
 
 ## Functions
 
@@ -23,9 +18,9 @@ Generate a style element based on the provided CSS styles.
 
 #### Parameters
 
-| Parameter | Type                    | Description                                     |
-| --------- | ----------------------- | ----------------------------------------------- |
-| `style`   | `undefined` \| `string` | The CSS styles to include in the style element. |
+| Parameter | Type        | Description |
+| --------- | ----------- | ----------- | ----------------------------------------------- |
+| `style`   | `undefined` | `string`    | The CSS styles to include in the style element. |
 
 #### Returns
 

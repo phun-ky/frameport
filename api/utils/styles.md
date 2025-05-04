@@ -2,13 +2,7 @@
 
 # utils/styles
 
-> Last updated 2025-05-02T22:19:34.762Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [add()](#add)
-  - [get()](#get)
+> Last updated 2025-05-04T12:13:30.763Z
 
 ## Functions
 
@@ -24,14 +18,14 @@ Adds CSS styles to an HTMLElement.
 
 #### Parameters
 
-| Parameter | Type                                                                    | Description                                                      |
-| --------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The HTMLElement to apply styles to.                              |
-| `styles`  | \| `object` \| \{ `key`: `string`; `value`: `string`; }\[]              | An object or an array of objects containing CSS styles to apply. |
+| Parameter | Type                                                                    | Description                         |
+| --------- | ----------------------------------------------------------------------- | ----------------------------------- | ------------------------------------------ | ---------------------------------------------------------------- |
+| `el`      | [`HTMLElement`](https://developer.mozilla.org/docs/Web/API/HTMLElement) | The HTMLElement to apply styles to. |
+| `styles`  |                                                                         | `object`                            | { `key`: `string`; `value`: `string`; }\[] | An object or an array of objects containing CSS styles to apply. |
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`void`>
 
 - A Promise that resolves after styles are applied.
 
@@ -70,7 +64,7 @@ Gets the computed CSS styles of an HTMLElement.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[`CSSStyleDeclaration`](https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration)>
 
 - A Promise that resolves with the computed CSS styles.
 

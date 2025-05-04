@@ -2,12 +2,7 @@
 
 # utils/code
 
-> Last updated 2025-05-02T22:19:34.760Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [getCode()](#getcode)
+> Last updated 2025-05-04T12:13:30.699Z
 
 ## Functions
 
@@ -23,9 +18,9 @@ Get a script element containing the provided code if available.
 
 #### Parameters
 
-| Parameter | Type                    | Description                                |
-| --------- | ----------------------- | ------------------------------------------ |
-| `code`    | `undefined` \| `string` | The code to include in the script element. |
+| Parameter | Type        | Description |
+| --------- | ----------- | ----------- | ------------------------------------------ |
+| `code`    | `undefined` | `string`    | The code to include in the script element. |
 
 #### Returns
 

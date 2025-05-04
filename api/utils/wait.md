@@ -2,12 +2,7 @@
 
 # utils/wait
 
-> Last updated 2025-05-02T22:19:34.763Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [waitForFrame()](#waitforframe)
+> Last updated 2025-05-04T12:13:30.780Z
 
 ## Functions
 
@@ -23,7 +18,7 @@ Waits for the next animation frame using requestAnimationFrame.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`number`>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<`number`>
 
 - A Promise that resolves with the timestamp of the next animation frame.
 

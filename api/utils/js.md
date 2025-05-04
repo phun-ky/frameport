@@ -2,12 +2,7 @@
 
 # utils/js
 
-> Last updated 2025-05-02T22:19:34.761Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [getJavaScript()](#getjavascript)
+> Last updated 2025-05-04T12:13:30.734Z
 
 ## Functions
 
@@ -23,9 +18,9 @@ Generate a script tag for the specified JavaScript file.
 
 #### Parameters
 
-| Parameter    | Type                    | Description                      |
-| ------------ | ----------------------- | -------------------------------- |
-| `javascript` | `undefined` \| `string` | The path to the JavaScript file. |
+| Parameter    | Type        | Description |
+| ------------ | ----------- | ----------- | -------------------------------- |
+| `javascript` | `undefined` | `string`    | The path to the JavaScript file. |
 
 #### Returns
 
