@@ -2,12 +2,7 @@
 
 # config/generate
 
-> Last updated 2025-05-02T22:19:34.753Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [generate()](#generate)
+> Last updated 2025-05-04T12:22:36.854Z
 
 ## Functions
 

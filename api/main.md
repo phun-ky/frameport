@@ -2,14 +2,7 @@
 
 # main
 
-> Last updated 2025-05-02T22:19:34.756Z
-
-## Table of Contents
-
-- [Variables](#variables)
-  - [modes](#modes)
-- [Functions](#functions)
-  - [frameport()](#frameport)
+> Last updated 2025-05-04T12:22:36.963Z
 
 ## Variables
 
@@ -29,72 +22,83 @@ Defined in: [main.ts:6](https://github.com/phun-ky/frameport/blob/main/src/main.
 #### Type declaration
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-  <tbody>
-    <tr>
-      <td>
-        <a id="activate" /> `activate()`
-      </td>
+<a id="activate"></a> `activate()`
 
-      <td>
-        (`frameport`) => `void`
-      </td>
+</td>
+<td>
 
-      <td>
-        [main.ts:10](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L10)
-      </td>
-    </tr>
+(`frameport`) => `void`
 
-    <tr>
-      <td>
-        <a id="domready" /> `domReady()`
-      </td>
+</td>
+<td>
 
-      <td>
-        (`frameport`) => `void`
-      </td>
+[main.ts:10](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L10)
 
-      <td>
-        [main.ts:7](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L7)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-    <tr>
-      <td>
-        <a id="lazy" /> `lazy()`
-      </td>
+<a id="domready"></a> `domReady()`
 
-      <td>
-        () => `void`
-      </td>
+</td>
+<td>
 
-      <td>
-        [main.ts:8](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L8)
-      </td>
-    </tr>
+(`frameport`) => `void`
 
-    <tr>
-      <td>
-        <a id="manual" /> `manual()`
-      </td>
+</td>
+<td>
 
-      <td>
-        (`frameport`) => `void`
-      </td>
+[main.ts:7](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L7)
 
-      <td>
-        [main.ts:9](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L9)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-  </tbody>
+<a id="lazy"></a> `lazy()`
+
+</td>
+<td>
+
+() => `void`
+
+</td>
+<td>
+
+[main.ts:8](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L8)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="manual"></a> `manual()`
+
+</td>
+<td>
+
+(`frameport`) => `void`
+
+</td>
+<td>
+
+[main.ts:9](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L9)
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ## Functions

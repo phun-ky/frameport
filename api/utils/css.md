@@ -2,12 +2,7 @@
 
 # utils/css
 
-> Last updated 2025-05-02T22:19:34.761Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [getCSS()](#getcss)
+> Last updated 2025-05-04T12:22:37.088Z
 
 ## Functions
 
@@ -23,9 +18,9 @@ Generate a CSS link tag based on the provided URL.
 
 #### Parameters
 
-| Parameter | Type                    | Description              |
-| --------- | ----------------------- | ------------------------ |
-| `css`     | `undefined` \| `string` | The URL of the CSS file. |
+| Parameter | Type        | Description |
+| --------- | ----------- | ----------- | ------------------------ |
+| `css`     | `undefined` | `string`    | The URL of the CSS file. |
 
 #### Returns
 
