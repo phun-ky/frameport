@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.17](https://github.com/phun-ky/frameport/compare/v2.0.16...v2.0.17) (2025-05-04)
+
+### Tasks
+
+* 🤖 bump the major-updates group with 6 updates ([b8854d8](https://github.com/phun-ky/frameport/commit/b8854d801255124abf07b6781df0d18e8a615998))
+* 🤖 Reinstall major dep update ([0d37a04](https://github.com/phun-ky/frameport/commit/0d37a04b7f46232efff0d7f16e6d566c7be7a3ee))
+
 ## [2.0.16](https://github.com/phun-ky/frameport/compare/v2.0.15...v2.0.16) (2025-05-02)
 
 

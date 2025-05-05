@@ -2,12 +2,7 @@
 
 # utils/iframe
 
-> Last updated 2025-05-02T22:19:34.761Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [createIframe()](#createiframe)
+> Last updated 2025-05-04T12:22:37.114Z
 
 ## Functions
 

@@ -2,12 +2,7 @@
 
 # utils/blob
 
-> Last updated 2025-05-02T22:19:34.759Z
-
-## Table of Contents
-
-- [Functions](#functions)
-  - [getBlobURL()](#getbloburl)
+> Last updated 2025-05-04T12:22:37.042Z
 
 ## Functions
 

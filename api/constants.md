@@ -2,13 +2,7 @@
 
 # constants
 
-> Last updated 2025-05-02T22:19:34.754Z
-
-## Table of Contents
-
-- [Variables](#variables)
-  - [DEFAULT_HEADERS](#default_headers)
-  - [HIDE_TEMPLATE_STYLE](#hide_template_style)
+> Last updated 2025-05-04T12:22:36.897Z
 
 ## Variables
 
@@ -44,100 +38,117 @@ Style object for hiding an element in the HTML.
 #### Type declaration
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Defined in</th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-  <tbody>
-    <tr>
-      <td>
-        <a id="clip" /> `clip`
-      </td>
+<a id="clip"></a> `clip`
 
-      <td>
-        `string`
-      </td>
+</td>
+<td>
 
-      <td>
-        [constants/index.ts:7](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L7)
-      </td>
-    </tr>
+`string`
 
-    <tr>
-      <td>
-        <a id="height" /> `height`
-      </td>
+</td>
+<td>
 
-      <td>
-        `string`
-      </td>
+[constants/index.ts:7](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L7)
 
-      <td>
-        [constants/index.ts:8](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L8)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-    <tr>
-      <td>
-        <a id="margin" /> `margin`
-      </td>
+<a id="height"></a> `height`
 
-      <td>
-        `string`
-      </td>
+</td>
+<td>
 
-      <td>
-        [constants/index.ts:9](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L9)
-      </td>
-    </tr>
+`string`
 
-    <tr>
-      <td>
-        <a id="overflow" /> `overflow`
-      </td>
+</td>
+<td>
 
-      <td>
-        `string`
-      </td>
+[constants/index.ts:8](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L8)
 
-      <td>
-        [constants/index.ts:10](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L10)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-    <tr>
-      <td>
-        <a id="position" /> `position`
-      </td>
+<a id="margin"></a> `margin`
 
-      <td>
-        `string`
-      </td>
+</td>
+<td>
 
-      <td>
-        [constants/index.ts:11](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L11)
-      </td>
-    </tr>
+`string`
 
-    <tr>
-      <td>
-        <a id="width" /> `width`
-      </td>
+</td>
+<td>
 
-      <td>
-        `string`
-      </td>
+[constants/index.ts:9](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L9)
 
-      <td>
-        [constants/index.ts:12](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L12)
-      </td>
-    </tr>
+</td>
+</tr>
+<tr>
+<td>
 
-  </tbody>
+<a id="overflow"></a> `overflow`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+[constants/index.ts:10](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L10)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="position"></a> `position`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+[constants/index.ts:11](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L11)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="width"></a> `width`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+[constants/index.ts:12](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L12)
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ---
