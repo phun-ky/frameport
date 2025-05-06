@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.0.19](https://github.com/phun-ky/frameport/compare/v2.0.18...v2.0.19) (2025-05-05)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 2 updates ([b209bfd](https://github.com/phun-ky/frameport/commit/b209bfd2882b0bcd048056138e96ec99d8f7e9a0))
+
+## [2.0.18](https://github.com/phun-ky/frameport/compare/v2.0.17...v2.0.18) (2025-05-05)
+
+### Tasks
+
+* 🤖 Disable rules for markdown files ([feeed92](https://github.com/phun-ky/frameport/commit/feeed922671bbfe26612f51dc14c8bb9b6bdb2fc))
+* 🤖 Reinstall and regenerate ([1a7ddc3](https://github.com/phun-ky/frameport/commit/1a7ddc319d02469b601a94dcd8d2235339f43cd9))
+* 🤖 Remove dep no longer required ([8d3a07d](https://github.com/phun-ky/frameport/commit/8d3a07dd360d971f21e6c467588681b525f84ae0))
+
 ## [2.0.17](https://github.com/phun-ky/frameport/compare/v2.0.16...v2.0.17) (2025-05-04)
 
 ### Tasks
