@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.20](https://github.com/phun-ky/frameport/compare/v2.0.19...v2.0.20) (2025-05-06)
+
+### Tasks
+
+* 🤖 Use new dep for eslint config ([a1e5187](https://github.com/phun-ky/frameport/commit/a1e518718b70e54ad4ab53f12cda170340ef486f))
+
 ## [2.0.19](https://github.com/phun-ky/frameport/compare/v2.0.18...v2.0.19) (2025-05-05)
 
 ### Tasks
