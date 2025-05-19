@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.22](https://github.com/phun-ky/frameport/compare/v2.0.21...v2.0.22) (2025-05-19)
+
+### Tasks
+
+* 🤖 Add more keywords ([0068e86](https://github.com/phun-ky/frameport/commit/0068e86f80dbffb0cea91f874ee8e2b31880eefa))
+
+### Documentation
+
+* ✏️ Update docs ([e5269ad](https://github.com/phun-ky/frameport/commit/e5269ad51ba77ef24549b4fbd73619efb8f506df))
+
 ## [2.0.21](https://github.com/phun-ky/frameport/compare/v2.0.20...v2.0.21) (2025-05-13)
 
 ### Tasks
