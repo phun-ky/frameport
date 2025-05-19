@@ -2,7 +2,7 @@
 
 # utils/js
 
-> Last updated 2025-05-13T08:31:16.005Z
+> Last updated 2025-05-19T10:40:48.563Z
 
 ## Functions
 

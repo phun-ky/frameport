@@ -2,7 +2,7 @@
 
 # main
 
-> Last updated 2025-05-13T08:31:15.851Z
+> Last updated 2025-05-19T10:40:48.455Z
 
 ## Variables
 
@@ -17,7 +17,10 @@ const modes: {
 };
 ```
 
-Defined in: [main.ts:6](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L6)
+Defined in: [main.ts:10](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L10)
+
+Available initialization modes for frameport usage.
+Can be triggered manually or via browser lifecycle hooks.
 
 #### Type declaration
 
@@ -43,7 +46,7 @@ Defined in: [main.ts:6](https://github.com/phun-ky/frameport/blob/main/src/main.
 </td>
 <td>
 
-[main.ts:10](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L10)
+[main.ts:14](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L14)
 
 </td>
 </tr>
@@ -60,7 +63,7 @@ Defined in: [main.ts:6](https://github.com/phun-ky/frameport/blob/main/src/main.
 </td>
 <td>
 
-[main.ts:7](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L7)
+[main.ts:11](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L11)
 
 </td>
 </tr>
@@ -77,7 +80,7 @@ Defined in: [main.ts:6](https://github.com/phun-ky/frameport/blob/main/src/main.
 </td>
 <td>
 
-[main.ts:8](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L8)
+[main.ts:12](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L12)
 
 </td>
 </tr>
@@ -94,7 +97,7 @@ Defined in: [main.ts:6](https://github.com/phun-ky/frameport/blob/main/src/main.
 </td>
 <td>
 
-[main.ts:9](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L9)
+[main.ts:13](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L13)
 
 </td>
 </tr>
@@ -109,11 +112,51 @@ Defined in: [main.ts:6](https://github.com/phun-ky/frameport/blob/main/src/main.
 function frameport(): void;
 ```
 
-Defined in: [main.ts:13](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L13)
+Defined in: [main.ts:55](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L55)
+
+Transforms all DOM elements marked with `[data-frameport]` into embedded iframes
+with sandboxed content based on HTML templates and associated metadata.
+
+Also removes any existing `[data-frameport-iframe]` elements from the document,
+ensuring re-renders are clean.
+
+Reads attributes such as:
+
+- `data-frameport-template`
+- `data-frameport-css`
+- `data-frameport-style`
+- `data-frameport-code`
+- `data-frameport-js`
+- `data-frameport-class`
+- `data-frameport-headers`
+- `data-frameport-viewports`
+- `data-frameport-vh`
+- `data-frameport-vw`
 
 #### Returns
 
 `void`
+
+void
+
+#### Example
+
+```html
+<div
+  data-frameport
+  data-frameport-template="#my-template"
+  data-frameport-vh="100"
+  data-frameport-vw="100"
+  data-frameport-css="styles.css"
+  data-frameport-js="script.js"
+></div>
+
+<template id="my-template">
+  <h1>Hello, sandbox!</h1>
+</template>
+```
+
+frameport
 
 ---
 

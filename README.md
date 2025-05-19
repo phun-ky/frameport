@@ -2,23 +2,25 @@
 
 ![logo](./public/logo-frameport-colored-package.svg)
 
-> Frameport enables you to fake and display your responsive components in real life media queries!
+> ⚡ Create interactive, responsive component previews for your style guides using real device viewports and media queries.
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com) [![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html) ![npm version](https://img.shields.io/npm/v/@phun-ky/frameport) ![issues](https://img.shields.io/github/issues/phun-ky/frameport) ![license](https://img.shields.io/npm/l/@phun-ky/frameport) ![size](https://img.shields.io/bundlephobia/min/@phun-ky/frameport) ![npm](https://img.shields.io/npm/dm/%40phun-ky/frameport) ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/frameport) [![codecov](https://codecov.io/gh/phun-ky/frameport/graph/badge.svg?token=VA91DL7ZLZ)](https://codecov.io/gh/phun-ky/frameport)
 
 - [@phun-ky/frameport](#phun-kyframeport)
   - [About](#about)
+  - [Installation \& Setup](#installation--setup)
   - [API](#api)
   - [Demo](#demo)
   - [Options](#options)
   - [Usage](#usage)
-    - [Typescript](#typescript)
-    - [ESM](#esm)
-    - [Script](#script)
-  - [Advanced usage](#advanced-usage)
-    - [Lazy](#lazy)
+    - [Basic usage](#basic-usage)
+      - [Typescript](#typescript)
+      - [ESM](#esm)
+      - [Script](#script)
+    - [Advanced usage](#advanced-usage)
+      - [Lazy](#lazy)
   - [Features](#features)
-  - [Via DOM](#via-dom)
+    - [Via DOM](#via-dom)
     - [Use templates as a target](#use-templates-as-a-target)
     - [Use targets with different template](#use-targets-with-different-template)
       - [Allowed tags](#allowed-tags)
@@ -27,10 +29,23 @@
 
 ## About
 
-Frameport was created so I could display frameports of components in a style guide. It creates iframes with your component (html, css and javascript) that acts as natural viewports, thus making use of your media queries! It is a zero dependency package!
+Frameport helps you embed live, responsive component previews in your documentation or style guide. It works by generating iframes with your HTML/CSS/JS that respect real media queries—so your components behave just like they do in actual devices.
+
+✅ Zero dependencies  
+✅ Framework agnostic  
+✅ Real device viewport emulation  
+✅ Instant iframe-based previews
+
+## Installation & Setup
 
 ```shell-session
 npm i -S @phun-ky/frameport
+```
+
+or with yarn:
+
+```shell-session
+yarn add @phun-ky/frameport
 ```
 
 ## API
@@ -62,11 +77,13 @@ Click [here for a demo on codepen.io](https://codepen.io/phun-ky/full/MWWWvLm)
 
 ## Usage
 
-### Typescript
+### Basic usage
+
+#### Typescript
 
 Types can be found in `@phun-ky/frameport/dist/frameport.d.ts`.
 
-### ESM
+#### ESM
 
 Either import and run the required functions:
 
@@ -80,7 +97,7 @@ frameport(document.getElementById('target'), {
 });
 ```
 
-### Script
+#### Script
 
 Or place these `script` in your web page:
 
@@ -90,7 +107,7 @@ Or place these `script` in your web page:
 
 And then follow the steps below that suites your needs :)
 
-## Advanced usage
+### Advanced usage
 
 If you want to control frameport a bit more, you have some options. Apply one of these attributes to the script element for different types of initialization:
 
@@ -107,7 +124,7 @@ If you want to control frameport a bit more, you have some options. Apply one of
 
 If no attribute is applied, it will default to `data-dom`, as in, it will initialize when `DOMContentLoaded` is fired.
 
-### Lazy
+#### Lazy
 
 If you're importing frameport instead of with a script tag, you can use the following approach to apply lazy loading:
 
@@ -173,7 +190,7 @@ export const lazy = (): void => {
 
 ## Features
 
-## Via DOM
+### Via DOM
 
 Place the `script` tag at the bottom of your page, right before the `</body>`-tag:
 
@@ -240,20 +257,20 @@ This approach is useful if you want to use a device decorator to mimic appearanc
 
 #### Allowed tags
 
-| tag                      | description                                                                                                                                                                                     |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| data-frameport           | To identify this as the template to use for generating the responsive examples. **Required**                                                                                                    |
-| data-frameport-target    | To identify this as a target to use to generate the frameports                                                                                                                                  |
-| data-frameport-template  | Selector to the template                                                                                                                                                                        |
-| data-frameport-width     | The viewport width. **Required**                                                                                                                                                                |
-| data-frameport-height    | The viewport height.                                                                                                                                                                            |
-| data-frameport-css       | A CSS file to be appended to the `<head>`-tag of the generated html. **NOTE! This needs to be on the same domain and relative to root!** For example: `/dist/yourcss.css`                       |
-| data-frameport-style     | Inline styles (CSS) to be inserted into a `<style>` -tag in the `<head>`-tag of the generated html                                                                                              |
-| data-frameport-code      | Custom JavaScript code to be inserted into a `<script>`-tag in the `<body>`-tag in the generated html                                                                                           |
-| data-frameport-js        | A JavaScript file to be inserted in the `<body>`-tag of the generated html. **NOTE! This needs to be on the same domain and relative to root!** For example: `/dist/yourjs.js`                  |
-| data-frameport-class     | Class names to be given the generated iframe                                                                                                                                                    |
-| data-frameport-viewports | The viewports to generate for examples. This is a string `wxh` for example: `375x667`. If you want more viewports, you can separate them with a comma: `375x667,360x740,768x1024`. **Required** |
-| data-frameport-headers   | An array of HTTP headers to include when fetching the HTML content                                                                                                                              |
+| tag                          | description                                                                                                                                                                                     | Required |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| **data-frameport**           | To identify this as the template to use for generating the responsive examples. **Required**                                                                                                    | 🔸       |
+| **data-frameport-width**     | The viewport width. **Required**                                                                                                                                                                | 🔸       |
+| **data-frameport-viewports** | The viewports to generate for examples. This is a string `wxh` for example: `375x667`. If you want more viewports, you can separate them with a comma: `375x667,360x740,768x1024`. **Required** | 🔸       |
+| data-frameport-target        | To identify this as a target to use to generate the frameports                                                                                                                                  |          |
+| data-frameport-template      | Selector to the template                                                                                                                                                                        |          |
+| data-frameport-height        | The viewport height.                                                                                                                                                                            |          |
+| data-frameport-css           | A CSS file to be appended to the `<head>`-tag of the generated html. **NOTE! This needs to be on the same domain and relative to root!** For example: `/dist/yourcss.css`                       |          |
+| data-frameport-style         | Inline styles (CSS) to be inserted into a `<style>` -tag in the `<head>`-tag of the generated html                                                                                              |          |
+| data-frameport-code          | Custom JavaScript code to be inserted into a `<script>`-tag in the `<body>`-tag in the generated html                                                                                           |          |
+| data-frameport-js            | A JavaScript file to be inserted in the `<body>`-tag of the generated html. **NOTE! This needs to be on the same domain and relative to root!** For example: `/dist/yourjs.js`                  |          |
+| data-frameport-class         | Class names to be given the generated iframe                                                                                                                                                    |          |
+| data-frameport-headers       | An array of HTTP headers to include when fetching the HTML content                                                                                                                              |          |
 
 ## Contributing
 
