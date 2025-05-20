@@ -2,7 +2,7 @@
 
 # config/generate-viewports
 
-> Last updated 2025-05-19T10:45:49.610Z
+> Last updated 2025-05-20T09:52:33.495Z
 
 ## Functions
 
