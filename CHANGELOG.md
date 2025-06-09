@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.26](https://github.com/phun-ky/frameport/compare/v2.0.25...v2.0.26) (2025-06-09)
+
+### Tasks
+
+* 🤖 bump rollup from 4.41.1 to 4.42.0 in the minor-and-patch group ([0b132ca](https://github.com/phun-ky/frameport/commit/0b132cafb10e92c22c5920863cc9631c56bcad02))
+
 ## [2.0.25](https://github.com/phun-ky/frameport/compare/v2.0.24...v2.0.25) (2025-06-02)
 
 ### Tasks
