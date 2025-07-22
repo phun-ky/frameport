@@ -1,6 +1,6 @@
 {
   "name": "@phun-ky/frameport",
-  "version": "2.0.29",
+  "version": "2.0.30",
   "description": "A zero dependency package to effortlessly create responsive component previews in documentation using real media queries. Frameport dynamically generates iframes containing your HTML/CSS/JS, mimicking natural device viewports to test responsiveness, without any build steps or dependencies.",
   "keywords": [
     "documentation",
