@@ -2,7 +2,7 @@
 
 # config/generate
 
-> Last updated 2025-07-22T17:46:26.098Z
+> Last updated 2025-08-19T08:51:20.989Z
 
 ## Functions
 

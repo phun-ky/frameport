@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.31](https://github.com/phun-ky/frameport/compare/v2.0.30...v2.0.31) (2025-08-19)
+
+### Tasks
+
+* 🤖 reinstall ([e9cf862](https://github.com/phun-ky/frameport/commit/e9cf862bf4c1e827a3e92abd1f3d9fdc518551bc))
+* 🤖 Update deps ([6b10a76](https://github.com/phun-ky/frameport/commit/6b10a76602be9e51c4a833e3a89fab2470898b57))
+
 ## [2.0.30](https://github.com/phun-ky/frameport/compare/v2.0.29...v2.0.30) (2025-07-22)
 
 ### Tasks
