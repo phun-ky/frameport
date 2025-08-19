@@ -1,5 +1,63 @@
 # Changelog
 
+## [2.0.30](https://github.com/phun-ky/frameport/compare/v2.0.29...v2.0.30) (2025-07-22)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 5 updates ([ee7edcb](https://github.com/phun-ky/frameport/commit/ee7edcb371ada470a48cf25ec8f4df80d7c83785))
+
+## [2.0.29](https://github.com/phun-ky/frameport/compare/v2.0.28...v2.0.29) (2025-07-20)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group across 1 directory with 4 updates ([ecca11b](https://github.com/phun-ky/frameport/commit/ecca11b3ed0f7b09d27e2f010754a2b668803082))
+
+## [2.0.28](https://github.com/phun-ky/frameport/compare/v2.0.27...v2.0.28) (2025-06-24)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 3 updates ([8f586fd](https://github.com/phun-ky/frameport/commit/8f586fd666e667e79ae7f47bf08facbd5b47125c))
+
+## [2.0.27](https://github.com/phun-ky/frameport/compare/v2.0.26...v2.0.27) (2025-06-17)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 5 updates ([6a30e38](https://github.com/phun-ky/frameport/commit/6a30e38105c4a5c7763bb13ac120ca0076565517))
+
+## [2.0.26](https://github.com/phun-ky/frameport/compare/v2.0.25...v2.0.26) (2025-06-09)
+
+### Tasks
+
+* 🤖 bump rollup from 4.41.1 to 4.42.0 in the minor-and-patch group ([0b132ca](https://github.com/phun-ky/frameport/commit/0b132cafb10e92c22c5920863cc9631c56bcad02))
+
+## [2.0.25](https://github.com/phun-ky/frameport/compare/v2.0.24...v2.0.25) (2025-06-02)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 5 updates ([de0f1b8](https://github.com/phun-ky/frameport/commit/de0f1b8e06c6497bfa60ca7ca6778e23fd4aac8f))
+
+## [2.0.24](https://github.com/phun-ky/frameport/compare/v2.0.23...v2.0.24) (2025-05-27)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 3 updates ([69d6c48](https://github.com/phun-ky/frameport/commit/69d6c481441b8ea4b9451d0025c18d158eb710ab))
+
+## [2.0.23](https://github.com/phun-ky/frameport/compare/v2.0.22...v2.0.23) (2025-05-20)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 2 updates ([a9d0dda](https://github.com/phun-ky/frameport/commit/a9d0ddaa9ada45bf9163295083014f6adc49eb10))
+
+## [2.0.22](https://github.com/phun-ky/frameport/compare/v2.0.21...v2.0.22) (2025-05-19)
+
+### Tasks
+
+* 🤖 Add more keywords ([0068e86](https://github.com/phun-ky/frameport/commit/0068e86f80dbffb0cea91f874ee8e2b31880eefa))
+
+### Documentation
+
+* ✏️ Update docs ([e5269ad](https://github.com/phun-ky/frameport/commit/e5269ad51ba77ef24549b4fbd73619efb8f506df))
+
 ## [2.0.21](https://github.com/phun-ky/frameport/compare/v2.0.20...v2.0.21) (2025-05-13)
 
 ### Tasks

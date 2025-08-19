@@ -2,7 +2,7 @@
 
 # constants
 
-> Last updated 2025-05-13T08:31:15.788Z
+> Last updated 2025-07-22T17:46:26.137Z
 
 ## Variables
 
@@ -12,9 +12,23 @@
 const DEFAULT_HEADERS: string[];
 ```
 
-Defined in: [constants/index.ts:27](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L27)
+Defined in: [constants/index.ts:48](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L48)
 
-Default meta headers for an HTML document.
+#### Constant
+
+#### Description
+
+Default `<meta>` tags to inject into a dynamically created HTML document.
+Ensures consistent encoding, responsive layout, and no indexing by robots.
+
+Useful when rendering sandboxed `<iframe>` content or initializing virtual DOMs.
+
+#### Example
+
+```ts
+const headHtml = DEFAULT_HEADERS.join('\n');
+iframeDoc.head.innerHTML = headHtml;
+```
 
 ---
 
@@ -31,9 +45,7 @@ const HIDE_TEMPLATE_STYLE: {
 };
 ```
 
-Defined in: [constants/index.ts:6](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L6)
-
-Style object for hiding an element in the HTML.
+Defined in: [constants/index.ts:16](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L16)
 
 #### Type declaration
 
@@ -59,7 +71,7 @@ Style object for hiding an element in the HTML.
 </td>
 <td>
 
-[constants/index.ts:7](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L7)
+[constants/index.ts:17](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L17)
 
 </td>
 </tr>
@@ -76,7 +88,7 @@ Style object for hiding an element in the HTML.
 </td>
 <td>
 
-[constants/index.ts:8](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L8)
+[constants/index.ts:18](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L18)
 
 </td>
 </tr>
@@ -93,7 +105,7 @@ Style object for hiding an element in the HTML.
 </td>
 <td>
 
-[constants/index.ts:9](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L9)
+[constants/index.ts:19](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L19)
 
 </td>
 </tr>
@@ -110,7 +122,7 @@ Style object for hiding an element in the HTML.
 </td>
 <td>
 
-[constants/index.ts:10](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L10)
+[constants/index.ts:20](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L20)
 
 </td>
 </tr>
@@ -127,7 +139,7 @@ Style object for hiding an element in the HTML.
 </td>
 <td>
 
-[constants/index.ts:11](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L11)
+[constants/index.ts:21](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L21)
 
 </td>
 </tr>
@@ -144,12 +156,27 @@ Style object for hiding an element in the HTML.
 </td>
 <td>
 
-[constants/index.ts:12](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L12)
+[constants/index.ts:22](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L22)
 
 </td>
 </tr>
 </tbody>
 </table>
+
+#### Constant
+
+#### Description
+
+Inline style used to visually hide an element from layout and screen readers,
+often used to hide `<template>` elements or accessibility-hidden content.
+
+Mimics techniques commonly recommended for a11y-invisible content without removing from DOM.
+
+#### Example
+
+```ts
+element.style = { ...HIDE_TEMPLATE_STYLE };
+```
 
 ---
 
