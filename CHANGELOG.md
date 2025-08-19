@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.32](https://github.com/phun-ky/frameport/compare/v2.0.31...v2.0.32) (2025-08-19)
+
+### Tasks
+
+* 🤖 bump eslint-config-phun-ky ([d6faabb](https://github.com/phun-ky/frameport/commit/d6faabbc5c33aad501c5da8e0decded55bafc24c))
+
 ## [2.0.31](https://github.com/phun-ky/frameport/compare/v2.0.30...v2.0.31) (2025-08-19)
 
 ### Tasks
