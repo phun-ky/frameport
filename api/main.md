@@ -2,7 +2,7 @@
 
 # main
 
-> Last updated 2025-08-19T21:01:29.699Z
+> Last updated 2025-08-26T10:08:37.381Z
 
 ## Variables
 
@@ -22,7 +22,7 @@ Defined in: [main.ts:10](https://github.com/phun-ky/frameport/blob/main/src/main
 Available initialization modes for frameport usage.
 Can be triggered manually or via browser lifecycle hooks.
 
-#### Type declaration
+#### Type Declaration
 
 <table>
 <thead>

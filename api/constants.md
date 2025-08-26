@@ -2,7 +2,7 @@
 
 # constants
 
-> Last updated 2025-08-19T21:01:29.631Z
+> Last updated 2025-08-26T10:08:37.307Z
 
 ## Variables
 
@@ -47,7 +47,7 @@ const HIDE_TEMPLATE_STYLE: {
 
 Defined in: [constants/index.ts:16](https://github.com/phun-ky/frameport/blob/main/src/constants/index.ts#L16)
 
-#### Type declaration
+#### Type Declaration
 
 <table>
 <thead>
