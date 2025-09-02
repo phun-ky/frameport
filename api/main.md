@@ -2,7 +2,7 @@
 
 # main
 
-> Last updated 2025-08-26T10:08:37.381Z
+> Last updated 2025-09-02T12:15:06.106Z
 
 ## Variables
 
@@ -29,6 +29,7 @@ Can be triggered manually or via browser lifecycle hooks.
 <tr>
 <th>Name</th>
 <th>Type</th>
+<th>Description</th>
 <th>Defined in</th>
 </tr>
 </thead>
@@ -42,6 +43,18 @@ Can be triggered manually or via browser lifecycle hooks.
 <td>
 
 (`frameport`) => `void`
+
+</td>
+<td>
+
+A function to activate frameport based on script attributes.
+
+**Example**
+
+```ts
+// Usage example:
+// activate(myRDE);
+```
 
 </td>
 <td>
@@ -63,6 +76,18 @@ Can be triggered manually or via browser lifecycle hooks.
 </td>
 <td>
 
+A function to initialize frameport when the DOM is ready.
+
+**Example**
+
+```ts
+// Usage example:
+// domReady(myRDE);
+```
+
+</td>
+<td>
+
 [main.ts:11](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L11)
 
 </td>
@@ -80,6 +105,18 @@ Can be triggered manually or via browser lifecycle hooks.
 </td>
 <td>
 
+A function to initialize lazy frameport functionality.
+
+**Example**
+
+```ts
+// Usage example:
+// lazy();
+```
+
+</td>
+<td>
+
 [main.ts:12](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L12)
 
 </td>
@@ -93,6 +130,18 @@ Can be triggered manually or via browser lifecycle hooks.
 <td>
 
 (`frameport`) => `void`
+
+</td>
+<td>
+
+A function to manually activate frameport.
+
+**Example**
+
+```ts
+// Usage example:
+// manual(myRDE);
+```
 
 </td>
 <td>

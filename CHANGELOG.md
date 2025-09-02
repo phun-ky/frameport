@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.34](https://github.com/phun-ky/frameport/compare/v2.0.33...v2.0.34) (2025-09-02)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group with 4 updates ([1276d6a](https://github.com/phun-ky/frameport/commit/1276d6aebfebc1161860dbeea57e7eee0a34523f))
+
 ## [2.0.33](https://github.com/phun-ky/frameport/compare/v2.0.32...v2.0.33) (2025-08-26)
 
 ### Tasks
