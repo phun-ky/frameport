@@ -2,7 +2,7 @@
 
 # utils/js
 
-> Last updated 2025-10-07T10:03:09.041Z
+> Last updated 2025-10-14T20:23:19.102Z
 
 ## Functions
 
@@ -18,9 +18,9 @@ Generate a script tag for the specified JavaScript file.
 
 #### Parameters
 
-| Parameter    | Type        | Description |
-| ------------ | ----------- | ----------- | -------------------------------- |
-| `javascript` | `undefined` | `string`    | The path to the JavaScript file. |
+| Parameter    | Type     | Description |
+| ------------ | -------- | ----------- | -------------------------------- |
+| `javascript` | `string` | `undefined` | The path to the JavaScript file. |
 
 #### Returns
 

@@ -2,7 +2,7 @@
 
 # utils/code
 
-> Last updated 2025-10-07T10:03:08.988Z
+> Last updated 2025-10-14T20:23:19.043Z
 
 ## Functions
 
@@ -18,9 +18,9 @@ Get a script element containing the provided code if available.
 
 #### Parameters
 
-| Parameter | Type        | Description |
-| --------- | ----------- | ----------- | ------------------------------------------ |
-| `code`    | `undefined` | `string`    | The code to include in the script element. |
+| Parameter | Type     | Description |
+| --------- | -------- | ----------- | ------------------------------------------ |
+| `code`    | `string` | `undefined` | The code to include in the script element. |
 
 #### Returns
 

@@ -2,7 +2,7 @@
 
 # config/browser
 
-> Last updated 2025-10-07T10:03:08.637Z
+> Last updated 2025-10-14T20:23:18.691Z
 
 ## Functions
 
