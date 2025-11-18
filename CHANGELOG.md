@@ -1,5 +1,7 @@
 # Changelog
 
+## [2.0.46](///compare/v2.0.45...v2.0.46) (2025-11-18)
+
 ## [2.0.45](https://github.com/phun-ky/frameport/compare/v2.0.44...v2.0.45) (2025-11-13)
 
 ### Tasks
