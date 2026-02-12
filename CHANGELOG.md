@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.50](https://github.com/phun-ky/frameport/compare/v2.0.49...v2.0.50) (2026-02-12)
+
+### Tasks
+
+* 🤖 bump lodash from 4.17.21 to 4.17.23 ([965df91](https://github.com/phun-ky/frameport/commit/965df91a343f369d9493477e9f2c9a201a02d053))
+* 🤖 bump the major-updates group across 1 directory with 4 updates ([1aefeab](https://github.com/phun-ky/frameport/commit/1aefeab5add72fd8b6b19e3358355b9395ead375))
+
+### Refactoring
+
+* 💡 Update deps, prepare for Trusted Publishing ([62c2ac8](https://github.com/phun-ky/frameport/commit/62c2ac88ad7d4406ed45a7bf00da5e960071543c))
+
 ## [2.0.49](///compare/v2.0.48...v2.0.49) (2025-11-25)
 
 ## [2.0.48](///compare/v2.0.47...v2.0.48) (2025-11-18)

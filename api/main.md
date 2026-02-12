@@ -2,7 +2,7 @@
 
 # main
 
-> Last updated 2025-11-25T09:41:57.940Z
+> Last updated 2026-02-12T11:35:43.983Z
 
 ## Variables
 
@@ -37,7 +37,7 @@ Can be triggered manually or via browser lifecycle hooks.
 <tr>
 <td>
 
-<a id="activate"></a> `activate()`
+<a id="property-activate"></a> `activate()`
 
 </td>
 <td>
@@ -66,7 +66,7 @@ A function to activate frameport based on script attributes.
 <tr>
 <td>
 
-<a id="domready"></a> `domReady()`
+<a id="property-domready"></a> `domReady()`
 
 </td>
 <td>
@@ -95,7 +95,7 @@ A function to initialize frameport when the DOM is ready.
 <tr>
 <td>
 
-<a id="lazy"></a> `lazy()`
+<a id="property-lazy"></a> `lazy()`
 
 </td>
 <td>
@@ -124,7 +124,7 @@ A function to initialize lazy frameport functionality.
 <tr>
 <td>
 
-<a id="manual"></a> `manual()`
+<a id="property-manual"></a> `manual()`
 
 </td>
 <td>

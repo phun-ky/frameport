@@ -2,7 +2,7 @@
 
 # constants
 
-> Last updated 2025-11-25T09:41:57.880Z
+> Last updated 2026-02-12T11:35:43.905Z
 
 ## Variables
 
@@ -61,7 +61,7 @@ Defined in: [constants/index.ts:16](https://github.com/phun-ky/frameport/blob/ma
 <tr>
 <td>
 
-<a id="clip"></a> `clip`
+<a id="property-clip"></a> `clip`
 
 </td>
 <td>
@@ -78,7 +78,7 @@ Defined in: [constants/index.ts:16](https://github.com/phun-ky/frameport/blob/ma
 <tr>
 <td>
 
-<a id="height"></a> `height`
+<a id="property-height"></a> `height`
 
 </td>
 <td>
@@ -95,7 +95,7 @@ Defined in: [constants/index.ts:16](https://github.com/phun-ky/frameport/blob/ma
 <tr>
 <td>
 
-<a id="margin"></a> `margin`
+<a id="property-margin"></a> `margin`
 
 </td>
 <td>
@@ -112,7 +112,7 @@ Defined in: [constants/index.ts:16](https://github.com/phun-ky/frameport/blob/ma
 <tr>
 <td>
 
-<a id="overflow"></a> `overflow`
+<a id="property-overflow"></a> `overflow`
 
 </td>
 <td>
@@ -129,7 +129,7 @@ Defined in: [constants/index.ts:16](https://github.com/phun-ky/frameport/blob/ma
 <tr>
 <td>
 
-<a id="position"></a> `position`
+<a id="property-position"></a> `position`
 
 </td>
 <td>
@@ -146,7 +146,7 @@ Defined in: [constants/index.ts:16](https://github.com/phun-ky/frameport/blob/ma
 <tr>
 <td>
 
-<a id="width"></a> `width`
+<a id="property-width"></a> `width`
 
 </td>
 <td>
