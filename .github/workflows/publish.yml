@@ -45,9 +45,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '>=22.8.0'
+      - run: npm install -g npm@latest
       - name: Install dependencies
         run: | # Install and link dependencies
-          npm i
+          npm ci
           git checkout -- package-lock.json
       - name: 'Release' # Interesting step
         run: |
