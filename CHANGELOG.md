@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.52](https://github.com/phun-ky/frameport/compare/v2.0.51...v2.0.52) (2026-02-17)
+
+### Tasks
+
+* 🤖 bump putout from 41.20.1 to 42.0.0 in the major-updates group ([6955382](https://github.com/phun-ky/frameport/commit/69553828f4dec62ed18db091da2876c81c5d5ff7))
+
 ## [2.0.51](https://github.com/phun-ky/frameport/compare/v2.0.50...v2.0.51) (2026-02-17)
 
 ### Tasks
