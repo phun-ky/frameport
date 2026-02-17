@@ -2,7 +2,7 @@
 
 # utils/headers
 
-> Last updated 2026-02-12T11:35:44.133Z
+> Last updated 2026-02-17T08:59:26.409Z
 
 ## Functions
 
