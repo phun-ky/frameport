@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.53](https://github.com/phun-ky/frameport/compare/v2.0.52...v2.0.53) (2026-02-17)
+
+### Bug
+
+* 🐛 Deploy ([a077ca1](https://github.com/phun-ky/frameport/commit/a077ca1a85bf54dd30cc23386c05a1210320da53))
+
 ## [2.0.52](https://github.com/phun-ky/frameport/compare/v2.0.51...v2.0.52) (2026-02-17)
 
 ### Tasks
