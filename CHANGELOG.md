@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.55](https://github.com/phun-ky/frameport/compare/v2.0.54...v2.0.55) (2026-03-02)
+
+### Tasks
+
+* 🤖 bump minimatch ([74de6e5](https://github.com/phun-ky/frameport/commit/74de6e57e584e737df675246e118db0ae56c84ad))
+
 ## [2.0.54](https://github.com/phun-ky/frameport/compare/v2.0.53...v2.0.54) (2026-02-24)
 
 ### Tasks
