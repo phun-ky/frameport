@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.56](https://github.com/phun-ky/frameport/compare/v2.0.55...v2.0.56) (2026-03-02)
+
+### Tasks
+
+* 🤖 bump basic-ftp from 5.1.0 to 5.2.0 ([1f6045d](https://github.com/phun-ky/frameport/commit/1f6045d7e8dbd5246f4451691b6a38050e2731bc))
+
 ## [2.0.55](https://github.com/phun-ky/frameport/compare/v2.0.54...v2.0.55) (2026-03-02)
 
 ### Tasks
