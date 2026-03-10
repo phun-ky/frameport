@@ -85,7 +85,7 @@
   "devDependencies": {
     "@release-it/conventional-changelog": "^10.0.2",
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-terser": "^1.0.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.9.1",
     "cobertura": "^1.0.1",
