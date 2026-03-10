@@ -2,7 +2,7 @@
 
 # utils/style
 
-> Last updated 2026-03-10T08:34:00.349Z
+> Last updated 2026-03-10T09:38:58.104Z
 
 ## Functions
 

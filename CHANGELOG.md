@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.59](https://github.com/phun-ky/frameport/compare/v2.0.58...v2.0.59) (2026-03-10)
+
+### Tasks
+
+* 🤖 bump @rollup/plugin-terser in the major-updates group ([fa099da](https://github.com/phun-ky/frameport/commit/fa099daf3ffb94c15d06d985e5483ca8f377c280))
+
 ## [2.0.58](https://github.com/phun-ky/frameport/compare/v2.0.57...v2.0.58) (2026-03-10)
 
 ### Tasks
