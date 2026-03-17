@@ -2,7 +2,7 @@
 
 # utils/blob
 
-> Last updated 2026-03-17T09:51:54.574Z
+> Last updated 2026-03-17T09:55:28.254Z
 
 ## Functions
 
