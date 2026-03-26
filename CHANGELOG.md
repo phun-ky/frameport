@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.63](https://github.com/phun-ky/frameport/compare/v2.0.62...v2.0.63) (2026-03-26)
+
+### Tasks
+
+* 🤖 bump flatted from 3.3.3 to 3.4.2 ([92a1e18](https://github.com/phun-ky/frameport/commit/92a1e18cc6d1da8d01ebf48ca1a7acd0b79ff6e6))
+
 ## [2.0.62](https://github.com/phun-ky/frameport/compare/v2.0.61...v2.0.62) (2026-03-26)
 
 ### Tasks
