@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.64](https://github.com/phun-ky/frameport/compare/v2.0.63...v2.0.64) (2026-03-27)
+
+### Tasks
+
+* 🤖 bump handlebars from 4.7.8 to 4.7.9 ([e9d8fe6](https://github.com/phun-ky/frameport/commit/e9d8fe67d27685f7e06a5db375ccf1e5325ab14f))
+
 ## [2.0.63](https://github.com/phun-ky/frameport/compare/v2.0.62...v2.0.63) (2026-03-26)
 
 ### Tasks
