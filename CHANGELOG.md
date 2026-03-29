@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.65](https://github.com/phun-ky/frameport/compare/v2.0.64...v2.0.65) (2026-03-29)
+
+### Tasks
+
+* 🤖 bump picomatch from 2.3.1 to 2.3.2 ([91c5b62](https://github.com/phun-ky/frameport/commit/91c5b62601a5eddabe61c48def896f7db072752e))
+* 🤖 Upgrade correct deps ([f9ba5da](https://github.com/phun-ky/frameport/commit/f9ba5da724d0810b58ba7c060a0d7762b3aebb14))
+
 ## [2.0.64](https://github.com/phun-ky/frameport/compare/v2.0.63...v2.0.64) (2026-03-27)
 
 ### Tasks
