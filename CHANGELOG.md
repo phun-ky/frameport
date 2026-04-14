@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.67](https://github.com/phun-ky/frameport/compare/v2.0.66...v2.0.67) (2026-04-14)
+
+### Tasks
+
+* 🤖 bump serialize-javascript from 7.0.4 to 7.0.5 ([223ff1e](https://github.com/phun-ky/frameport/commit/223ff1e650b26d1c2f805fd3f1ad214302e122db))
+
 ## [2.0.66](https://github.com/phun-ky/frameport/compare/v2.0.65...v2.0.66) (2026-04-14)
 
 ### Tasks
