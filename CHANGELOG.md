@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.68](https://github.com/phun-ky/frameport/compare/v2.0.67...v2.0.68) (2026-04-14)
+
+### Tasks
+
+* 🤖 bump defu from 6.1.4 to 6.1.6 ([b70d54c](https://github.com/phun-ky/frameport/commit/b70d54c549ff15e8e58dd8468b159ad7daa88a59))
+
 ## [2.0.67](https://github.com/phun-ky/frameport/compare/v2.0.66...v2.0.67) (2026-04-14)
 
 ### Tasks
