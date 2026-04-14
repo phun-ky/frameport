@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.66](https://github.com/phun-ky/frameport/compare/v2.0.65...v2.0.66) (2026-04-14)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group across 1 directory with 4 updates ([de182d2](https://github.com/phun-ky/frameport/commit/de182d297c6f5d845b34c85ad652e02ab62dbc06))
+
 ## [2.0.65](https://github.com/phun-ky/frameport/compare/v2.0.64...v2.0.65) (2026-03-29)
 
 ### Tasks
