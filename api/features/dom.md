@@ -2,7 +2,7 @@
 
 # features/dom
 
-> Last updated 2026-04-14T12:22:41.714Z
+> Last updated 2026-04-14T12:25:26.918Z
 
 ## Functions
 

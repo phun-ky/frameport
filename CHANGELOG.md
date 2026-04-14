@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.69](https://github.com/phun-ky/frameport/compare/v2.0.68...v2.0.69) (2026-04-14)
+
+### Tasks
+
+* 🤖 bump lodash from 4.17.23 to 4.18.1 ([24df2a8](https://github.com/phun-ky/frameport/commit/24df2a88a8b6ec240977cdbeb911d0d52886a480))
+
 ## [2.0.68](https://github.com/phun-ky/frameport/compare/v2.0.67...v2.0.68) (2026-04-14)
 
 ### Tasks
