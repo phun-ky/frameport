@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.73](https://github.com/phun-ky/frameport/compare/v2.0.72...v2.0.73) (2026-05-11)
+
+### Tasks
+
+* 🤖 bump ip-address from 10.1.0 to 10.2.0 ([969b30d](https://github.com/phun-ky/frameport/commit/969b30d53f9d175b46de510e79d0844b0ba027ce))
+
 ## [2.0.72](https://github.com/phun-ky/frameport/compare/v2.0.71...v2.0.72) (2026-05-11)
 
 ### Tasks
