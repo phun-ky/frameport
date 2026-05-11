@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.72](https://github.com/phun-ky/frameport/compare/v2.0.71...v2.0.72) (2026-05-11)
+
+### Tasks
+
+* 🤖 bump postcss from 8.5.6 to 8.5.14 ([d46031c](https://github.com/phun-ky/frameport/commit/d46031c24b8caff4936e9d59de47384c9d2892cd))
+
 ## [2.0.71](https://github.com/phun-ky/frameport/compare/v2.0.70...v2.0.71) (2026-05-11)
 
 ### Tasks
