@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.74](https://github.com/phun-ky/frameport/compare/v2.0.73...v2.0.74) (2026-05-11)
+
+### Tasks
+
+* 🤖 bump fast-uri from 3.1.0 to 3.1.2 ([fd65d85](https://github.com/phun-ky/frameport/commit/fd65d85e7463956d83b142916e442764297ea72c))
+
 ## [2.0.73](https://github.com/phun-ky/frameport/compare/v2.0.72...v2.0.73) (2026-05-11)
 
 ### Tasks
