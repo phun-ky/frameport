@@ -62,7 +62,8 @@ const frameport = () => {
   const elsToBeTransformedTemplate =
     document.querySelectorAll('[data-frameport]');
 
-  elsToBeTransformedTemplate.forEach((targetElement: HTMLElement) => {
+  elsToBeTransformedTemplate.forEach((targetElement) => {
+    if (!(targetElement instanceof HTMLElement)) return;
     const {
       dataset: {
         frameportTemplate: templateSelector,
