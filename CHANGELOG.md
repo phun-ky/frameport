@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.75](https://github.com/phun-ky/frameport/compare/v2.0.74...v2.0.75) (2026-05-13)
+
+### Tasks
+
+* 🤖 bump the major-updates group across 1 directory with 4 updates ([fbea71d](https://github.com/phun-ky/frameport/commit/fbea71d892a7f105973364a85e50fd93f8432979))
+* 🤖 Update tooling chain and fix some linting ([f7ca515](https://github.com/phun-ky/frameport/commit/f7ca5159b6648a0725bab77d0327b31dbab06bae))
+
 ## [2.0.74](https://github.com/phun-ky/frameport/compare/v2.0.73...v2.0.74) (2026-05-11)
 
 ### Tasks

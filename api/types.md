@@ -2,7 +2,7 @@
 
 # types
 
-> Last updated 2026-05-11T18:39:01.004Z
+> Last updated 2026-05-13T12:36:20.000Z
 
 ## Interfaces
 
