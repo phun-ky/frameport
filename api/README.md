@@ -2,7 +2,7 @@
 
 ---
 
-> Last updated 2026-05-13T12:36:19.551Z
+> Last updated 2026-06-04T18:09:16.252Z
 
 ## Modules
 
