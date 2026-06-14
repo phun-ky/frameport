@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.77](https://github.com/phun-ky/frameport/compare/v2.0.76...v2.0.77) (2026-06-14)
+
+### Tasks
+
+* 🤖 bump esbuild from 0.28.0 to 0.28.1 ([7a9d356](https://github.com/phun-ky/frameport/commit/7a9d356c15ab39e1da3b3d6e7c8abd7ae0ec8afa))
+
 ## [2.0.76](https://github.com/phun-ky/frameport/compare/v2.0.75...v2.0.76) (2026-06-04)
 
 ### Tasks
