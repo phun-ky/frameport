@@ -2,7 +2,7 @@
 
 # utils/iframe
 
-> Last updated 2026-06-14T18:12:10.696Z
+> Last updated 2026-07-08T19:37:44.448Z
 
 ## Functions
 
