@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.79](https://github.com/phun-ky/frameport/compare/v2.0.78...v2.0.79) (2026-07-12)
+
+### Tasks
+
+* 🤖 bump js-yaml from 4.1.1 to 4.3.0 ([90e37cd](https://github.com/phun-ky/frameport/commit/90e37cdd76914e50111ead4c65076750fbb354af))
+
 ## [2.0.78](https://github.com/phun-ky/frameport/compare/v2.0.77...v2.0.78) (2026-07-08)
 
 ### Tasks
