@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.82](https://github.com/phun-ky/frameport/compare/v2.0.81...v2.0.82) (2026-09-03)
+
+### Tasks
+
+* 🤖 bump brace-expansion from 2.0.2 to 2.1.4 ([ccd000d](https://github.com/phun-ky/frameport/commit/ccd000da14f76fd7f062a5e8561b022989fbe0cf))
+
 ## [2.0.81](https://github.com/phun-ky/frameport/compare/v2.0.80...v2.0.81) (2026-09-03)
 
 ### Tasks
