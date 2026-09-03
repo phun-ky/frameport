@@ -1,5 +1,35 @@
 # Changelog
 
+## [2.0.84](https://github.com/phun-ky/frameport/compare/v2.0.83...v2.0.84) (2026-09-03)
+
+### Tasks
+
+* 🤖 bump @humanfs/node from 0.16.7 to 0.16.8 ([5de63a2](https://github.com/phun-ky/frameport/commit/5de63a2097d94c9b0a3495826bb62561cebdb1b9))
+
+## [2.0.83](https://github.com/phun-ky/frameport/compare/v2.0.82...v2.0.83) (2026-09-03)
+
+### Tasks
+
+* 🤖 bump browserslist from 4.28.2 to 4.28.8 ([aeb7932](https://github.com/phun-ky/frameport/commit/aeb79326b31e1d6a3172e469c6445288165ef3da))
+
+## [2.0.82](https://github.com/phun-ky/frameport/compare/v2.0.81...v2.0.82) (2026-09-03)
+
+### Tasks
+
+* 🤖 bump brace-expansion from 2.0.2 to 2.1.4 ([ccd000d](https://github.com/phun-ky/frameport/commit/ccd000da14f76fd7f062a5e8561b022989fbe0cf))
+
+## [2.0.81](https://github.com/phun-ky/frameport/compare/v2.0.80...v2.0.81) (2026-09-03)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group across 1 directory with 6 updates ([33f2c47](https://github.com/phun-ky/frameport/commit/33f2c47b9f846cd443cb9595e2d2a82f162f16d9))
+
+## [2.0.80](https://github.com/phun-ky/frameport/compare/v2.0.79...v2.0.80) (2026-09-03)
+
+### Tasks
+
+* 🤖 bump fast-uri from 3.1.2 to 3.1.7 ([0e643a6](https://github.com/phun-ky/frameport/commit/0e643a64b070c7257ac16714f683101bdf1121ca))
+
 ## [2.0.79](https://github.com/phun-ky/frameport/compare/v2.0.78...v2.0.79) (2026-07-12)
 
 ### Tasks
