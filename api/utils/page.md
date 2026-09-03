@@ -2,7 +2,7 @@
 
 # utils/page
 
-> Last updated 2026-07-12T07:48:40.921Z
+> Last updated 2026-09-03T06:36:20.393Z
 
 ## Functions
 
