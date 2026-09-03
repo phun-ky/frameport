@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.83](https://github.com/phun-ky/frameport/compare/v2.0.82...v2.0.83) (2026-09-03)
+
+### Tasks
+
+* 🤖 bump browserslist from 4.28.2 to 4.28.8 ([aeb7932](https://github.com/phun-ky/frameport/commit/aeb79326b31e1d6a3172e469c6445288165ef3da))
+
 ## [2.0.82](https://github.com/phun-ky/frameport/compare/v2.0.81...v2.0.82) (2026-09-03)
 
 ### Tasks
