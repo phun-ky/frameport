@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.84](https://github.com/phun-ky/frameport/compare/v2.0.83...v2.0.84) (2026-09-03)
+
+### Tasks
+
+* 🤖 bump @humanfs/node from 0.16.7 to 0.16.8 ([5de63a2](https://github.com/phun-ky/frameport/commit/5de63a2097d94c9b0a3495826bb62561cebdb1b9))
+
 ## [2.0.83](https://github.com/phun-ky/frameport/compare/v2.0.82...v2.0.83) (2026-09-03)
 
 ### Tasks
