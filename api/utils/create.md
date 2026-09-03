@@ -2,7 +2,7 @@
 
 # utils/create
 
-> Last updated 2026-09-03T06:36:20.335Z
+> Last updated 2026-09-03T06:38:51.278Z
 
 ## Functions
 

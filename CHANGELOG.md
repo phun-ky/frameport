@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.81](https://github.com/phun-ky/frameport/compare/v2.0.80...v2.0.81) (2026-09-03)
+
+### Tasks
+
+* 🤖 bump the minor-and-patch group across 1 directory with 6 updates ([33f2c47](https://github.com/phun-ky/frameport/commit/33f2c47b9f846cd443cb9595e2d2a82f162f16d9))
+
 ## [2.0.80](https://github.com/phun-ky/frameport/compare/v2.0.79...v2.0.80) (2026-09-03)
 
 ### Tasks
