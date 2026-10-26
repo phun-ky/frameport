@@ -1,3 +1,5 @@
+import { type FrameportOptionsInterface } from '../types';
+
 import { getBlobURL } from './blob';
 import { getSource } from './source';
 
@@ -7,7 +9,9 @@ import { getSource } from './source';
  * @param {object} options - The options for generating the HTML page.
  * @returns {string} - The URL of the generated HTML page as a Blob URL.
  */
-export const getGeneratedPageURL = (options) => {
+export const getGeneratedPageURL = (
+  options: FrameportOptionsInterface
+): string => {
   const source = getSource(options);
 
   return getBlobURL(source, 'text/html');

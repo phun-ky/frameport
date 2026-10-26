@@ -40,13 +40,18 @@ export const add = async (
 
   await waitForFrame();
 
+  // Style properties by their camelCase names, such as backgroundColor
+  type Styles = Record<string, string>;
+
   if (Array.isArray(styles)) {
     styles.forEach(
       (style: { key: string; value: string }) =>
-        (el.style[style.key] = style.value)
+        ((el.style as unknown as Styles)[style.key] = style.value)
     );
   } else {
-    Object.keys(styles).forEach((key) => (el.style[key] = styles[key]));
+    Object.keys(styles).forEach(
+      (key) => ((el.style as unknown as Styles)[key] = (styles as Styles)[key])
+    );
   }
 };
 
