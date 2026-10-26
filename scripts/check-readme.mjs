@@ -73,6 +73,7 @@ try {
 
     const where = `README.md:${block.line}`;
     const expected = block.code.match(/Renders (\d+) iframes?/);
+
     let body;
 
     if (block.lang === 'html') {
