@@ -1,6 +1,6 @@
 {
   "name": "@phun-ky/frameport",
-  "version": "2.0.85",
+  "version": "2.0.88",
   "description": "A zero dependency package to effortlessly create responsive component previews in documentation using real media queries. Frameport dynamically generates iframes containing your HTML/CSS/JS, mimicking natural device viewports to test responsiveness, without any build steps or dependencies.",
   "keywords": [
     "documentation",
@@ -77,6 +77,7 @@
     "commit": "npx git-cz",
     "dev": "npx browser-sync start --server 'dev' --files 'dist' --ss 'dist'",
     "docs:gen": "node ./node_modules/.bin/typedoc",
+    "prepare": "git config core.hooksPath .githooks || true",
     "release": "release-it",
     "rollup": "rollup -c",
     "prerollup:dev": "npm run clean",
