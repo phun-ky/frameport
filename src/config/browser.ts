@@ -118,6 +118,9 @@ export const manual = (frameport: FrameportFunctionType): void => {
  * ```
  */
 export const activate = (frameport: FrameportFunctionType): void => {
+  // Importing in Node (server-side rendering, tests) must not throw
+  if (typeof document === 'undefined') return;
+
   const script = document.currentScript;
 
   if (script) {
