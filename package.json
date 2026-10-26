@@ -138,5 +138,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "overrides": {
+    "release-it": {
+      "undici": "^7.30.1"
+    }
   }
 }
