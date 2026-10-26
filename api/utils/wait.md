@@ -2,7 +2,7 @@
 
 # utils/wait
 
-> Last updated 2026-10-26T08:34:48.743Z
+> Last updated 2026-10-26T08:46:41.409Z
 
 ## Functions
 
