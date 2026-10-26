@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.87](https://github.com/phun-ky/frameport/compare/v2.0.86...v2.0.87) (2026-10-26)
+
+### Bug
+
+* 🐛 make import and require of the package work in Node ([14c9e2a](https://github.com/phun-ky/frameport/commit/14c9e2aa0d4585e5e38cc04c7322fda8b3decba4)), closes [#225](https://github.com/phun-ky/frameport/issues/225)
+
+## [2.0.86](https://github.com/phun-ky/frameport/compare/v2.0.85...v2.0.86) (2026-10-26)
+
 ## [2.0.85](https://github.com/phun-ky/frameport/compare/v2.0.84...v2.0.85) (2026-09-03)
 
 ### Tasks
