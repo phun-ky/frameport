@@ -2,7 +2,7 @@
 
 # config/generate
 
-> Last updated 2026-10-26T08:18:42.061Z
+> Last updated 2026-10-26T08:34:48.443Z
 
 ## Functions
 
@@ -12,9 +12,11 @@
 function generate(targetElement, options): void;
 ```
 
-Defined in: [config/generate.ts:11](https://github.com/phun-ky/frameport/blob/main/src/config/generate.ts#L11)
+Defined in: [config/generate.ts:13](https://github.com/phun-ky/frameport/blob/main/src/config/generate.ts#L13)
 
 Generate an iframe with the given options and append it to a target element.
+When the target is its own template, it is hidden, so the iframe goes right
+after it instead.
 
 #### Parameters
 

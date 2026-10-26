@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.89](https://github.com/phun-ky/frameport/compare/v2.0.88...v2.0.89) (2026-10-26)
+
+### Bug
+
+* 🐛 show the iframe for inline content with data-frameport-vw ([9eb7040](https://github.com/phun-ky/frameport/commit/9eb7040c27441604c183a3886e931bee7dea4c9c)), closes [#252](https://github.com/phun-ky/frameport/issues/252)
+
 ## [2.0.88](https://github.com/phun-ky/frameport/compare/v2.0.87...v2.0.88) (2026-10-26)
 
 ### Bug
