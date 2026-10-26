@@ -10,6 +10,7 @@ on:
     paths:
       - '.github/**'
       - 'src/**'
+      - 'scripts/**'
       - 'package.json'
       - 'package-lock.json'
       - 'rollup.config.js'
@@ -21,6 +22,7 @@ on:
     paths:
       - '.github/**'
       - 'src/**'
+      - 'scripts/**'
       - 'package.json'
       - 'package-lock.json'
       - 'rollup.config.js'
@@ -55,6 +57,8 @@ jobs:
         run: npm run build
       - name: Test
         run: npm run test:ci
+      - name: Check the packed package
+        run: npm run check:pack
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
