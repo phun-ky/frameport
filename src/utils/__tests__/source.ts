@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 
-import { FrameportOptions } from '../../types';
+import { FrameportOptionsInterface } from '../../types';
 import { getSource } from '../source';
 
 describe('getSource', () => {
@@ -33,7 +33,7 @@ describe('getSource', () => {
       javascript: '/path-to-js.js',
       code: 'alert("Hello, World!");'
     };
-    const result = getSource(options as FrameportOptions);
+    const result = getSource(options as FrameportOptionsInterface);
     const expected = `<!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +53,7 @@ describe('getSource', () => {
 
   it('should handle missing options and generate minimal HTML structure', () => {
     const options = {};
-    const result = getSource(options as FrameportOptions);
+    const result = getSource(options as FrameportOptionsInterface);
     const expected = `<!DOCTYPE html>
 <html>
 <head>
@@ -75,7 +75,7 @@ describe('getSource', () => {
     const options = {
       headers: ['<meta charset="UTF-8">', '<title>My Page</title>']
     };
-    const result = getSource(options as FrameportOptions);
+    const result = getSource(options as FrameportOptionsInterface);
     const expected = `<!DOCTYPE html>
 <html>
 <head>
