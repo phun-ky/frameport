@@ -49,18 +49,30 @@
   "license": "MIT",
   "author": "Alexander Vassbotn Røyne-Helgesen <alexander+frameport@phun-ky.net>",
   "type": "module",
-  "main": "dist/frameport.js",
-  "module": "dist/frameport.esm.js",
-  "types": "dist/frameport.d.ts",
+  "main": "./dist/frameport.esm.js",
+  "module": "./dist/frameport.esm.js",
+  "types": "./dist/frameport.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/frameport.d.ts",
+      "default": "./dist/frameport.esm.js"
+    },
+    "./package.json": "./package.json",
+    "./dist/*": "./dist/*"
+  },
+  "unpkg": "./dist/frameport.js",
+  "jsdelivr": "./dist/frameport.js",
   "files": [
     "/dist/frameport.esm.js",
     "/dist/frameport.esm.js.map",
     "/dist/frameport.js",
     "/dist/frameport.js.map",
-    "/dist/frameport.d.ts"
+    "/dist/frameport.d.ts",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "build": "npm run clean && npm run rollup",
+    "check:pack": "node scripts/check-pack.mjs",
     "clean": "rm -rf dist dts",
     "commit": "npx git-cz",
     "dev": "npx browser-sync start --server 'dev' --files 'dist' --ss 'dist'",
@@ -84,6 +96,7 @@
     }
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
     "@release-it/conventional-changelog": "^11.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^1.0.0",
@@ -97,6 +110,7 @@
     "global-jsdom": "^29.0.0",
     "jsdom": "^29.1.1",
     "prettier": "^3.8.0",
+    "publint": "^0.3.25",
     "putout": "^42.13.0",
     "release-it": "^20.2.1",
     "remark-github": "^12.0.0",
