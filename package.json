@@ -49,15 +49,26 @@
   "license": "MIT",
   "author": "Alexander Vassbotn Røyne-Helgesen <alexander+frameport@phun-ky.net>",
   "type": "module",
-  "main": "dist/frameport.js",
-  "module": "dist/frameport.esm.js",
-  "types": "dist/frameport.d.ts",
+  "main": "./dist/frameport.esm.js",
+  "module": "./dist/frameport.esm.js",
+  "types": "./dist/frameport.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/frameport.d.ts",
+      "default": "./dist/frameport.esm.js"
+    },
+    "./package.json": "./package.json",
+    "./dist/*": "./dist/*"
+  },
+  "unpkg": "./dist/frameport.js",
+  "jsdelivr": "./dist/frameport.js",
   "files": [
     "/dist/frameport.esm.js",
     "/dist/frameport.esm.js.map",
     "/dist/frameport.js",
     "/dist/frameport.js.map",
-    "/dist/frameport.d.ts"
+    "/dist/frameport.d.ts",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "build": "npm run clean && npm run rollup",
