@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.88](https://github.com/phun-ky/frameport/compare/v2.0.87...v2.0.88) (2026-10-26)
+
+### Bug
+
+* 🐛 stop frameport() from duplicating iframes when called again ([ddbbe83](https://github.com/phun-ky/frameport/commit/ddbbe83d5d6e6cf6d14449a92ea23795df94e3a9)), closes [#226](https://github.com/phun-ky/frameport/issues/226)
+
 ## [2.0.87](https://github.com/phun-ky/frameport/compare/v2.0.86...v2.0.87) (2026-10-26)
 
 ### Bug
