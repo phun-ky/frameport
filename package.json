@@ -65,6 +65,7 @@
     "commit": "npx git-cz",
     "dev": "npx browser-sync start --server 'dev' --files 'dist' --ss 'dist'",
     "docs:gen": "node ./node_modules/.bin/typedoc",
+    "prepare": "git config core.hooksPath .githooks || true",
     "release": "release-it",
     "rollup": "rollup -c",
     "prerollup:dev": "npm run clean",
