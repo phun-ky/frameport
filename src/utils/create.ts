@@ -18,7 +18,7 @@ export const create = (
   const iframeStyle = {};
 
   iframeElement.src = url;
-  iframeElement.setAttribute('data-rde-iframe', '');
+  iframeElement.setAttribute('data-frameport-iframe', '');
 
   if (!className || className === '') {
     iframeStyle['border'] = 'none';
