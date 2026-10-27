@@ -7,7 +7,7 @@
     "typedoc-plugin-rename-defaults",
     "./custom-typedoc-plugin.js"
   ],
-  "out": "./api",
+  "out": "./docs/api",
   "tsconfig": "tsconfig.build.json",
   "outputFileStrategy": "modules",
   "interfacePropertiesFormat": "table",
@@ -17,8 +17,7 @@
   "propertyMembersFormat": "table",
   "theme": "custom-markdown-theme",
   "parametersFormat": "table",
-  "entryPoints": ["src"],
-  "entryPointStrategy": "expand",
+  "entryPoints": ["src/main.ts"],
   "readme": "./public/docs/README.md",
   "gitRevision": "main",
   "githubPages": false,
@@ -27,7 +26,19 @@
   "expandObjects": true,
   "remarkPlugins": [
     "unified-prettier",
-    ["remark-github", { "repository": "https://github.com/phun-ky/frameport" }],
-    ["remark-toc", { "heading": "Table of Contents", "maxDepth": 3 }]
-  ]
+    [
+      "remark-github",
+      {
+        "repository": "https://github.com/phun-ky/frameport"
+      }
+    ],
+    [
+      "remark-toc",
+      {
+        "heading": "Table of Contents",
+        "maxDepth": 3
+      }
+    ]
+  ],
+  "intentionallyNotExported": ["FrameportFunctionType"]
 }

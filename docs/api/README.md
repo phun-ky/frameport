@@ -1,8 +1,6 @@
-[@phun-ky/frameport](README.md) / main
+# FRAMEPORT API Documentation
 
-# main
-
-> Last updated 2026-10-26T08:46:41.137Z
+---
 
 ## Variables
 
@@ -17,7 +15,7 @@ const modes: {
 };
 ```
 
-Defined in: [main.ts:10](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L10)
+Defined in: [main.ts:9](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L9)
 
 Available initialization modes for frameport usage.
 Can be triggered manually or via browser lifecycle hooks.
@@ -59,7 +57,7 @@ A function to activate frameport based on script attributes.
 </td>
 <td>
 
-[main.ts:14](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L14)
+[main.ts:13](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L13)
 
 </td>
 </tr>
@@ -88,7 +86,7 @@ A function to initialize frameport when the DOM is ready.
 </td>
 <td>
 
-[main.ts:11](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L11)
+[main.ts:10](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L10)
 
 </td>
 </tr>
@@ -117,7 +115,7 @@ A function to initialize lazy frameport functionality.
 </td>
 <td>
 
-[main.ts:12](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L12)
+[main.ts:11](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L11)
 
 </td>
 </tr>
@@ -146,7 +144,7 @@ A function to manually activate frameport.
 </td>
 <td>
 
-[main.ts:13](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L13)
+[main.ts:12](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L12)
 
 </td>
 </tr>
@@ -161,7 +159,7 @@ A function to manually activate frameport.
 function frameport(): void;
 ```
 
-Defined in: [main.ts:55](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L55)
+Defined in: [main.ts:54](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L54)
 
 Transforms all DOM elements marked with `[data-frameport]` into embedded iframes
 with sandboxed content based on HTML templates and associated metadata.
@@ -221,7 +219,7 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
-![Speccer banner, with logo and slogan: A zero dependency package to annotate or highlight elements](https://github.com/phun-ky/frameport/blob/main/public/frameport-banner.png?raw=true)
+![The frameport logo](https://github.com/phun-ky/frameport/blob/main/public/logo-frameport-colored-package.svg?raw=true)
 
 ---
 

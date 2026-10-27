@@ -57,6 +57,8 @@ jobs:
         run: npm run check:pack
       - name: Run the README examples # In headless Chrome, which the runner image includes
         run: npm run check:readme
+      - name: Check API docs # TypeDoc, with warnings as errors
+        run: npm run docs:check
       - name: Check OpenSSF answers # Valid statuses, and every linked file and heading exists
         run: npm run check:bestpractices
       - name: Upload coverage reports to Codecov

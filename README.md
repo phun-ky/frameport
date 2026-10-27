@@ -174,7 +174,7 @@ The iframes load from `blob:` URLs, which share your page's origin, and have no 
 
 ## API
 
-Go [here](https://github.com/phun-ky/frameport/blob/main/api/README.md) to read the full API documentation.
+Go [here](https://github.com/phun-ky/frameport/blob/main/docs/api/README.md) to read the full API documentation.
 
 ## Demo
 
