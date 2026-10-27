@@ -8,45 +8,169 @@
 
 - [@phun-ky/frameport](#phun-kyframeport)
   - [About](#about)
-  - [Installation \& Setup](#installation--setup)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Script tag](#script-tag)
+    - [ES modules](#es-modules)
+    - [Lazy loading](#lazy-loading)
+  - [Examples](#examples)
+    - [One width](#one-width)
+    - [Several viewports](#several-viewports)
+    - [Content from a template](#content-from-a-template)
+  - [Attributes](#attributes)
+  - [Security](#security)
   - [API](#api)
   - [Demo](#demo)
-  - [Options](#options)
-  - [Usage](#usage)
-    - [Basic usage](#basic-usage)
-      - [Typescript](#typescript)
-      - [ESM](#esm)
-      - [Script](#script)
-    - [Advanced usage](#advanced-usage)
-      - [Lazy](#lazy)
-  - [Features](#features)
-    - [Via DOM](#via-dom)
-    - [Use templates as a target](#use-templates-as-a-target)
-    - [Use targets with different template](#use-targets-with-different-template)
-      - [Allowed tags](#allowed-tags)
   - [Contributing](#contributing)
   - [Sponsor me](#sponsor-me)
 
 ## About
 
-Frameport helps you embed live, responsive component previews in your documentation or style guide. It works by generating iframes with your HTML/CSS/JS that respect real media queries—so your components behave just like they do in actual devices.
+Frameport helps you embed live, responsive component previews in your documentation or style guide. It generates iframes with your HTML, CSS and JavaScript at the widths you choose, so media queries apply as they would on a real device.
 
-✅ Zero dependencies  
-✅ Framework agnostic  
-✅ Real device viewport emulation  
+✅ Zero dependencies<br>
+✅ Framework agnostic<br>
+✅ Real device viewport emulation<br>
 ✅ Instant iframe-based previews
 
-## Installation & Setup
+## Requirements
 
-```shell-session
-npm i -S @phun-ky/frameport
+A browser. The package is ES modules with types included, plus a UMD build for script tags. Importing it in Node (for example during server-side rendering) works and does nothing until `frameport()` is called in a browser; `require()` needs Node 22.12 or later.
+
+## Installation
+
+```sh
+npm i @phun-ky/frameport
 ```
 
-or with yarn:
+## Usage
 
-```shell-session
-yarn add @phun-ky/frameport
+Frameport turns every element with a `data-frameport` attribute into one or more iframes. The element's content, or a template, becomes the body of each iframe.
+
+### Script tag
+
+Place the script at the end of the page:
+
+```html
+<script src="https://unpkg.com/@phun-ky/frameport/dist/frameport.js"></script>
 ```
+
+By default it renders when `DOMContentLoaded` fires. Add one of these attributes to the script element to change that:
+
+| Attribute      | Description                                                        |
+| -------------- | ------------------------------------------------------------------ |
+| `data-manual`  | Renders nothing; call `window.frameport()` when you want to render |
+| `data-instant` | Renders right away                                                 |
+| `data-dom`     | Renders when `DOMContentLoaded` fires (the default)                |
+| `data-lazy`    | Renders each element when it scrolls into view                     |
+
+```html
+<div data-frameport data-frameport-vw="320">
+  <p>Rendered when you call window.frameport()</p>
+</div>
+<script
+  src="https://unpkg.com/@phun-ky/frameport/dist/frameport.js"
+  data-manual
+></script>
+<script>
+  window.frameport();
+</script>
+<!-- Renders 1 iframe -->
+```
+
+Calling `frameport()` again removes the iframes it generated and renders them anew.
+
+### ES modules
+
+```javascript
+import frameport from '@phun-ky/frameport';
+
+// Render every [data-frameport] element on the page
+frameport();
+// Renders 1 iframe
+```
+
+### Lazy loading
+
+`modes.lazy()` renders each `[data-frameport]` element when it scrolls into view:
+
+```javascript
+import { modes } from '@phun-ky/frameport';
+
+modes.lazy();
+// Renders 1 iframe
+```
+
+## Examples
+
+### One width
+
+The element's content is rendered in an iframe 667 pixels wide and 375 pixels high, placed right after the element. The element itself is hidden.
+
+```html
+<div
+  data-frameport
+  data-frameport-vw="667"
+  data-frameport-vh="375"
+  data-frameport-style="body { background-color: #84a295; }"
+>
+  <button type="button">Primary</button>
+</div>
+<!-- Renders 1 iframe -->
+```
+
+### Several viewports
+
+`data-frameport-viewports` takes `widthxheight` pairs separated by commas. The iframes are placed right after the element. In 2.x they come out in reverse order: the last viewport in the list comes first. This changes in 3.0 ([#240](https://github.com/phun-ky/frameport/issues/240)).
+
+```html
+<div data-frameport data-frameport-viewports="375x667,360x740,768x1024">
+  <main style="height: 100vh">
+    <p>Look, I'm in an iframe</p>
+  </main>
+</div>
+<!-- Renders 3 iframes -->
+```
+
+### Content from a template
+
+With `data-frameport-template`, the content comes from the element the selector matches, which is then hidden. The iframe is placed inside the `data-frameport` element.
+
+```html
+<div
+  data-frameport
+  data-frameport-template="#button-template"
+  data-frameport-vw="667"
+  data-frameport-vh="375"
+></div>
+<div id="button-template">
+  <button type="button">Primary</button>
+</div>
+<!-- Renders 1 iframe -->
+```
+
+## Attributes
+
+| Attribute                  | Description                                                                                                                                                                                 |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data-frameport`           | **Required.** Marks the element to render.                                                                                                                                                  |
+| `data-frameport-vw`        | The iframe width in pixels. **Required** unless `data-frameport-viewports` is set.                                                                                                          |
+| `data-frameport-vh`        | The iframe height in pixels.                                                                                                                                                                |
+| `data-frameport-viewports` | One iframe per `widthxheight` pair, separated by commas, for example `375x667,768x1024`. Replaces `data-frameport-vw` and `data-frameport-vh`.                                              |
+| `data-frameport-template`  | A selector for the element whose content to render, instead of the element's own content.                                                                                                   |
+| `data-frameport-css`       | A stylesheet path on the same origin, starting with `/`, for example `/dist/styles.css`. Added to the iframe's `<head>`.                                                                    |
+| `data-frameport-style`     | CSS added in a `<style>` element in the iframe's `<head>`.                                                                                                                                  |
+| `data-frameport-js`        | A script path on the same origin, starting with `/`, for example `/dist/script.js`. Added at the end of the iframe's `<body>`.                                                              |
+| `data-frameport-code`      | JavaScript added in a `<script>` element at the end of the iframe's `<body>`.                                                                                                               |
+| `data-frameport-class`     | A class name for the generated iframes. Without it, the iframes get `border: none`.                                                                                                         |
+| `data-frameport-headers`   | Extra HTML for the iframe's `<head>`, such as `<meta>` or `<link>` elements, separated by commas (so the HTML itself can't contain a comma). Added after frameport's default `<meta>` tags. |
+
+Generated iframes have a `data-frameport-iframe` attribute.
+
+## Security
+
+The iframes load from `blob:` URLs, which share your page's origin, and have no `sandbox` attribute. Code in the rendered content, `data-frameport-code`, `data-frameport-js` and `data-frameport-headers` can read and change your page. Only render content you control, never user input. See [SECURITY.md](https://github.com/phun-ky/frameport/blob/main/SECURITY.md).
 
 ## API
 
@@ -55,222 +179,6 @@ Go [here](https://github.com/phun-ky/frameport/blob/main/api/README.md) to read 
 ## Demo
 
 Click [here for a demo on codepen.io](https://codepen.io/phun-ky/full/MWWWvLm)
-
-## Options
-
-| Option           | Type             | Required | Description                                                                                                                                                                                                                                        |
-| ---------------- | ---------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                  |                  |          |                                                                                                                                                                                                                                                    |
-| html             | string           | ✓        | The html you want to use in the viewport example                                                                                                                                                                                                   |
-| height           | string \| number |          | The height of the viewport, either as a string (e.g., '400') or a number (e.g., 400)                                                                                                                                                               |
-| width            | string \| number |          | The width of the viewport, either as a string (e.g., '600') or a number (e.g., 600)                                                                                                                                                                |
-| className        | string           |          | Class names to be given the generated iframe                                                                                                                                                                                                       |
-| style            | string           |          | Inline styles (CSS) to be inserted into a `<style>` -tag in the `<head>`-tag of the generated html                                                                                                                                                 |
-| css              | string           |          | A CSS file to be appended to the `<head>`-tag of the generated html. **NOTE! This needs to be on the same domain and relative to root!**                                                                                                           |
-| code             | string           |          | Custom JavaScript code to be inserted into a `<script>`-tag in the `<body>`-tag in the generated html                                                                                                                                              |
-| javascript       | string           |          | A JavaScript file to be inserted in the `<body>`-tag of the generated html. **NOTE! This needs to be on the same domain and relative to root!**                                                                                                    |
-| headers          | string[]         |          | An array of HTTP headers to include when fetching the HTML content                                                                                                                                                                                 |
-| viewports        | string           |          | The viewports to generate for examples. This is a string `wxh` for example: `375x667`. If you want more viewports, you can separate them with a comma: `375x667,360x740,768x1024`. **NOTE!** If not `viewports` are used, you need to set `width`! |
-| templateSelector | string           |          | Selector to the template                                                                                                                                                                                                                           |
-| templateElement  | HTMLElement      |          | Template element                                                                                                                                                                                                                                   |
-| target           | string           |          | To identify this as a target to use to generate the frameports                                                                                                                                                                                     |
-
-## Usage
-
-### Basic usage
-
-#### Typescript
-
-Types can be found in `@phun-ky/frameport/dist/frameport.d.ts`.
-
-#### ESM
-
-Either import and run the required functions:
-
-```javascript
-import frameport from '@phun-ky/frameport';
-
-// do stuff
-frameport(document.getElementById('target'), {
-  width: 667,
-  html: '<h1>FOO</h1>'
-});
-```
-
-#### Script
-
-Or place these `script` in your web page:
-
-```html
-<script src="../path/to/frameport.js"></script>
-```
-
-And then follow the steps below that suites your needs :)
-
-### Advanced usage
-
-If you want to control frameport a bit more, you have some options. Apply one of these attributes to the script element for different types of initialization:
-
-```html
-<script src="../frameport.js" data-<manual|instant|dom|lazy></script>
-```
-
-| Tag            | Description                                                           |
-| -------------- | --------------------------------------------------------------------- |
-| `data-manual`  | Makes `window.frameport()` available to be used when you feel like it |
-| `data-instant` | fires off `frameport()` right away                                    |
-| `data-dom`     | Waits for `DOMContentLoaded`                                          |
-| `data-lazy`    | Lazy loads `frameport()` per specced element                          |
-
-If no attribute is applied, it will default to `data-dom`, as in, it will initialize when `DOMContentLoaded` is fired.
-
-#### Lazy
-
-If you're importing frameport instead of with a script tag, you can use the following approach to apply lazy loading:
-
-```javascript
-import frameport from '@phun-ky/frameport';
-
-export const lazy = (): void => {
-  const frameportObserverTarget = new IntersectionObserver((els, observer) => {
-    els.forEach((el: IntersectionObserverEntry) => {
-      if (el.intersectionRatio > 0) {
-        const {
-          dataset: {
-            frameportTemplate: templateSelector,
-            frameportVh: height,
-            frameportVw: width,
-            frameportCss: css,
-            frameportStyle: style,
-            frameportCode: code,
-            frameportJs: javascript,
-            frameportClass: className,
-            frameportHeaders: headers,
-            frameportViewports: viewports,
-          },
-        } = el.target as HTMLElement;
-
-        let html = el.target.innerHTML;
-        let templateElementToUse = el.target as HTMLElement;
-
-        if (templateSelector) {
-          const templateElement = document.querySelector(templateSelector);
-
-          if (templateElement) {
-            html = templateElement.innerHTML;
-            templateElementToUse = templateElement as HTMLElement;
-          }
-        }
-
-        const options = {
-          templateSelector,
-          templateElement: templateElementToUse,
-          height,
-          width,
-          html,
-          css,
-          style,
-          code,
-          javascript,
-          className,
-          headers: getHeaders(headers),
-          viewports,
-        };
-        dom(el.target as HTMLElement, options);
-        observer.unobserve(el.target);
-      }
-    });
-  });
-
-  document.querySelectorAll('[data-frameport]').forEach((el) => {
-    frameportObserverTarget.observe(el);
-  });
-};
-```
-
-## Features
-
-### Via DOM
-
-Place the `script` tag at the bottom of your page, right before the `</body>`-tag:
-
-```html
-<script src="../path/to/@phun-ky/frameport/dist/frameport.js"></script>
-```
-
-Or with a CDN:
-
-```html
-<script src="https://unpkg.com/@phun-ky/frameport/dist/frameport.js"></script>
-```
-
-And then follow the steps below to display the frameports you want :)
-
-### Use templates as a target
-
-With this approach, the script will locate given template and produce frameports based on that template and insert them right after the template. The original template will be hidden:
-
-```html
-<div
-  data-frameport
-  data-frameport-css="/css/ph.css"
-  data-frameport-style="body{background-color: #84a295 !important;}"
-  data-frameport-target
-  data-frameport-template="#template"
-  data-frameport-vw="667"
-  data-frameport-vh="375"
-></div>
-<div id="template">
-  <main class="ph" style="height: 100vh">
-    <button class="ph button" type="button">Primary</button>
-  </main>
-</div>
-```
-
-The content of the `[data-frameport]`-container is the html you want to display in the frameport.
-
-### Use targets with different template
-
-With this approach, you decide where the frameports are added. The script will locate given target and produce frameports based on the given template and insert them in that target. The original template will be hidden:
-
-```html
-<div
-  data-frameport
-  data-frameport-css="/css/ph.css"
-  data-frameport-style="body{background-color: #84a295 !important;}"
-  data-frameport-viewports="375x667,360x740,768x1024"
->
-  <main class="ph" style="height: 100vh">
-    <div class="ph app">
-      <p class="ph lead">Look mah, I'm in an iframe</p>
-      <button class="ph button" type="button">Primary</button>
-    </div>
-  </main>
-</div>
-```
-
-The above example code will generate 3 iframes with given viewports.
-
-The content of the `#template`-container is the html you want to display in the frameport.
-
-This approach is useful if you want to use a device decorator to mimic appearance of a device.
-
-#### Allowed tags
-
-| tag                          | description                                                                                                                                                                                     | Required |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| **data-frameport**           | To identify this as the template to use for generating the responsive examples. **Required**                                                                                                    | 🔸       |
-| **data-frameport-width**     | The viewport width. **Required**                                                                                                                                                                | 🔸       |
-| **data-frameport-viewports** | The viewports to generate for examples. This is a string `wxh` for example: `375x667`. If you want more viewports, you can separate them with a comma: `375x667,360x740,768x1024`. **Required** | 🔸       |
-| data-frameport-target        | To identify this as a target to use to generate the frameports                                                                                                                                  |          |
-| data-frameport-template      | Selector to the template                                                                                                                                                                        |          |
-| data-frameport-height        | The viewport height.                                                                                                                                                                            |          |
-| data-frameport-css           | A CSS file to be appended to the `<head>`-tag of the generated html. **NOTE! This needs to be on the same domain and relative to root!** For example: `/dist/yourcss.css`                       |          |
-| data-frameport-style         | Inline styles (CSS) to be inserted into a `<style>` -tag in the `<head>`-tag of the generated html                                                                                              |          |
-| data-frameport-code          | Custom JavaScript code to be inserted into a `<script>`-tag in the `<body>`-tag in the generated html                                                                                           |          |
-| data-frameport-js            | A JavaScript file to be inserted in the `<body>`-tag of the generated html. **NOTE! This needs to be on the same domain and relative to root!** For example: `/dist/yourjs.js`                  |          |
-| data-frameport-class         | Class names to be given the generated iframe                                                                                                                                                    |          |
-| data-frameport-headers       | An array of HTTP headers to include when fetching the HTML content                                                                                                                              |          |
 
 ## Contributing
 

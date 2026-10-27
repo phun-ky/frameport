@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.90](https://github.com/phun-ky/frameport/compare/v2.0.89...v2.0.90) (2026-10-26)
+
+### Bug
+
+* 🐛 correct the README attributes and examples ([7cff664](https://github.com/phun-ky/frameport/commit/7cff664a222cc6b7459d676338944b9ab5f8566f)), closes [#240](https://github.com/phun-ky/frameport/issues/240) [#227](https://github.com/phun-ky/frameport/issues/227)
+
+## [2.0.89](https://github.com/phun-ky/frameport/compare/v2.0.88...v2.0.89) (2026-10-26)
+
+### Bug
+
+* 🐛 show the iframe for inline content with data-frameport-vw ([9eb7040](https://github.com/phun-ky/frameport/commit/9eb7040c27441604c183a3886e931bee7dea4c9c)), closes [#252](https://github.com/phun-ky/frameport/issues/252)
+
 ## [2.0.88](https://github.com/phun-ky/frameport/compare/v2.0.87...v2.0.88) (2026-10-26)
 
 ### Bug
