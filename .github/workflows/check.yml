@@ -24,6 +24,8 @@ on:
       - 'eslint.config.mjs'
       - '.prettierrc'
       - '.prettierignore'
+      - '.bestpractices.json'
+      - 'security-insights.yml'
   workflow_dispatch:
 
 permissions:
@@ -55,6 +57,8 @@ jobs:
         run: npm run check:pack
       - name: Run the README examples # In headless Chrome, which the runner image includes
         run: npm run check:readme
+      - name: Check OpenSSF answers # Valid statuses, and every linked file and heading exists
+        run: npm run check:bestpractices
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
         with:

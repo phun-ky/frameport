@@ -73,6 +73,7 @@
   "scripts": {
     "build": "npm run clean && npm run rollup",
     "check:pack": "node scripts/check-pack.mjs",
+    "check:bestpractices": "node scripts/check-bestpractices.mjs",
     "check:readme": "node scripts/check-readme.mjs",
     "clean": "rm -rf dist dts",
     "commit": "npx git-cz",
