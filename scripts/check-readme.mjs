@@ -4,17 +4,21 @@
 // the page throws no errors. CDN script URLs must point at the published UMD
 // build. Run after `npm run build`. Set CHROME to the browser binary if it
 // isn't google-chrome.
-import { execFile } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+//
+// Chrome is driven over the DevTools protocol in real time: --dump-dom with
+// --virtual-time-budget could dump the page before any frame was drawn, so
+// IntersectionObserver (lazy loading) had not run yet on a busy machine.
+import { spawn } from 'node:child_process';
+import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { createServer } from 'node:http';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { promisify } from 'node:util';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const CHROME = process.env.CHROME ?? 'google-chrome';
-// Asynchronous, so the server below can answer the browser meanwhile
-const run = promisify(execFile);
+// How long a page may take to report its result
+const DEADLINE = 20_000;
 const pkg = JSON.parse(readFileSync(join(ROOT, 'package.json'), 'utf8'));
 const umd = pkg.unpkg.replace(/^\.\//, '');
 const esm = pkg.exports['.'].default.replace(/^\.\//, '');
@@ -33,9 +37,14 @@ const FIXTURE =
 // Collects errors before any example runs
 const ERRORS =
   '<script>window.errors = []; addEventListener("error", (e) => errors.push(e.message)); addEventListener("unhandledrejection", (e) => errors.push(String(e.reason)));</script>';
-// Reports the iframes once rendering has settled
+// Reports the iframes once rendering has settled. IntersectionObserver
+// (lazy loading) reports during rendering frames, so wait for two frames
+// after the timer, or a busy machine reports before the first frame
 const REPORT = `<script>
-  setTimeout(() => {
+  const frame = () => new Promise((resolve) => requestAnimationFrame(resolve));
+  setTimeout(async () => {
+    await frame();
+    await frame();
     const iframes = [...document.querySelectorAll('iframe')];
     const hidden = iframes.filter((iframe) => {
       iframe.scrollIntoView({ block: 'start', inline: 'start' });
@@ -66,6 +75,96 @@ const server = createServer((request, response) => {
 await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
 
 const origin = `http://127.0.0.1:${server.address().port}`;
+const profile = mkdtempSync(join(tmpdir(), 'frameport-chrome-'));
+const chrome = spawn(
+  CHROME,
+  [
+    '--headless=new',
+    '--disable-gpu',
+    '--no-sandbox',
+    '--no-first-run',
+    '--window-size=1400,1200',
+    // Keep frames and timers running at full speed in every tab
+    '--disable-background-timer-throttling',
+    '--disable-renderer-backgrounding',
+    '--disable-backgrounding-occluded-windows',
+    '--remote-debugging-port=0',
+    `--user-data-dir=${profile}`,
+    'about:blank'
+  ],
+  { stdio: ['ignore', 'ignore', 'pipe'] }
+);
+const endpoint = await new Promise((resolve, reject) => {
+  let output = '';
+
+  chrome.stderr.on('data', (chunk) => {
+    output += chunk;
+
+    const match = output.match(/DevTools listening on (ws:\/\/\S+)/);
+
+    if (match) resolve(match[1]);
+  });
+  chrome.on('error', reject);
+  chrome.on('exit', (code) =>
+    reject(new Error(`${CHROME} exited with ${code}:\n${output}`))
+  );
+});
+const socket = new WebSocket(endpoint);
+const pending = new Map();
+
+let id = 0;
+
+socket.addEventListener('message', ({ data }) => {
+  const message = JSON.parse(data);
+  const call = pending.get(message.id);
+
+  if (!call) return;
+
+  pending.delete(message.id);
+
+  if (message.error) call.reject(new Error(message.error.message));
+  else call.resolve(message.result);
+});
+await new Promise((resolve, reject) => {
+  socket.addEventListener('open', resolve);
+  socket.addEventListener('error', reject);
+});
+
+/** Send a DevTools protocol command, to a page when sessionId is given. */
+const send = (method, params = {}, sessionId) =>
+  new Promise((resolve, reject) => {
+    pending.set(++id, { resolve, reject });
+    socket.send(JSON.stringify({ id, method, params, sessionId }));
+  });
+/** Open a page and wait for its data-result attribute, or undefined. */
+const resultOf = async (url) => {
+  const { targetId } = await send('Target.createTarget', { url });
+  const { sessionId } = await send('Target.attachToTarget', {
+    targetId,
+    flatten: true
+  });
+
+  try {
+    for (const end = Date.now() + DEADLINE; Date.now() < end; ) {
+      const { result } = await send(
+        'Runtime.evaluate',
+        {
+          expression: 'document.body?.dataset.result ?? null',
+          returnByValue: true
+        },
+        sessionId
+      );
+
+      if (typeof result.value === 'string') return JSON.parse(result.value);
+
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+
+    return undefined;
+  } finally {
+    await send('Target.closeTarget', { targetId });
+  }
+};
 
 try {
   for (const block of blocks) {
@@ -115,27 +214,12 @@ try {
       `<!doctype html><html><head>${ERRORS}</head><body>${body}${REPORT}</body></html>`
     );
 
-    const { stdout: dom } = await run(
-      CHROME,
-      [
-        '--headless=new',
-        '--disable-gpu',
-        '--no-sandbox',
-        '--window-size=1400,1200',
-        '--virtual-time-budget=5000',
-        '--dump-dom',
-        `${origin}${path}`
-      ],
-      { encoding: 'utf8', timeout: 60_000 }
-    );
-    const attribute = dom.match(/data-result="([^"]*)"/);
+    const result = await resultOf(`${origin}${path}`);
 
-    if (!attribute) {
+    if (!result) {
       problems.push(`${where}: the page did not finish`);
       continue;
     }
-
-    const result = JSON.parse(attribute[1].replaceAll('&quot;', '"'));
 
     if (result.count !== want) {
       problems.push(
@@ -162,6 +246,23 @@ try {
     }
   }
 } finally {
+  const exited = new Promise((resolve) => chrome.once('exit', resolve));
+
+  // Close Chrome cleanly, so it stops writing to its profile; kill it if not
+  await send('Browser.close').catch(() => chrome.kill());
+  await Promise.race([
+    exited,
+    new Promise((resolve) => setTimeout(resolve, 5_000))
+  ]);
+  chrome.kill();
+  socket.close();
+  // Chrome's helper processes can still be writing to the profile
+  rmSync(profile, {
+    recursive: true,
+    force: true,
+    maxRetries: 10,
+    retryDelay: 100
+  });
   server.close();
 }
 
