@@ -15,7 +15,7 @@ export const create = (
   const { className, height, width } = options;
   const url = getGeneratedPageURL(options);
   const iframeElement = createIframe();
-  const iframeStyle = {};
+  const iframeStyle: Record<string, string> = {};
 
   iframeElement.src = url;
   iframeElement.setAttribute('data-frameport-iframe', '');

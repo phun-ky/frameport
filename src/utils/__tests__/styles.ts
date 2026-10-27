@@ -4,7 +4,7 @@ import { describe, it, before, after } from 'node:test';
 import { add, get } from '../styles';
 
 describe('add', () => {
-  let element;
+  let element: HTMLElement;
 
   before(() => {
     // Create a div element for testing
@@ -40,10 +40,31 @@ describe('add', () => {
     assert.equal(computedStyles.color, 'rgb(0, 0, 255)');
     assert.equal(computedStyles.backgroundColor, 'rgb(255, 255, 0)');
   });
+
+  for (const [name, styles] of [
+    ['a string', 'color: red'],
+    ['a number', 1],
+    ['a boolean', true],
+    ['an empty array', []],
+    ['an empty object', {}],
+    ['null', null]
+  ] as const) {
+    it(`should ignore ${name}`, async () => {
+      element.removeAttribute('style');
+      await add(element, styles as unknown as object);
+      assert.equal(element.getAttribute('style'), null);
+    });
+  }
+
+  it('should ignore a missing element', async () => {
+    await assert.doesNotReject(
+      add(null as unknown as HTMLElement, { color: 'red' })
+    );
+  });
 });
 
 describe('get', () => {
-  let element;
+  let element: HTMLElement;
 
   before(() => {
     // Create a div element for testing

@@ -1,19 +1,50 @@
 import assert from 'node:assert/strict';
-import { describe, it } from 'node:test';
+import { describe, it, mock, afterEach } from 'node:test';
 
 import { waitForFrame } from '../wait';
 
 describe('waitForFrame', () => {
-  it('should wait for the next animation frame', async () => {
-    const startTime = performance.now(); // High-resolution timestamp
+  afterEach(() => {
+    mock.restoreAll();
+  });
 
-    await waitForFrame();
+  it('should resolve with the timestamp of the next animation frame', async () => {
+    const requestAnimationFrame = mock.method(
+      globalThis,
+      'requestAnimationFrame',
+      (callback: FrameRequestCallback) => {
+        callback(1234.5);
 
-    const endTime = performance.now(); // High-resolution timestamp
-    const elapsedTime = endTime - startTime;
+        return 1;
+      }
+    );
 
-    // Check that the timestamp received is an approximate match to the expected next frame timestamp
-    assert.ok(elapsedTime < 40); // Assuming 30 frames per second (approximately 8ms per frame)
-    // assert.ok(elapsedTime < 20); // Assuming 60 frames per second (approximately 16ms per frame)
+    assert.equal(await waitForFrame(), 1234.5);
+    assert.equal(requestAnimationFrame.mock.callCount(), 1);
+  });
+
+  it('should not resolve before the frame', async () => {
+    let frame: FrameRequestCallback | undefined;
+    let resolved = false;
+
+    mock.method(
+      globalThis,
+      'requestAnimationFrame',
+      (callback: FrameRequestCallback) => {
+        frame = callback;
+
+        return 1;
+      }
+    );
+
+    const waiting = waitForFrame().then(() => {
+      resolved = true;
+    });
+
+    await Promise.resolve();
+    assert.equal(resolved, false);
+    frame?.(1);
+    await waiting;
+    assert.equal(resolved, true);
   });
 });
