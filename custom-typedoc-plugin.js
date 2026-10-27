@@ -8,11 +8,6 @@ import { MarkdownTheme, MarkdownThemeContext } from 'typedoc-plugin-markdown';
 export function load(app) {
   app.renderer.defineTheme('custom-markdown-theme', MyMarkdownTheme);
 
-  app.renderer.markdownHooks.on(
-    'content.begin',
-    () => `> Last updated ${new Date().toISOString()}`
-  );
-
   const footerText = `***
 
 **Contributing**
@@ -27,7 +22,7 @@ The sponsorship is an unique opportunity to alleviate more hours for me to maint
 
 [Support me on GitHub Sponsors](https://github.com/sponsors/phun-ky).
 
-![Speccer banner, with logo and slogan: A zero dependency package to annotate or highlight elements](https://github.com/phun-ky/frameport/blob/main/public/frameport-banner.png?raw=true)
+![The frameport logo](https://github.com/phun-ky/frameport/blob/main/public/logo-frameport-colored-package.svg?raw=true)
 
 ***
 
