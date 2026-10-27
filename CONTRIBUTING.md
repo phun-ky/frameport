@@ -43,7 +43,7 @@ unacceptable behaviour to <code-of-conduct@phun-ky.net>.
 
 > If you want to ask a question, we assume that you have read the
 > [README](https://github.com/phun-ky/frameport#readme) and the
-> [API documentation](https://github.com/phun-ky/frameport/blob/main/api/README.md).
+> [API documentation](https://github.com/phun-ky/frameport/blob/main/docs/api/README.md).
 
 Before you ask a question, search the existing
 [issues](https://github.com/phun-ky/frameport/issues) that might help you. If you
@@ -180,6 +180,7 @@ npm run check:readme
 | `npm run check:readme`        | Runs every HTML and JavaScript example in the README in headless Chrome (set `CHROME` if needed)                  |
 | `npm run check:bestpractices` | Checks `.bestpractices.json` and `security-insights.yml`: valid answers, and every linked file and heading exists |
 | `npm run docs:gen`            | Generates the API documentation with TypeDoc                                                                      |
+| `npm run docs:check`          | Checks the API documentation comments with TypeDoc, treating warnings as errors                                   |
 | `npm run commit`              | Writes a conventional commit message with git-cz                                                                  |
 | `npm run release:dry-run`     | Shows whether merging would release, and the planned version and changelog                                        |
 
@@ -190,7 +191,7 @@ Run `npm run check:pack` and `npm run check:readme` after `npm run build`.
 Code follows the project's [ESLint](https://eslint.org/) configuration
 (`eslint-config-phun-ky`), [Prettier](https://prettier.io/) formatting and
 TypeScript in strict mode. A contribution must pass `npm run style:lint`,
-and `npm run typecheck` with no errors. All of them run in
+`npm run typecheck` and `npm run docs:check` with no errors. All of them run in
 CI on every pull request, and a pull request that fails them can't be merged.
 
 #### Tests
@@ -236,10 +237,11 @@ The DCO check on every pull request fails if a commit isn't signed off.
   Mark it `@deprecated` with its replacement and the major it will be removed
   in. It keeps working through one full major: deprecated during 2.x or at 3.0,
   it can be removed in 4.0 at the earliest.
-- Don't commit regenerated API docs (`api/`); each release regenerates them.
+- Don't commit regenerated API docs (`docs/api/`); each release regenerates them.
+  Run `npm run docs:check` instead.
 - Open a pull request against `main`. The Checks workflow lints, type-checks,
-  tests, builds, packs and runs the README examples; dependency review, CodeQL
-  and the DCO check also run. All of them must pass.
+  tests, builds, packs, runs the README examples and checks the API docs;
+  dependency review, CodeQL and the DCO check also run. All of them must pass.
 
 #### Releases
 
