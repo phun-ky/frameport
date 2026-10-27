@@ -59,6 +59,8 @@ jobs:
         run: npm run test:ci
       - name: Check the packed package
         run: npm run check:pack
+      - name: Run the README examples
+        run: npm run check:readme
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
