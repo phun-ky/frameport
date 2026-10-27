@@ -163,7 +163,8 @@ Publishing to npm needs no secret: it uses short-lived OIDC tokens from GitHub
 (npm trusted publishing).
 
 - **Storage:** secrets are kept only as encrypted GitHub Actions secrets, never
-  in the repository. Secret scanning with push protection is being turned on.
+  in the repository. Secret scanning with push protection blocks commits that
+  contain one.
 - **Access:** only the maintainer can view or change them, and they are not
   available to workflows run from forks.
 - **Rotation:** at least once a year, and immediately if one may have been
