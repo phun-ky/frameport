@@ -179,6 +179,7 @@ npm run check:readme
 | `npm run check:pack`          | Packs the package, installs it in an empty project and calls `frameport()` from every entry point                 |
 | `npm run check:readme`        | Runs every HTML and JavaScript example in the README in headless Chrome (set `CHROME` if needed)                  |
 | `npm run check:bestpractices` | Checks `.bestpractices.json` and `security-insights.yml`: valid answers, and every linked file and heading exists |
+| `npm run bestpractices:url`   | Prints bestpractices.dev links that propose the answers in `.bestpractices.json` that differ from the site        |
 | `npm run docs:gen`            | Generates the API documentation with TypeDoc                                                                      |
 | `npm run docs:check`          | Checks the API documentation comments with TypeDoc, treating warnings as errors                                   |
 | `npm run commit`              | Writes a conventional commit message with git-cz                                                                  |
