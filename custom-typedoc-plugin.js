@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unused-modules */
 // @ts-check
 
 import { MarkdownTheme, MarkdownThemeContext } from 'typedoc-plugin-markdown';
