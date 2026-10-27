@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unused-modules */
 import { domReady, lazy, manual, activate } from './config/browser';
 import dom from './features/dom';
 import { getHeaders } from './utils/headers';
@@ -64,6 +63,7 @@ const frameport = () => {
 
   elsToBeTransformedTemplate.forEach((targetElement) => {
     if (!(targetElement instanceof HTMLElement)) return;
+
     const {
       dataset: {
         frameportTemplate: templateSelector,
