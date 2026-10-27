@@ -71,6 +71,7 @@
     "CHANGELOG.md"
   ],
   "scripts": {
+    "bestpractices:url": "node scripts/bestpractices-url.mjs",
     "build": "npm run clean && npm run rollup",
     "check:pack": "node scripts/check-pack.mjs",
     "check:bestpractices": "node scripts/check-bestpractices.mjs",
