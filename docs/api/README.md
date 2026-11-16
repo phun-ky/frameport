@@ -17,7 +17,7 @@ const modes: {
 
 Defined in: [main.ts:9](https://github.com/phun-ky/frameport/blob/main/src/main.ts#L9)
 
-Available initialization modes for frameport usage.
+Available initialisation modes for frameport usage.
 Can be triggered manually or via browser lifecycle hooks.
 
 #### Type Declaration
@@ -74,7 +74,7 @@ A function to activate frameport based on script attributes.
 </td>
 <td>
 
-A function to initialize frameport when the DOM is ready.
+A function to initialise frameport when the DOM is ready.
 
 **Example**
 
@@ -103,7 +103,7 @@ A function to initialize frameport when the DOM is ready.
 </td>
 <td>
 
-A function to initialize lazy frameport functionality.
+A function to initialise lazy frameport functionality.
 
 **Example**
 

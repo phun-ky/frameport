@@ -1,5 +1,40 @@
 # Changelog
 
+## [2.0.91](https://github.com/phun-ky/frameport/compare/v2.0.90...v2.0.91) (2026-11-16)
+
+### Tasks
+
+* 🤖 add bestpractices:url for project 15989 ([e95ae82](https://github.com/phun-ky/frameport/commit/e95ae822e1099a99e74fbcef29e12c1fa5bd7df5)), references [#236](https://github.com/phun-ky/frameport/issues/236)
+* 🤖 bump the minor-and-patch group with 4 updates ([df903ef](https://github.com/phun-ky/frameport/commit/df903ef488e2e699a0ef87a49613dcff894ebd68))
+* 🤖 bundle with esbuild in check:pack, not rollup's node-resolve ([22fee53](https://github.com/phun-ky/frameport/commit/22fee5332ff9150ca8c8676207299211abf20e59)), closes [#285](https://github.com/phun-ky/frameport/issues/285)
+* 🤖 eslint-config-phun-ky 3, which lints the tests ([3daf3e7](https://github.com/phun-ky/frameport/commit/3daf3e72617509629e753973848eb452751e4a44)), closes [#287](https://github.com/phun-ky/frameport/issues/287)
+* 🤖 generate the API docs from the entry point and check them in CI ([33e8e99](https://github.com/phun-ky/frameport/commit/33e8e997a4f4997e2e68713ef458d220b7048dd6)), references [#237](https://github.com/phun-ky/frameport/issues/237)
+* 🤖 keep TypeScript on 6 in Dependabot ([0125056](https://github.com/phun-ky/frameport/commit/01250560f481a33c677bb1aa49b52be94e9c4a33)), references [#233](https://github.com/phun-ky/frameport/issues/233) [#265](https://github.com/phun-ky/frameport/issues/265)
+* 🤖 lint every file with eslint-config-phun-ky 2.0.10 ([37b483f](https://github.com/phun-ky/frameport/commit/37b483f60a5637acaf00c51adfe1aa86563a8371)), closes [#229](https://github.com/phun-ky/frameport/issues/229)
+* 🤖 move jsdom and global-jsdom to 31 together ([17b065d](https://github.com/phun-ky/frameport/commit/17b065dacfb55c4f02ab719c13b41ff855958716)), closes [#286](https://github.com/phun-ky/frameport/issues/286)
+* 🤖 override undici under release-it to 7.30.1 ([147f1af](https://github.com/phun-ky/frameport/commit/147f1affdfebbbf8825dc583ccfaa3744c3679ba)), references [#235](https://github.com/phun-ky/frameport/issues/235)
+* 🤖 refresh development dependencies and accept the minimatch advisory ([69089d2](https://github.com/phun-ky/frameport/commit/69089d2c9bfd4fd578c00da84bf5b70a282f9e46)), closes [#284](https://github.com/phun-ky/frameport/issues/284)
+* 🤖 refresh vulnerable dev dependencies and the Dependabot config ([7a73860](https://github.com/phun-ky/frameport/commit/7a73860d1d139f07e8c6ea5dee19cabbc5073c6f)), closes [#233](https://github.com/phun-ky/frameport/issues/233)
+* 🤖 remove putout ([7346249](https://github.com/phun-ky/frameport/commit/7346249872c4347f0a866982f18f50aed9140d0b)), closes [#266](https://github.com/phun-ky/frameport/issues/266)
+* 🤖 stop running node-resolve in the build ([d95fcac](https://github.com/phun-ky/frameport/commit/d95fcac58c38c01810f7a1506d4f0bfdfd7963b7)), references [#285](https://github.com/phun-ky/frameport/issues/285)
+* 🤖 upgrade to release-it 21 and conventional-changelog 12 ([88ce5ca](https://github.com/phun-ky/frameport/commit/88ce5caf9b490f669270bb995c6d902fcef80093)), closes [#235](https://github.com/phun-ky/frameport/issues/235)
+
+### Documentation
+
+* ✏️ British English in the source comments and issue templates ([45d378a](https://github.com/phun-ky/frameport/commit/45d378a5a96b9fbae6ebca2b8c7098dc33a9ee39)), closes [#288](https://github.com/phun-ky/frameport/issues/288)
+* ✏️ move the API reference to docs/api ([3e5e3a7](https://github.com/phun-ky/frameport/commit/3e5e3a7320e243635ccffcf21a1bd9a4caa1f272)), closes [#237](https://github.com/phun-ky/frameport/issues/237)
+* ✏️ security policy, governance, roadmap and OpenSSF answers ([cc02fda](https://github.com/phun-ky/frameport/commit/cc02fda14530f1b48eeb98675419d5137b52cc90)), closes [#236](https://github.com/phun-ky/frameport/issues/236)
+* ✏️ show the OpenSSF Best Practices badge ([431b5ed](https://github.com/phun-ky/frameport/commit/431b5ed5b330f86efce8f6319eb0a5c35ccbee20)), references [#236](https://github.com/phun-ky/frameport/issues/236)
+* ✏️ state that secret scanning with push protection is on ([c34655c](https://github.com/phun-ky/frameport/commit/c34655c3329b00ececeb00e1972a119186c29091)), references [#236](https://github.com/phun-ky/frameport/issues/236)
+
+### Bug
+
+* 🐛 drop engines.npm, which warns on the npm that ships with Node 22 ([9946af3](https://github.com/phun-ky/frameport/commit/9946af3357d70135b6529cb78500c28abbffcd11)), closes [#283](https://github.com/phun-ky/frameport/issues/283)
+
+### Refactoring
+
+* 💡 build in strict mode from tsconfig.build.json ([ce88b28](https://github.com/phun-ky/frameport/commit/ce88b2895f8b7bd0b33f97c96c114484c6165bb0)), references [#231](https://github.com/phun-ky/frameport/issues/231)
+
 ## [2.0.90](https://github.com/phun-ky/frameport/compare/v2.0.89...v2.0.90) (2026-10-26)
 
 ### Bug
