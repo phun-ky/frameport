@@ -3,7 +3,7 @@ import dom from './features/dom';
 import { getHeaders } from './utils/headers';
 
 /**
- * Available initialization modes for frameport usage.
+ * Available initialisation modes for frameport usage.
  * Can be triggered manually or via browser lifecycle hooks.
  */
 export const modes = {
