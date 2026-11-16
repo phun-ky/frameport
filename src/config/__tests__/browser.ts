@@ -119,7 +119,6 @@ describe('activate', () => {
 
     it('should observe the targets with data-lazy', () => {
       const observe = mock.fn();
-
       const remove = fakeIntersectionObserver(() => ({
         observe,
         unobserve: () => {}
@@ -179,6 +178,7 @@ describe('lazy', () => {
 
   let callback: Callback;
   let remove: () => void;
+
   const unobserve = mock.fn();
 
   before(() => {
