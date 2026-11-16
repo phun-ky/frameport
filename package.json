@@ -132,8 +132,7 @@
     "unified-prettier": "^2.0.1"
   },
   "engines": {
-    "node": ">=22.9.0",
-    "npm": ">=11.0.0"
+    "node": ">=22.9.0"
   },
   "publishConfig": {
     "access": "public"
