@@ -145,7 +145,7 @@ const resultOf = async (url) => {
   });
 
   try {
-    for (const end = Date.now() + DEADLINE; Date.now() < end; ) {
+    for (const end = Date.now() + DEADLINE; Date.now() < end;) {
       const { result } = await send(
         'Runtime.evaluate',
         {

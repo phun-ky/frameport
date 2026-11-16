@@ -103,16 +103,16 @@
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.5",
     "@release-it/conventional-changelog": "^12.0.2",
-    "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^1.0.0",
     "@types/node": "^24.19.2",
     "cobertura": "^1.0.1",
+    "esbuild": "^0.28.2",
     "eslint": "^10.0.0",
-    "eslint-config-phun-ky": "^2.0.10",
+    "eslint-config-phun-ky": "^3.0.0",
     "git-cz": "^4.9.0",
-    "global-jsdom": "^29.0.0",
+    "global-jsdom": "^31.0.0",
     "globals": "^17.13.0",
-    "jsdom": "^29.1.1",
+    "jsdom": "^31.0.1",
     "prettier": "^3.8.0",
     "publint": "^0.3.25",
     "release-it": "^21.1.1",
@@ -132,8 +132,7 @@
     "unified-prettier": "^2.0.1"
   },
   "engines": {
-    "node": ">=22.9.0",
-    "npm": ">=11.0.0"
+    "node": ">=22.9.0"
   },
   "publishConfig": {
     "access": "public"
@@ -141,7 +140,7 @@
   "overrides": {
     "release-it": {
       "undici": "^7.30.1",
-      "basic-ftp": "^6.2.3"
+      "basic-ftp": "^6.2.4"
     }
   }
 }

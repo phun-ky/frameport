@@ -5,9 +5,8 @@
 // import (with and without a DOM), require, the old dist path, the UMD build
 // and a browser bundle. It also checks that the ES module build bundles no
 // dependencies. Run after `npm run build`.
-import { nodeResolve } from '@rollup/plugin-node-resolve';
+import { build } from 'esbuild';
 import { JSDOM } from 'jsdom';
-import { rollup } from 'rollup';
 
 import { execFileSync } from 'node:child_process';
 import {
@@ -284,21 +283,25 @@ try {
         `import frameport from ${name};\nframeport();\nwindow.result = document.querySelectorAll('iframe').length;\n`
       );
 
-      const bundle = await rollup({
-        input: entry,
-        plugins: [nodeResolve({ browser: true, rootDir: app })]
+      // Resolves the package through its exports, as a browser bundler does
+      const { outputFiles } = await build({
+        absWorkingDir: app,
+        entryPoints: [entry],
+        bundle: true,
+        format: 'iife',
+        platform: 'browser',
+        write: false,
+        logLevel: 'silent'
       });
-      const { output } = await bundle.generate({ format: 'iife' });
       // pretendToBeVisual provides requestAnimationFrame
       const { window } = new JSDOM(`<body>${page}</body>`, {
         pretendToBeVisual: true,
         runScripts: 'outside-only'
       });
 
-      await bundle.close();
       // jsdom has no blob URLs
       window.URL.createObjectURL = () => 'blob:frameport';
-      window.eval(output[0].code);
+      window.eval(outputFiles[0].text);
 
       if (window.result !== 1)
         throw new Error(`rendered ${window.result} iframes, expected 1`);

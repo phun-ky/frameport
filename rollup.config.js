@@ -1,4 +1,3 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 import dts from 'rollup-plugin-dts';
 import ts from 'rollup-plugin-typescript2';
@@ -57,7 +56,6 @@ export default [
       }
     ],
     plugins: [
-      nodeResolve(),
       ts({
         tsconfig: 'tsconfig.build.json',
         useTsconfigDeclarationDir: true,

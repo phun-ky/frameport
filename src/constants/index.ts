@@ -35,7 +35,7 @@ export const HIDE_TEMPLATE_STYLE: {
  * Default `<meta>` tags to inject into a dynamically created HTML document.
  * Ensures consistent encoding, responsive layout, and no indexing by robots.
  *
- * Useful when rendering sandboxed `<iframe>` content or initializing virtual DOMs.
+ * Useful when rendering sandboxed `<iframe>` content or initialising virtual DOMs.
  *
  * @type {string[]}
  *

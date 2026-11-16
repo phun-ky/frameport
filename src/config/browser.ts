@@ -4,7 +4,7 @@ import { type FrameportFunctionType } from '../types';
 import { getHeaders } from '../utils/headers';
 
 /**
- * A function to initialize frameport when the DOM is ready.
+ * A function to initialise frameport when the DOM is ready.
  *
  * @param {FrameportFunctionType} frameport - The frameport function to execute.
  *
@@ -26,7 +26,7 @@ export const domReady = (frameport: FrameportFunctionType): void => {
 };
 
 /**
- * A function to initialize lazy frameport functionality.
+ * A function to initialise lazy frameport functionality.
  *
  * @example
  * ```ts

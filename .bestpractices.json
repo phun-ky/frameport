@@ -346,7 +346,7 @@
   "osps_sa_03_02_status": "Unmet",
   "osps_sa_03_02_justification": "No threat model yet.",
   "osps_vm_04_02_status": "Unmet",
-  "osps_vm_04_02_justification": "The one accepted exception (katex, development only) is explained in the security policy, but not recorded as a VEX document: https://github.com/phun-ky/frameport/blob/main/SECURITY.md#dependencies",
+  "osps_vm_04_02_justification": "The accepted exceptions (katex and minimatch, development only) are explained in the security policy, but not recorded as a VEX document: https://github.com/phun-ky/frameport/blob/main/SECURITY.md#dependencies",
   "osps_vm_05_01_status": "Met",
   "osps_vm_05_01_justification": "Thresholds for fixing vulnerability and licence findings in dependencies: https://github.com/phun-ky/frameport/blob/main/SECURITY.md#dependencies",
   "osps_vm_05_02_status": "Met",
