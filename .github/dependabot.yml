@@ -6,6 +6,15 @@ updates:
     # so each one gets its own PR to test and merge, and one blocked major does
     # not hold back the others
     groups:
+      # global-jsdom requires the jsdom major it was built for, so a major of
+      # one fails CI without the other (#278)
+      jsdom:
+        applies-to: version-updates
+        patterns:
+          - 'jsdom'
+          - 'global-jsdom'
+        update-types:
+          - 'major'
       minor-and-patch:
         applies-to: version-updates
         update-types:
