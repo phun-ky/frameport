@@ -93,7 +93,8 @@
     "test": "node --import tsx --import global-jsdom/register --test --enable-source-maps 'src/**/__tests__/**/*.ts'",
     "typecheck": "tsc -p tsconfig.json",
     "pretest:ci": "rm -rf coverage && mkdir -p coverage",
-    "test:ci": "node --import tsx --import global-jsdom/register --test --experimental-test-coverage --test-coverage-include='src/**/*.ts' --test-coverage-exclude='src/**/__tests__/**' --test-coverage-exclude='src/types/**' --test-coverage-lines=99 --test-coverage-functions=100 --test-coverage-branches=95 --test-reporter=cobertura --test-reporter-destination=coverage/cobertura-coverage.xml --test-reporter=spec --test-reporter-destination=stdout 'src/**/__tests__/**/*.ts'"
+    "test:ci": "node --import tsx --import global-jsdom/register --test --experimental-test-coverage --test-coverage-include='src/**/*.ts' --test-coverage-exclude='src/**/__tests__/**' --test-coverage-exclude='src/types/**' --test-coverage-lines=99 --test-coverage-functions=100 --test-coverage-branches=95 --test-reporter=cobertura --test-reporter-destination=coverage/cobertura-coverage.xml --test-reporter=spec --test-reporter-destination=stdout 'src/**/__tests__/**/*.ts'",
+    "test:hooks": "node --test scripts/__tests__/commit-msg.test.mjs"
   },
   "config": {
     "commitizen": {
